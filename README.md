@@ -6,6 +6,15 @@
   </picture>
 </p>
 
+<p align="center">
+  <a href="./RESUME.md"><img alt="Resume" src="./assets/btn-resume.svg" height="34" /></a>
+  <a href="https://neochaotic.github.io/neochaotic/"><img alt="Interactive CV" src="./assets/btn-cv.svg" height="34" /></a>
+  <a href="https://neochaotic.github.io/neochaotic/Alisson_Rosa_CV_EN.pdf"><img alt="PDF in English" src="./assets/btn-pdf-en.svg" height="34" /></a>
+  <a href="https://neochaotic.github.io/neochaotic/Alisson_Rosa_CV_PT.pdf"><img alt="PDF em português" src="./assets/btn-pdf-pt.svg" height="34" /></a>
+  <a href="https://www.linkedin.com/in/alissonrosa/"><img alt="LinkedIn" src="./assets/btn-linkedin.svg" height="34" /></a>
+  <a href="mailto:alisson.david.rosa@gmail.com"><img alt="Email" src="./assets/btn-email.svg" height="34" /></a>
+</p>
+
 I build data platforms and the systems around them, and I lead the teams that run them.
 I created [Dexaflow](https://github.com/dexadata/dexaflow), an Airflow-compatible workflow orchestrator written in Go, and I am a Google Developer Expert in Cloud.
 
@@ -22,11 +31,25 @@ I created [Dexaflow](https://github.com/dexadata/dexaflow), an Airflow-compatibl
 
 ## Selected work
 
-**[Dexaflow](https://github.com/dexadata/dexaflow)** · Go, Kubernetes, Helm\
-Runs Airflow DAGs on a single Go control plane with the Airflow UI and REST API, one pod per task, and weekly releases. [Docs](https://dexaflow.dexadata.ai/) · [DexaData](https://dexadata.ai)
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://github.com/dexadata/dexaflow"><strong>Dexaflow</strong></a><br />
+      <sub>Go · Kubernetes · Helm</sub><br /><br />
+      Runs Airflow DAGs on a single Go control plane with the Airflow UI and REST API, one pod per task, and weekly releases.<br /><br />
+      <a href="https://dexaflow.dexadata.ai/">Docs</a> · <a href="https://dexadata.ai">DexaData</a>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://github.com/neochaotic/powerlab"><strong>PowerLab</strong></a><br />
+      <sub>Go · SvelteKit</sub><br /><br />
+      Self-hosted control panel for home servers and edge boxes, with a one-line installer and a curated app catalog.
+    </td>
+  </tr>
+</table>
 
-**[PowerLab](https://github.com/neochaotic/powerlab)** · Go, SvelteKit\
-Self-hosted control panel for home servers and edge boxes, with a one-line installer and a curated app catalog.
+## Stack
+
+Go · Python · SQL · BigQuery · Databricks · Apache Airflow · Apache Spark · Apache Beam · Dataflow · dbt · OpenMetadata · Kubernetes · Google Cloud · AWS · Azure · Vertex AI · Gemini · ADK · MCP
 
 ## Open source
 
@@ -47,4 +70,4 @@ Speaker at The Developers Conference (TDC) and DevFest BH. Organizer of the Data
 
 ---
 
-[Resume (PDF)](https://neochaotic.github.io/neochaotic/Alisson_Rosa_CV_EN.pdf) · [Currículo (PDF)](https://neochaotic.github.io/neochaotic/Alisson_Rosa_CV_PT.pdf) · [Web CV](https://neochaotic.github.io/neochaotic/) · [LinkedIn](https://www.linkedin.com/in/alissonrosa/) · [Email](mailto:alisson.david.rosa@gmail.com)
+[Resume](./RESUME.md) · [Interactive CV](https://neochaotic.github.io/neochaotic/) · [Resume (PDF)](https://neochaotic.github.io/neochaotic/Alisson_Rosa_CV_EN.pdf) · [Currículo (PDF)](https://neochaotic.github.io/neochaotic/Alisson_Rosa_CV_PT.pdf) · [LinkedIn](https://www.linkedin.com/in/alissonrosa/) · [Email](mailto:alisson.david.rosa@gmail.com)
