@@ -56,6 +56,7 @@
     const v = (name, fallback) => (css.getPropertyValue(name) || "").trim() || fallback;
     const light = document.documentElement.classList.contains("light");
     return {
+      bg: v("--bg", light ? "#ffffff" : "#0b0c0f"),
       text: v("--text", "#f4f4f5"),
       muted: v("--text-muted", "#8b8b95"),
       secondary: v("--text-secondary", "#c4c4cb"),
@@ -79,45 +80,95 @@
     return { image: cv, repeat: "repeat" };
   }
 
+  // Labels get a halo in the color behind the chart so leader lines pass
+  // behind the text instead of through it.
+  function effectiveBg(el) {
+    for (let n = el; n && n.nodeType === 1; n = n.parentElement) {
+      const b = getComputedStyle(n).backgroundColor;
+      if (b && b !== "transparent" && !/rgba\(.*,\s*0\)$/.test(b)) return b;
+    }
+    return null;
+  }
+
   function build(chart, lang) {
     const t = TEXT[lang] || TEXT.en;
     const c = themeColors();
+    c.bg = effectiveBg(chart.getDom().parentElement) || c.bg;
     const width = chart.getWidth();
     const left = width < 900 ? 128 : 170, right = 24;
     const end = dec(NOW, true) + 0.2;
     const pxPerUnit = (width - left - right) / warp(end);
     const X = y => left + warp(y) * pxPerUnit;
     const fontPx = width < 900 ? 11 : 12;
-    const textW = (s, px) => s.length * px * 0.56;
 
-    // Lay out rows so labels never collide: a label that does not fit inside
-    // its bar goes to the right, or to the left near the right edge.
+    const fontFam = "Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif";
+    const measure = (() => {
+      const g = document.createElement("canvas").getContext("2d");
+      return (txt, f) => { g.font = f; return g.measureText(txt).width; };
+    })();
+    const headFont = `600 ${fontPx}px ${fontFam}`, durFont = `500 ${fontPx - 1}px ${fontFam}`, roleFont = `400 ${fontPx - 1}px ${fontFam}`;
+
+    // Bars of one lane share a row unless they overlap by more than a month.
+    // Every label is a two line block (company and duration, then role) that
+    // sits above or below its bar, starting at the bar's left edge; near the
+    // right edge it is right aligned to the bar's end. Blocks go to the
+    // closest free tier, so labels never collide and always read the same way.
+    const BAR_H = 16, LBL_H = 34, PAD = 6, SEP = 14;
     const items = ROWS.map((r, i) => {
       const e = r.e || NOW, n = months(r.s, e);
       const role = r.role[lang] || r.role.en, dur = fmtDur(n, t);
       const x1 = X(dec(r.s)), x2 = X(dec(e, true));
-      const head = textW(r.co, fontPx) + 10 + textW(dur, fontPx - 1);
-      const inside = head + 20 < x2 - x1;
-      const nameOnly = !inside && textW(r.co, fontPx) + 20 < x2 - x1;
-      const need = Math.max(head, textW(role, fontPx - 1));
-      const placeLeft = !inside && !nameOnly && x2 + 8 + need > width - right;
-      const from = placeLeft ? x1 - 10 - need : x1;
-      const to = (inside || nameOnly) ? Math.max(x2, x1 + 10 + Math.max(textW(role, fontPx - 1), nameOnly ? textW(r.co, fontPx) + 10 + textW(dur, fontPx - 1) : 0)) : placeLeft ? x2 : x2 + 10 + need;
-      return { i, r, e, n, role, dur, inside, nameOnly, placeLeft, from, to };
+      const w = Math.max(measure(r.co, headFont) + 8 + measure(dur, durFont), measure(role, roleFont));
+      const alignRight = x1 + w > width - right;
+      const from = alignRight ? x2 - w : x1, to = alignRight ? x2 : x1 + w;
+      return { i, r, e, n, role, dur, x1, x2, w, alignRight, from, to, ms: dec(r.s), me: dec(e, true) };
     });
     const lanes = { direct: [], out: [] };
     for (const it of items) {
       const rows = lanes[it.r.lane];
-      let k = rows.findIndex(endPx => it.from >= endPx + 12);
-      if (k < 0) { rows.push(it.to); k = rows.length - 1; } else rows[k] = it.to;
-      it.row = k;
+      let k = rows.findIndex(row => row.every(o => it.ms >= o.me - 2.5 / 12 || it.me <= o.ms + 2.5 / 12));
+      if (k < 0) { rows.push([]); k = rows.length - 1; }
+      rows[k].push(it); it.row = k;
     }
-    const directRows = lanes.direct.length, outRows = lanes.out.length;
-    const ROW_H = 54, LANE_GAP = 30, TOP = 60, AXIS = 40;
-    const rowY = it => TOP + (it.r.lane === "direct" ? it.row : directRows + it.row) * ROW_H + (it.r.lane === "out" ? LANE_GAP : 0);
-    const height = TOP + (directRows + outRows) * ROW_H + LANE_GAP + AXIS;
+    for (const lane of Object.values(lanes)) {
+      for (const row of lane) {
+        const tiers = { above: [], below: [] };
+        for (const it of row) {
+          for (let depth = 0, placed = false; !placed; depth++) {
+            for (const side of ["below", "above"]) {
+              const list = tiers[side][depth] || (tiers[side][depth] = []);
+              if (list.every(o => it.from >= o.to + SEP || it.to + SEP <= o.from)) {
+                list.push(it); it.side = side; it.depth = depth; placed = true; break;
+              }
+            }
+          }
+        }
+        row.above = tiers.above.filter(l => l.length).length;
+        row.below = tiers.below.filter(l => l.length).length;
+      }
+    }
+    const TOP = 44, LANE_GAP = 26, AXIS = 40, ROW_GAP = 4;
+    let y = TOP;
+    const laneTop = {};
+    for (const name of ["direct", "out"]) {
+      if (name === "out") y += LANE_GAP;
+      laneTop[name] = y;
+      for (const row of lanes[name]) {
+        row.barY = y + row.above * LBL_H + (row.above ? PAD : 0);
+        y = row.barY + BAR_H + (row.below ? PAD + row.below * LBL_H : 0) + ROW_GAP;
+      }
+    }
+    for (const it of items) {
+      const row = lanes[it.r.lane][it.row];
+      it.barY = row.barY;
+      it.lblY = it.side === "below"
+        ? row.barY + BAR_H + PAD + it.depth * LBL_H
+        : row.barY - PAD - (it.depth + 1) * LBL_H;
+    }
+    const height = y + AXIS;
     chart.getDom().style.height = height + "px";
     chart.resize();
+    const rowY = it => it.barY;
 
     const total = Math.ceil(months(FIRST, NOW) / 12);
     const years = [];
@@ -134,7 +185,7 @@
       { type: "text", left: 0, top: y, style: { text: t[lane][0], fill: c.text, font: `500 14px ${font}` } },
       { type: "text", left: 0, top: y + 20, style: { text: t[lane][1], fill: c.muted, font: `400 12px ${font}`, width: left - 16, overflow: "break" } },
     ];
-    const outTop = TOP + directRows * ROW_H + LANE_GAP;
+    const outTop = laneTop.out;
 
     return {
       animationDuration: 500,
@@ -163,10 +214,10 @@
         },
       },
       graphic: [
-        ...laneLabel("direct", TOP + 4),
+        ...laneLabel("direct", laneTop.direct + 4),
         { type: "line", shape: { x1: 0, y1: outTop - LANE_GAP / 2, x2: width - right, y2: outTop - LANE_GAP / 2 }, style: { stroke: c.grid, lineWidth: 1 } },
         ...laneLabel("out", outTop + 4),
-        { type: "text", right, top: 8, style: { text: t.total(total), fill: c.secondary, font: `500 13px ${font}`, align: "right" } },
+        { type: "text", right, top: 4, style: { text: t.total(total), fill: c.secondary, font: `500 13px ${font}`, align: "right" } },
         { type: "text", left: left + EARLY_UNITS * pxPerUnit - 2, top: height - AXIS + 12, style: { text: "//", fill: c.muted, font: `400 12px ${font}` } },
       ],
       series: [
@@ -174,9 +225,21 @@
           type: "custom", silent: true, data: [0, ...years.map(warp)].map(v => [v]),
           renderItem: (params, api) => {
             const x = api.coord([api.value(0), 0])[0];
-            return { type: "line", shape: { x1: x, y1: TOP - 18, x2: x, y2: height - AXIS - 8 }, style: { stroke: c.grid, lineWidth: 1 } };
+            return { type: "line", shape: { x1: x, y1: TOP - 10, x2: x, y2: height - AXIS - 8 }, style: { stroke: c.grid, lineWidth: 1 } };
           },
           z: 1,
+        },
+        {
+          type: "custom", silent: true, z: 1.5, data: data.filter(d => d.it.depth > 0).map(d => ({ value: d.value, it: d.it })),
+          encode: { x: [0, 1], y: 2 },
+          renderItem: (params, api) => {
+            const it = api.value(0) !== undefined && data.filter(d => d.it.depth > 0)[params.dataIndex].it;
+            const p1 = api.coord([api.value(0), api.value(2)]), p2 = api.coord([api.value(1), api.value(2)]);
+            const ax = (it.alignRight ? p2[0] - 2 : p1[0] + 2) + 0.5;
+            const y1 = it.side === "below" ? it.barY + BAR_H : it.lblY + LBL_H - 6;
+            const y2 = it.side === "below" ? it.lblY + 4 : it.barY;
+            return { type: "line", shape: { x1: ax, y1, x2: ax, y2 }, style: { stroke: c.muted, opacity: 0.5, lineWidth: 1 } };
+          },
         },
         {
           type: "custom", data, z: 2,
@@ -186,27 +249,19 @@
             const out = it.r.lane === "out";
             const p1 = api.coord([api.value(0), api.value(2)]);
             const p2 = api.coord([api.value(1), api.value(2)]);
-            const x = p1[0] + 1, y = p1[1], w = Math.max(p2[0] - p1[0] - 2, 5), h = 28;
+            const x = p1[0] + 2, y = p1[1], w = Math.max(p2[0] - p1[0] - 4, 6), h = BAR_H;
             const kids = [{
-              type: "rect", shape: { x, y, width: w, height: h, r: 6 },
+              type: "rect", shape: { x, y, width: w, height: h, r: 4 },
               style: out ? { fill: pattern, stroke: c.accent, lineWidth: 1 } : { fill: c.accent },
-              emphasis: { style: out ? { lineWidth: 2 } : { shadowBlur: 14, shadowColor: c.accent, opacity: 0.95 } },
+              emphasis: { style: out ? { lineWidth: 2 } : { shadowBlur: 12, shadowColor: c.accent } },
             }];
-            const headFont = `600 ${fontPx}px ${font}`, durFont = `500 ${fontPx - 1}px ${font}`, roleFont = `400 ${fontPx - 1}px ${font}`;
-            if (it.nameOnly) {
-              kids.push({ type: "text", style: { x: x + 9, y: y + h / 2, text: it.r.co, fill: c.onBar, font: headFont, verticalAlign: "middle" } });
-              kids.push({ type: "text", style: { x: x + 9, y: y + h + 13, text: `{d|${it.dur}}  {r|${it.role}}`, verticalAlign: "middle", rich: { d: { fill: c.secondary, font: durFont }, r: { fill: c.muted, font: roleFont } } } });
-            } else if (it.inside) {
-              const tc = out ? c.text : c.onBar, dc = out ? c.secondary : c.onBarMuted;
-              kids.push({ type: "text", style: { x: x + 9, y: y + h / 2, text: it.r.co, fill: tc, font: headFont, verticalAlign: "middle" } });
-              kids.push({ type: "text", style: { x: x + w - 9, y: y + h / 2, text: it.dur, fill: dc, font: durFont, align: "right", verticalAlign: "middle" } });
-              kids.push({ type: "text", style: { x: x + 9, y: y + h + 13, text: it.role, fill: c.muted, font: roleFont, verticalAlign: "middle" } });
-            } else {
-              const lx = it.placeLeft ? x - 9 : x + w + 9, align = it.placeLeft ? "right" : "left";
-              kids.push({ type: "text", style: { x: lx, y: y + h / 2, text: `{h|${it.r.co}}  {d|${it.dur}}`, align, verticalAlign: "middle",
-                rich: { h: { fill: c.text, font: headFont }, d: { fill: c.muted, font: durFont } } } });
-              kids.push({ type: "text", style: { x: lx, y: y + h + 13, text: it.role, fill: c.muted, font: roleFont, align, verticalAlign: "middle" } });
-            }
+            const ax = it.alignRight ? x + w : x, align = it.alignRight ? "right" : "left";
+            const ly = it.lblY;
+            const tx = it.depth > 0 ? ax + (it.alignRight ? -6 : 6) : ax;
+            kids.push({ type: "text", style: { x: tx, y: ly + 9, text: `{h|${it.r.co}}  {d|${it.dur}}`, align, verticalAlign: "middle",
+              backgroundColor: c.bg, padding: [1, 4],
+              rich: { h: { fill: c.text, font: headFont }, d: { fill: c.muted, font: durFont } } } });
+            kids.push({ type: "text", style: { x: tx, y: ly + 25, text: it.role, fill: c.muted, font: roleFont, align, verticalAlign: "middle", backgroundColor: c.bg, padding: [1, 4] } });
             return { type: "group", children: kids };
           },
         },

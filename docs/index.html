@@ -759,6 +759,7 @@
     function toggleTheme() {
       document.documentElement.classList.toggle('light');
       drawTimeline();
+      setTimeout(drawTimeline, 320);
     }
 
     function drawTimeline() {
