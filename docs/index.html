@@ -3,42 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alisson Rosa — Principal Engineer · Data &amp; AI · Agentic Architect (ATS Curriculum Vitae)</title>
-  <meta name="description" content="Resume of Alisson Rosa — Principal Engineer (Data &amp; AI), Agentic Architect, Google Developer Expert (Cloud &amp; AI)." />
+  <title>Alisson Rosa, Principal Engineer · Data &amp; AI · Agentic Architect (ATS Curriculum Vitae)</title>
+  <meta name="description" content="Resume of Alisson Rosa, Principal Engineer (Data &amp; AI), Agentic Architect, Google Developer Expert (Cloud &amp; AI)." />
   <style>
+    @font-face{font-family:Inter;font-style:normal;font-weight:400;font-display:swap;src:url(./vendor/inter/inter-latin-400-normal.woff2) format("woff2")}
+    @font-face{font-family:Inter;font-style:normal;font-weight:500;font-display:swap;src:url(./vendor/inter/inter-latin-500-normal.woff2) format("woff2")}
+    @font-face{font-family:Inter;font-style:normal;font-weight:600 900;font-display:swap;src:url(./vendor/inter/inter-latin-600-normal.woff2) format("woff2")}
     :root {
-      --bg: #070a12;
-      --surface: #0d1322;
-      --surface-elevated: #131c31;
-      --border: rgba(148, 163, 184, 0.16);
-      --border-strong: rgba(148, 163, 184, 0.28);
-      --text: #f8fafc;
-      --text-secondary: #cbd5e1;
-      --text-muted: #94a3b8;
-      --accent: #38bdf8;
-      --accent-emerald: #34d399;
-      --accent-purple: #a78bfa;
-      --accent-amber: #fbbf24;
+      --bg: #0b0c0f;
+      --surface: #101115;
+      --surface-elevated: #14161b;
+      --border: rgba(255, 255, 255, 0.07);
+      --border-strong: rgba(255, 255, 255, 0.12);
+      --text: #f4f4f5;
+      --text-secondary: #c4c4cb;
+      --text-muted: #8b8b95;
+      --accent: #8ab4f8;
+      --accent-emerald: var(--accent);
+      --accent-purple: var(--accent);
+      --accent-amber: var(--accent);
     }
     html.light {
-      --bg: #f5f5f7;
+      --bg: #fafafa;
       --surface: #ffffff;
-      --surface-elevated: #f8fafc;
-      --border: rgba(15, 23, 42, 0.1);
-      --border-strong: rgba(15, 23, 42, 0.2);
-      --text: #1d1d1f;
-      --text-secondary: #334155;
-      --text-muted: #515154;
-      --accent: #0066cc;
-      --accent-emerald: #059669;
-      --accent-purple: #6d28d9;
-      --accent-amber: #b45309;
+      --surface-elevated: #ffffff;
+      --border: rgba(17, 17, 20, 0.08);
+      --border-strong: rgba(17, 17, 20, 0.14);
+      --text: #111114;
+      --text-secondary: #3f3f46;
+      --text-muted: #6b6b74;
+      --accent: #1a56db;
+      --accent-emerald: var(--accent);
+      --accent-purple: var(--accent);
+      --accent-amber: var(--accent);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       background-color: var(--bg);
       color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-feature-settings: "cv11", "ss01";
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       line-height: 1.6;
@@ -64,7 +68,7 @@
       -webkit-backdrop-filter: blur(16px);
       border: 1px solid var(--border-strong);
       border-radius: 14px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+      box-shadow: none;
     }
     .toolbar-left {
       display: flex;
@@ -72,9 +76,8 @@
       gap: 0.55rem;
       font-size: 0.78rem;
       color: var(--text-muted);
-      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
     }
-    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent-emerald); display: inline-block; }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); display: inline-block; }
     .toolbar-actions { display: flex; gap: 0.45rem; flex-wrap: wrap; }
     .btn {
       background: var(--surface-elevated);
@@ -93,32 +96,33 @@
     }
     .btn:hover { border-color: var(--accent); transform: translateY(-1px); }
     .btn-primary {
-      background: #0066cc;
-      color: #ffffff;
-      border-color: #38bdf8;
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
     }
     .btn-ats-active {
-      background: #059669;
-      color: #ffffff;
-      border-color: #10b981;
+      background: var(--accent);
+      color: var(--bg);
+      border-color: var(--accent);
     }
 
     /* Main Document Sheet */
     .dossier {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 3rem;
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+      border-radius: 18px;
+      padding: 3.5rem;
+      box-shadow: none;
     }
 
     /* Header */
     .header {
       display: flex;
+      flex-direction: column;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: flex-start;
-      gap: 1.5rem;
+      gap: 0;
       padding-bottom: 1.75rem;
       border-bottom: 1px solid var(--border);
     }
@@ -131,23 +135,26 @@
       border-radius: 999px;
       background: var(--surface-elevated);
       border: 1px solid var(--border-strong);
-      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-      font-size: 0.7rem;
-      font-weight: 600;
+      font-size: 0.68rem;
+      font-weight: 500;
       color: var(--accent);
-      margin-bottom: 0.85rem;
-      letter-spacing: 0.03em;
+      margin-bottom: 1rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: transparent;
+      border: none;
+      padding: 0;
     }
     h1 {
-      font-size: 2.35rem;
-      font-weight: 800;
-      letter-spacing: -0.03em;
+      font-size: 2.6rem;
+      font-weight: 600;
+      letter-spacing: -0.035em;
       line-height: 1.1;
     }
     .headline {
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: var(--accent);
+      font-size: 1.08rem;
+      font-weight: 500;
+      color: var(--text-secondary);
       margin-top: 0.45rem;
       letter-spacing: -0.01em;
     }
@@ -158,11 +165,12 @@
     }
     .contact-box {
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 0.32rem;
-      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-      font-size: 0.78rem;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.4rem 1.25rem;
+      margin-top: 1.1rem;
+      font-size: 0.82rem;
     }
     .contact-box a {
       color: var(--text-secondary);
@@ -183,15 +191,14 @@
     }
 
     /* Sections */
-    .section { margin-top: 2.25rem; }
+    .section { margin-top: 2.9rem; }
     .section-title {
-      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-      font-size: 0.76rem;
-      font-weight: 700;
+      font-size: 0.7rem;
+      font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.09em;
-      color: var(--accent);
-      margin-bottom: 1rem;
+      letter-spacing: 0.14em;
+      color: var(--text-muted);
+      margin-bottom: 1.15rem;
       display: flex;
       align-items: center;
       gap: 0.65rem;
@@ -217,10 +224,11 @@
       font-size: 0.87rem;
       color: var(--text-muted);
       line-height: 1.6;
-      background: var(--surface-elevated);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.25rem 1.4rem;
+      background: transparent;
+      border: none;
+      border-left: 1px solid var(--border-strong);
+      border-radius: 0;
+      padding: 0.2rem 0 0.2rem 1.25rem;
     }
     .keywords-block strong { color: var(--text); font-weight: 600; }
 
@@ -236,25 +244,25 @@
       gap: 1rem;
     }
     .card {
-      background: var(--surface-elevated);
+      background: transparent;
       border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.35rem;
+      border-radius: 14px;
+      padding: 1.5rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
     .card-tag {
-      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-      font-size: 0.7rem;
-      font-weight: 700;
+      font-size: 0.66rem;
+      font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.35rem;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
     }
     .card h3 {
       font-size: 1rem;
-      font-weight: 700;
+      font-weight: 600;
       margin-bottom: 0.45rem;
       color: var(--text);
       letter-spacing: -0.01em;
@@ -275,11 +283,10 @@
       justify-content: space-between;
       align-items: center;
       gap: 0.5rem;
-      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
       font-size: 0.73rem;
       color: var(--text-muted);
     }
-    .card-footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    .card-footer a { color: var(--accent); text-decoration: none; font-weight: 500; }
     .card-footer a:hover { text-decoration: underline; }
     code {
       font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
@@ -290,6 +297,17 @@
       border: 1px solid var(--border);
       color: var(--text);
     }
+
+
+    /* Experience timeline and list */
+    .timeline-wrap { margin: 0 0 1.75rem; }
+    .timeline { width: 100%; height: 420px; }
+    @media (max-width: 640px) { .timeline-wrap { display: none; } }
+    .exp-list { display: flex; flex-direction: column; gap: 0.85rem; }
+    .exp-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.25rem 1rem; }
+    .exp-title { font-size: 0.92rem; font-weight: 600; color: var(--text); }
+    .exp-dates { font-size: 0.82rem; color: var(--text-muted); font-feature-settings: "tnum"; }
+    .exp-desc { font-size: 0.86rem; color: var(--text-muted); line-height: 1.55; margin-top: 0.15rem; }
 
     /* =========================================================================
        ATS 1-COLUMN MODE (Single-Column Harvard/Executive Standard for Parsers)
@@ -328,7 +346,9 @@
     /* =========================================================================
        PRINT / EXPORT PDF (100% ATS-Compliant Single-Page Executive A4 Document)
        ========================================================================= */
+    @media screen { a.ext::after { content: " \2197"; } }
     @media print {
+      *, body { font-feature-settings: normal !important; letter-spacing: normal !important; }
       @page { margin: 6.5mm 11mm; size: A4; }
       :root, html, html.dark, html.light {
         --bg: #ffffff !important;
@@ -352,6 +372,15 @@
         line-height: 1.21 !important;
       }
       .toolbar, .privacy-pill, .badge-row { display: none !important; }
+      .timeline-wrap { display: none !important; }
+      .exp-list { gap: 0.1rem !important; }
+      .exp-item:nth-child(n+5) .exp-desc { display: none !important; }
+      .exp-list { display: grid !important; grid-template-columns: 1fr 1fr; column-gap: 1.2rem !important; }
+      .exp-item:nth-child(-n+4) { grid-column: 1 / -1; }
+      .exp-title { font-size: 7.6pt !important; color: #000 !important; }
+      .exp-dates { font-size: 7.2pt !important; color: #222 !important; }
+      .exp-desc { font-size: 7.3pt !important; color: #111 !important; line-height: 1.17 !important; margin-top: 0 !important; }
+
       .container { max-width: 100% !important; }
       .dossier {
         box-shadow: none !important;
@@ -428,12 +457,12 @@
         <span>Alisson Rosa · Resume</span>
       </div>
       <div class="toolbar-actions">
-        <button class="btn" onclick="toggleATS()" id="ats-btn">📄 ATS 1-Col View: OFF</button>
-        <button class="btn" onclick="toggleLang()" id="lang-btn">🌐 Idioma: EN → PT-BR</button>
-        <button class="btn" onclick="toggleTheme()" id="theme-btn">☀ Light / Dark</button>
-        <a class="btn btn-primary" href="./Alisson_Rosa_CV_EN.pdf" download id="pdf-download-btn">⬇ Download ATS PDF (EN)</a>
-        <a class="btn" href="./Alisson_Rosa_CV_PT.pdf" download>⬇ PDF (PT-BR)</a>
-        <a class="btn" href="https://github.com/neochaotic">← GitHub</a>
+        <button class="btn" onclick="toggleATS()" id="ats-btn">Single column</button>
+        <button class="btn" onclick="toggleLang()" id="lang-btn">Português</button>
+        <button class="btn" onclick="toggleTheme()" id="theme-btn">Theme</button>
+        <a class="btn btn-primary" href="./Alisson_Rosa_CV_EN.pdf" download id="pdf-download-btn">Download PDF</a>
+        <a class="btn" href="./Alisson_Rosa_CV_PT.pdf" download>PDF em português</a>
+        <a class="btn" href="https://github.com/neochaotic">GitHub</a>
       </div>
     </nav>
 
@@ -442,16 +471,16 @@
       <header class="header">
         <div>
           <div class="badge-row">
-            <span>✦ GOOGLE DEVELOPER EXPERT (CLOUD &amp; AI)</span>
+            <span>GOOGLE DEVELOPER EXPERT (CLOUD &amp; AI)</span>
             <span>·</span>
             <span>GEMINI PRODUCT FEEDBACK COLLABORATOR</span>
           </div>
           <h1>Alisson Rosa</h1>
-          <p class="headline" data-en="Principal Engineer — Data &amp; AI  |  Agentic Architect  |  Google Developer Expert (Cloud &amp; AI)" data-pt="Principal Engineer — Data &amp; AI  |  Arquiteto de Sistemas Agênticos  |  Google Developer Expert (Cloud &amp; AI)">
-            Principal Engineer — Data &amp; AI  |  Agentic Architect  |  Google Developer Expert (Cloud &amp; AI)
+          <p class="headline" data-en="Principal Engineer, Data &amp; AI  |  Agentic Architect  |  Google Developer Expert (Cloud &amp; AI)" data-pt="Principal Engineer, Data &amp; AI  |  Arquiteto de Sistemas Agênticos  |  Google Developer Expert (Cloud &amp; AI)">
+            Principal Engineer, Data &amp; AI  |  Agentic Architect  |  Google Developer Expert (Cloud &amp; AI)
           </p>
-          <p class="location" data-en="Belo Horizonte, MG — Brazil (Global / Remote)" data-pt="Belo Horizonte, MG — Brasil (Atuação Global / Remoto)">
-            Belo Horizonte, MG — Brazil (Global / Remote)
+          <p class="location" data-en="Belo Horizonte, MG, Brazil (Global / Remote)" data-pt="Belo Horizonte, MG, Brasil (Atuação Global / Remoto)">
+            Belo Horizonte, MG, Brazil (Global / Remote)
           </p>
         </div>
 
@@ -459,7 +488,7 @@
           <a href="mailto:alisson.david.rosa@gmail.com">alisson.david.rosa@gmail.com</a>
           <a href="https://www.linkedin.com/in/alissonrosa/" target="_blank" rel="noopener">linkedin.com/in/alissonrosa</a>
           <a href="https://github.com/neochaotic" target="_blank" rel="noopener">github.com/neochaotic</a>
-          <a href="https://me.developers.google.com/communities/experts?q=alisson%20rosa" target="_blank" rel="noopener">GDE Directory: Alisson Rosa ↗</a>
+          <a class="ext" href="https://me.developers.google.com/communities/experts?q=alisson%20rosa" target="_blank" rel="noopener">GDE Directory: Alisson Rosa</a>
           <a href="https://me.developers.google.com/u/neoChaotic" target="_blank" rel="noopener">me.developers.google.com/u/neoChaotic</a>
         </div>
       </header>
@@ -503,7 +532,7 @@
         <div class="grid-2">
           <div class="card">
             <div>
-              <div class="card-tag" style="color: var(--accent-emerald);" data-en="FinOps &amp; Cloud Migration · Brazilian Fintech" data-pt="FinOps &amp; Migração Cloud · Fintech Brasileira">FinOps &amp; Cloud Migration · Brazilian Fintech</div>
+              <div class="card-tag" data-en="FinOps &amp; Cloud Migration · Brazilian Fintech" data-pt="FinOps &amp; Migração Cloud · Fintech Brasileira">FinOps &amp; Cloud Migration · Brazilian Fintech</div>
               <h3 data-en="88% Data Lake Cost Reduction (Databricks to BigQuery)" data-pt="Redução de 88% em Custos de Data Lake (Databricks para BigQuery)">88% Data Lake Cost Reduction (Databricks to BigQuery)</h3>
               <p data-en="Architected and led the migration of an enterprise Data Lake from Databricks to Google BigQuery at a Brazilian Fintech, achieving an 88% reduction in infrastructure cost while improving query SLA and data governance." data-pt="Projetou e liderou a migração de um Data Lake corporativo de Databricks para Google BigQuery em uma Fintech brasileira, alcançando 88% de redução em custos de infraestrutura com ganho de SLA e governança.">
                 Architected and led the migration of an enterprise Data Lake from Databricks to Google BigQuery at a Brazilian Fintech, achieving an <strong>88% reduction</strong> in infrastructure cost while improving query SLA and data governance.
@@ -513,7 +542,7 @@
 
           <div class="card">
             <div>
-              <div class="card-tag" style="color: var(--accent);" data-en="FinOps &amp; Serverless Architecture · Databricks" data-pt="FinOps &amp; Arquitetura Serverless · Databricks">FinOps &amp; Serverless Architecture · Databricks</div>
+              <div class="card-tag" data-en="FinOps &amp; Serverless Architecture · Databricks" data-pt="FinOps &amp; Arquitetura Serverless · Databricks">FinOps &amp; Serverless Architecture · Databricks</div>
               <h3 data-en="57% Cost Reduction on Databricks via Serverless &amp; FinOps" data-pt="Redução de 57% em Custos Databricks via Serverless &amp; FinOps">57% Cost Reduction on Databricks via Serverless &amp; FinOps</h3>
               <p data-en="Delivered a 57% cost reduction on Databricks workloads by implementing FinOps governance, migrating pipelines to serverless compute, and applying storage/partitioning architectural best practices." data-pt="Entregou 57% de redução nos custos de workloads Databricks implementando governança FinOps, migração para computação serverless e boas práticas de arquitetura e particionamento.">
                 Delivered a <strong>57% cost reduction</strong> on Databricks workloads by implementing FinOps governance, migrating pipelines to serverless compute, and applying storage/partitioning architectural best practices.
@@ -523,7 +552,7 @@
 
           <div class="card">
             <div>
-              <div class="card-tag" style="color: var(--accent-purple);" data-en="LatAm-Scale Program &amp; Google PSO" data-pt="Programa Escala LatAm &amp; Google PSO">LatAm-Scale Program &amp; Google PSO</div>
+              <div class="card-tag" data-en="LatAm-Scale Program &amp; Google PSO" data-pt="Programa Escala LatAm &amp; Google PSO">LatAm-Scale Program &amp; Google PSO</div>
               <h3 data-en="40+ TB Legacy Migration Program &amp; Google PSO Engagements" data-pt="Programa de Migração de ~40 TB p/ GCP &amp; Google PSO">40+ TB Legacy Migration Program &amp; Google PSO Engagements</h3>
               <p data-en="Led a 4-project enterprise migration program transferring ~40 TB of data from legacy Hadoop, Oracle, and Greenplum environments to Google Cloud (among the largest in Latin America), and acted alongside the Google Professional Services (PSO) team on flagship enterprise projects in Brazil." data-pt="Liderou um programa de 4 projetos que migrou aproximadamente 40 TB de dados de Hadoop, Oracle e Greenplum para a nuvem GCP (dentre os maiores da América Latina), além de atuar junto ao time do Google Professional Services (PSO) nos principais projetos do Brasil.">
                 Led a 4-project enterprise migration program transferring <strong>~40 TB</strong> of data from legacy Hadoop, Oracle, and Greenplum environments to Google Cloud (among the largest in Latin America), and acted alongside the <strong>Google Professional Services (PSO)</strong> team on flagship enterprise projects in Brazil.
@@ -533,49 +562,86 @@
 
           <div class="card">
             <div>
-              <div class="card-tag" style="color: var(--accent-amber);" data-en="Greenfield AgTech Platform · European M&amp;A Exit" data-pt="Plataforma AgTech Greenfield · Aquisição Europeia (M&amp;A)">Greenfield AgTech Platform · European M&amp;A Exit</div>
-              <h3 data-en="Americas' Largest Livestock Data Lake → European Acquisition" data-pt="Maior Data Lake de Pecuária das Américas → Aquisição Europeia">Americas' Largest Livestock Data Lake → European Acquisition</h3>
-              <p data-en="Founded and architected from scratch an AgTech Data Lake on AWS and subsequently led its migration to GCP—establishing the largest livestock data platform in the Americas, driving revenue growth and enabling the company's acquisition by a European group." data-pt="Construiu do zero um Data Lake na AWS no setor de agropecuária e posteriormente liderou sua migração para o GCP—consolidando a maior base de dados de pecuária das Américas, alavancando as receitas da empresa brasileira e viabilizando sua aquisição por um grupo europeu.">
-                Founded and architected from scratch an AgTech Data Lake on AWS and subsequently led its migration to GCP—establishing the largest livestock data platform in the Americas, driving revenue growth and enabling the company's acquisition by a European group.
+              <div class="card-tag" data-en="Greenfield AgTech Platform · European M&amp;A Exit" data-pt="Plataforma AgTech Greenfield · Aquisição Europeia (M&amp;A)">Greenfield AgTech Platform · European M&amp;A Exit</div>
+              <h3 data-en="Americas' Largest Livestock Data Lake, then a European Acquisition" data-pt="Maior Data Lake de Pecuária das Américas e Aquisição Europeia">Americas' Largest Livestock Data Lake, then a European Acquisition</h3>
+              <p data-en="Founded and architected from scratch an AgTech Data Lake on AWS and subsequently led its migration to GCP, establishing the largest livestock data platform in the Americas, driving revenue growth and enabling the company's acquisition by a European group." data-pt="Construiu do zero um Data Lake na AWS no setor de agropecuária e posteriormente liderou sua migração para o GCP, consolidando a maior base de dados de pecuária das Américas, alavancando as receitas da empresa brasileira e viabilizando sua aquisição por um grupo europeu.">
+                Founded and architected from scratch an AgTech Data Lake on AWS and subsequently led its migration to GCP, establishing the largest livestock data platform in the Americas, driving revenue growth and enabling the company's acquisition by a European group.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 04. PROFESSIONAL EXPERIENCE & LEADERSHIP TRAJECTORY -->
+      <!-- 04. EXPERIENCE -->
       <section class="section">
-        <h2 class="section-title" data-en="Professional Experience &amp; Leadership Trajectory" data-pt="Experiência Profissional &amp; Trajetória de Liderança">
-          Professional Experience &amp; Leadership Trajectory
-        </h2>
-        <div class="grid-3">
-          <div class="card">
-            <div>
-              <div class="card-tag" style="color: var(--accent);" data-en="Engineering Manager &amp; Technical Leader" data-pt="Gestor de Engenharia &amp; Líder Técnico">Engineering Manager &amp; Technical Leader</div>
-              <h3 data-en="RD Station · Avenue Code · Acerto" data-pt="RD Station · Avenue Code · Acerto">RD Station · Avenue Code · Acerto</h3>
-              <p data-en="Managed and technically led multidisciplinary teams across Data Engineering, Artificial Intelligence, DevOps, and Software Engineering—building high-performing engineering cultures focused on measurable business outcomes and human care." data-pt="Gestor e líder técnico de projetos envolvendo Engenharia de Dados, IA, DevOps e Engenharia de Software—atuando na construção de times de alta performance com foco em resultado e cuidado humano.">
-                Managed and technically led multidisciplinary teams across Data Engineering, Artificial Intelligence, DevOps, and Software Engineering—building high-performing engineering cultures focused on measurable business outcomes and human care.
-              </p>
+        <h2 class="section-title" data-en="Experience" data-pt="Experiência">Experience</h2>
+        <div class="timeline-wrap" aria-hidden="true"><div id="career-timeline" class="timeline"></div></div>
+        <div class="exp-list">
+          <div class="exp-item">
+            <div class="exp-head">
+              <span class="exp-title"><span data-en="Staff Engineer, Data &amp; AI" data-pt="Staff Engineer, Data &amp; AI">Staff Engineer, Data &amp; AI</span> · QI Network</span>
+              <span class="exp-dates" data-en="Jun 2025 to Present" data-pt="jun 2025 a atual">Jun 2025 to Present</span>
+            </div>
+            <p class="exp-desc" data-en="FinOps assessment targeting 30% lower multicloud spend; client allocation that cut Databricks cost by 68% with cost segmentation." data-pt="Assessment de FinOps com meta de 30% de redução em multicloud; alocação em cliente com redução de 68% no custo de Databricks.">FinOps assessment targeting 30% lower multicloud spend; client allocation that cut Databricks cost by 68% with cost segmentation.</p>
+          </div>
+          <div class="exp-item">
+            <div class="exp-head">
+              <span class="exp-title"><span data-en="Staff Software Engineer, Data Platform" data-pt="Staff Software Engineer, Plataforma de Dados">Staff Software Engineer, Data Platform</span> · RD Station</span>
+              <span class="exp-dates" data-en="Aug 2024 to May 2025" data-pt="ago 2024 a mai 2025">Aug 2024 to May 2025</span>
+            </div>
+            <p class="exp-desc" data-en="Data platform maturity assessment, BigQuery editions migration study and real-time architecture design." data-pt="Assessment de maturidade da plataforma de dados, estudo de migração para BigQuery editions e desenho de arquitetura real-time.">Data platform maturity assessment, BigQuery editions migration study and real-time architecture design.</p>
+          </div>
+          <div class="exp-item">
+            <div class="exp-head">
+              <span class="exp-title"><span data-en="Senior Data Manager" data-pt="Gerente Sênior de Dados">Senior Data Manager</span> · Acerto</span>
+              <span class="exp-dates" data-en="Mar 2023 to Jul 2024" data-pt="mar 2023 a jul 2024">Mar 2023 to Jul 2024</span>
+            </div>
+            <p class="exp-desc" data-en="Built the data engineering team; cut data lake cost by 88% moving from Azure and Databricks to GCP and BigQuery; real-time data for operations." data-pt="Criou o time de engenharia de dados; cortou 88% do custo do data lake migrando de Azure e Databricks para GCP e BigQuery.">Built the data engineering team; cut data lake cost by 88% moving from Azure and Databricks to GCP and BigQuery; real-time data for operations.</p>
+          </div>
+          <div class="exp-item">
+            <div class="exp-head">
+              <span class="exp-title"><span data-en="Principal Engineer, Data &amp; AI" data-pt="Principal Engineer, Data &amp; AI">Principal Engineer, Data &amp; AI</span> · Avenue Code</span>
+              <span class="exp-dates" data-en="Aug 2021 to Feb 2023" data-pt="ago 2021 a fev 2023">Aug 2021 to Feb 2023</span>
+            </div>
+            <p class="exp-desc" data-en="Data lake and lakehouse architectures for clients in several industries; led MLOps teams and mentored data engineers." data-pt="Arquiteturas de data lake e lakehouse para clientes de vários setores; liderou times de MLOps e mentorou engenheiros de dados.">Data lake and lakehouse architectures for clients in several industries; led MLOps teams and mentored data engineers.</p>
+          </div>
+          <div class="exp-item">
+            <div class="exp-head">
+              <span class="exp-title"><span data-en="Data Architect" data-pt="Arquiteto de Dados">Data Architect</span> · Engineering</span>
+              <span class="exp-dates" data-en="Oct 2020 to Aug 2021" data-pt="out 2020 a ago 2021">Oct 2020 to Aug 2021</span>
+            </div>
+            <p class="exp-desc" data-en="Big data solutions on Hadoop and Google Cloud, including a large migration program delivered with Google Cloud Professional Services." data-pt="Soluções de big data em Hadoop e Google Cloud, incluindo um grande programa de migração entregue com o Google Cloud Professional Services.">Big data solutions on Hadoop and Google Cloud, including a large migration program delivered with Google Cloud Professional Services.</p>
+          </div>
+          <div class="exp-item">
+            <div class="exp-head">
+              <span class="exp-title"><span data-en="Principal Data Engineer" data-pt="Principal Data Engineer">Principal Data Engineer</span> · Prodap</span>
+              <span class="exp-dates" data-en="Mar 2019 to Oct 2020" data-pt="mar 2019 a out 2020">Mar 2019 to Oct 2020</span>
+            </div>
+            <p class="exp-desc" data-en="Designed the data architecture and led the AWS to Google Cloud migration of the company's livestock data platform." data-pt="Desenhou a arquitetura de dados e liderou a migração de AWS para Google Cloud da plataforma de dados pecuários.">Designed the data architecture and led the AWS to Google Cloud migration of the company's livestock data platform.</p>
+          </div>
+          <div class="exp-item">
+            <div class="exp-head">
+              <span class="exp-title"><span data-en="Senior BI Analyst" data-pt="Analista de BI Sênior">Senior BI Analyst</span> · BySat</span>
+              <span class="exp-dates" data-en="Aug 2018 to Mar 2019" data-pt="ago 2018 a mar 2019">Aug 2018 to Mar 2019</span>
+            </div>
+            <p class="exp-desc" data-en="IoT analytics architecture, data warehouse and data lake, on-premises Hadoop cluster." data-pt="Arquitetura analítica de IoT, data warehouse e data lake, cluster Hadoop on-premises.">IoT analytics architecture, data warehouse and data lake, on-premises Hadoop cluster.</p>
+          </div>
+          <div class="exp-item">
+            <div class="exp-head">
+              <span class="exp-title"><span data-en="BI Analyst and Python Developer" data-pt="Analista de BI e Dev Python">BI Analyst and Python Developer</span> · Freelance</span>
+              <span class="exp-dates" data-en="Nov 2014 to Jul 2018" data-pt="nov 2014 a jul 2018">Nov 2014 to Jul 2018</span>
             </div>
           </div>
-
-          <div class="card">
-            <div>
-              <div class="card-tag" style="color: var(--accent-purple);" data-en="Principal IC — Data &amp; AI Engineer" data-pt="Principal IC — Engenheiro de Dados &amp; IA">Principal IC — Data &amp; AI Engineer</div>
-              <h3 data-en="Engineering · Prodap · Bysat · D-Analytics" data-pt="Engineering do Brasil · Prodap · Bysat · D-Analytics">Engineering · Prodap · Bysat · D-Analytics</h3>
-              <p data-en="Hands-on Principal Software &amp; Data Engineer delivering enterprise Data Platforms, greenfield Data Lakes, Master Data Management (MDM), BI, and AI initiatives across GCP, AWS, Hadoop, Python, Go, and SQL (including own consultancy, D-Analytics)." data-pt="Colaborador Individual de alta senioridade em projetos de construção de plataformas de dados, Data Lakes do zero, MDM, BI e Inteligência Artificial como Engenheiro de Software e Engenheiro de Dados (incluindo consultoria própria, D-Analytics).">
-                Hands-on Principal Software &amp; Data Engineer delivering enterprise Data Platforms, greenfield Data Lakes, Master Data Management (MDM), BI, and AI initiatives across GCP, AWS, Hadoop, Python, Go, and SQL (including own consultancy, D-Analytics).
-              </p>
+          <div class="exp-item">
+            <div class="exp-head">
+              <span class="exp-title"><span data-en="Professor, Data Structures" data-pt="Professor, Estrutura de Dados">Professor, Data Structures</span> · IFMG</span>
+              <span class="exp-dates" data-en="May 2015 to Apr 2016" data-pt="mai 2015 a abr 2016">May 2015 to Apr 2016</span>
             </div>
           </div>
-
-          <div class="card">
-            <div>
-              <div class="card-tag" style="color: var(--accent-emerald);" data-en="Entrepreneur &amp; Startup Founder (2x)" data-pt="Empreendedor &amp; Fundador de Startups (2x)">Entrepreneur &amp; Startup Founder (2x)</div>
-              <h3 data-en="Conserta AI &amp; Consertos Legais" data-pt="Conserta AI &amp; Consertos Legais">Conserta AI &amp; Consertos Legais</h3>
-              <p data-en="Founded Consertos Legais (an Uber-like on-demand marketplace for home appliance maintenance) and led its product pivot into Conserta AI—an intelligent diagnostic chatbot providing automated repair instructions." data-pt="Empreendedor fundador de 2 startups e proprietário de negócio local: fundou a Consertos Legais (marketplace estilo Uber de eletrodomésticos) e liderou o pivot para a Conserta AI (chatbot inteligente para instruções de manutenção).">
-                Founded <strong>Consertos Legais</strong> (an Uber-like on-demand marketplace for home appliance maintenance) and led its product pivot into <strong>Conserta AI</strong>—an intelligent diagnostic chatbot providing automated repair instructions.
-              </p>
+          <div class="exp-item">
+            <div class="exp-head">
+              <span class="exp-title"><span data-en="IT Technician to Business Owner" data-pt="Técnico a Empresário">IT Technician to Business Owner</span> · Astecon, Tradição, Neotec</span>
+              <span class="exp-dates" data-en="Aug 2004 to Dec 2014" data-pt="ago 2004 a dez 2014">Aug 2004 to Dec 2014</span>
             </div>
           </div>
         </div>
@@ -589,7 +655,7 @@
         <div class="grid-3">
           <div class="card">
             <div>
-              <div class="card-tag" style="color: var(--accent);" data-en="google / adk-go · Proposed upstream" data-pt="google / adk-go · Proposta upstream">google / adk-go · Proposed upstream</div>
+              <div class="card-tag" data-en="google / adk-go · Proposed upstream" data-pt="google / adk-go · Proposta upstream">google / adk-go · Proposed upstream</div>
               <h3 data-en="Firestore Session Service for Google ADK Go v2" data-pt="Serviço de Sessão em Firestore para o Google ADK Go v2">Firestore Session Service for Google ADK Go v2</h3>
               <p data-en="Proposed a Firestore-backed session service, google.golang.org/adk/session/firestore (PR #2058 under review, issue #2057), for durable HITL agent pause and resume on serverless GCP stacks, with optimistic concurrency control and 91.4% test coverage." data-pt="Propôs um serviço de sessão em Firestore, google.golang.org/adk/session/firestore (PR #2058 em revisão, issue #2057), para pausa e retomada durável de agentes HITL em stacks serverless GCP, com controle de concorrência otimista e 91.4% de cobertura de testes.">
                 Proposed a Firestore-backed session service, <code>google.golang.org/adk/session/firestore</code> (PR #2058 under review, issue #2057), for durable HITL agent pause and resume on serverless GCP stacks, with optimistic concurrency control and 91.4% test coverage.
@@ -597,13 +663,13 @@
             </div>
             <div class="card-footer">
               <span>Go 1.26 · Firestore · gRPC</span>
-              <a href="https://github.com/google/adk-go/pull/2058" target="_blank" rel="noopener">github.com/google/adk-go/pull/2058 ↗</a>
+              <a class="ext" href="https://github.com/google/adk-go/pull/2058" target="_blank" rel="noopener">github.com/google/adk-go/pull/2058</a>
             </div>
           </div>
 
           <div class="card">
             <div>
-              <div class="card-tag" style="color: var(--accent-amber);" data-en="OpenMetadata &amp; Apache Airflow · Upstream" data-pt="OpenMetadata &amp; Apache Airflow · Upstream">OpenMetadata &amp; Apache Airflow · Upstream</div>
+              <div class="card-tag" data-en="OpenMetadata &amp; Apache Airflow · Upstream" data-pt="OpenMetadata &amp; Apache Airflow · Upstream">OpenMetadata &amp; Apache Airflow · Upstream</div>
               <h3 data-en="Data Catalog Governance, Unity Catalog &amp; Airflow 3" data-pt="Governança de Catálogo, Unity Catalog &amp; Airflow 3">Data Catalog Governance, Unity Catalog &amp; Airflow 3</h3>
               <p data-en="OpenMetadata: reported (#32063) and fixed (PR #32065, merged) a login dropped when the ServiceWorker fails; reported the Unity Catalog BROWSE-only ingestion gap (#33505). Apache Airflow: reported two Airflow 3 UI bugs fixed upstream within a week (#67883, #67884)." data-pt="OpenMetadata: reportou (#32063) e corrigiu (PR #32065, mergeado) o login perdido quando o ServiceWorker falha; reportou a lacuna de ingestão Unity Catalog BROWSE-only (#33505). Apache Airflow: reportou dois bugs de UI do Airflow 3 corrigidos upstream em menos de uma semana (#67883, #67884).">
                 <code>open-metadata/OpenMetadata</code>: reported (#32063) and fixed (<strong>PR #32065, merged</strong>) a login dropped when the ServiceWorker fails; reported the Unity Catalog <code>BROWSE</code>-only ingestion gap (#33505). <code>apache/airflow</code>: reported two Airflow 3 UI bugs fixed upstream within a week (#67883, #67884).
@@ -611,21 +677,21 @@
             </div>
             <div class="card-footer">
               <span>OpenMetadata · Unity Catalog · Airflow</span>
-              <a href="https://github.com/open-metadata/OpenMetadata/pull/32065" target="_blank" rel="noopener">OpenMetadata #32065 ↗</a>
+              <a class="ext" href="https://github.com/open-metadata/OpenMetadata/pull/32065" target="_blank" rel="noopener">OpenMetadata #32065</a>
             </div>
           </div>
 
           <div class="card">
             <div>
-              <div class="card-tag" style="color: var(--accent-purple);" data-en="dexadata / dexaflow · Creator &amp; Principal Architect" data-pt="dexadata / dexaflow · Criador &amp; Principal Architect">dexadata / dexaflow · Creator &amp; Principal Architect</div>
-              <h3 data-en="Dexaflow — Airflow-Compatible Orchestrator in Go" data-pt="Dexaflow — Orquestrador Compatível com Airflow em Go">Dexaflow — Airflow-Compatible Orchestrator in Go</h3>
+              <div class="card-tag" data-en="dexadata / dexaflow · Creator &amp; Principal Architect" data-pt="dexadata / dexaflow · Criador &amp; Principal Architect">dexadata / dexaflow · Creator &amp; Principal Architect</div>
+              <h3 data-en="Dexaflow: Airflow-Compatible Orchestrator in Go" data-pt="Dexaflow: Orquestrador Compatível com Airflow em Go">Dexaflow: Airflow-Compatible Orchestrator in Go</h3>
               <p data-en="Re-engineered Apache Airflow's scheduling and REST/UI control plane into a single Go binary, eliminating Python GIL bottlenecks while providing Kubernetes pod-per-task isolation and GitOps-native DAGs." data-pt="Reengenharia do orquestrador Apache Airflow em Go em um control plane de binário único, eliminando gargalos de GIL do Python com isolamento pod-per-task no Kubernetes e DAGs GitOps.">
                 Re-engineered Apache Airflow's scheduling and REST/UI control plane into a single Go binary, eliminating Python GIL bottlenecks while providing Kubernetes pod-per-task isolation and GitOps-native DAGs.
               </p>
             </div>
             <div class="card-footer">
               <span>Go · Kubernetes · Workflow Orchestration</span>
-              <a href="https://github.com/dexadata/dexaflow" target="_blank" rel="noopener">github.com/dexadata/dexaflow ↗</a>
+              <a class="ext" href="https://github.com/dexadata/dexaflow" target="_blank" rel="noopener">github.com/dexadata/dexaflow</a>
             </div>
           </div>
         </div>
@@ -639,20 +705,20 @@
         <div class="grid-3">
           <div class="card">
             <div>
-              <div class="card-tag" style="color: var(--accent);" data-en="Google Recognition" data-pt="Reconhecimento Oficial Google">Google Recognition</div>
+              <div class="card-tag" data-en="Google Recognition" data-pt="Reconhecimento Oficial Google">Google Recognition</div>
               <h3 data-en="Google Developer Expert (Cloud &amp; AI) &amp; Gemini Feedback" data-pt="Google Developer Expert (Cloud &amp; AI) &amp; Feedback Gemini">Google Developer Expert (Cloud &amp; AI) &amp; Gemini Feedback</h3>
               <p data-en="Official Google Developer Expert in Cloud &amp; AI and active contributor in Google's early-access Gemini product feedback loops." data-pt="Google Developer Expert oficial em Cloud &amp; AI e colaborador ativo nos ciclos de feedback de produto do ecossistema Gemini.">
                 Official Google Developer Expert in Cloud &amp; AI and active contributor in Google's early-access Gemini product feedback loops.
               </p>
             </div>
             <div class="card-footer">
-              <a href="https://me.developers.google.com/communities/experts?q=alisson%20rosa" target="_blank" rel="noopener" data-en="Verify in GDE Directory ↗" data-pt="Verificar no Diretório GDE ↗">Verify in GDE Directory ↗</a>
+              <a class="ext" href="https://me.developers.google.com/communities/experts?q=alisson%20rosa" target="_blank" rel="noopener" data-en="Verify in GDE Directory" data-pt="Verificar no Diretório GDE">Verify in GDE Directory</a>
             </div>
           </div>
 
           <div class="card">
             <div>
-              <div class="card-tag" style="color: var(--accent-amber);" data-en="Speaking &amp; Mentorship" data-pt="Palestras, Comunidade &amp; Mentoria">Speaking &amp; Mentorship</div>
+              <div class="card-tag" data-en="Speaking &amp; Mentorship" data-pt="Palestras, Comunidade &amp; Mentoria">Speaking &amp; Mentorship</div>
               <h3 data-en="TDC · DevFest BH · Data Science Academy" data-pt="TDC · DevFest BH · Data Science Academy">TDC · DevFest BH · Data Science Academy</h3>
               <p data-en="Speaker at The Developers Conference (TDC) and DevFest BH; Organizer &amp; Speaker at Data Analytics Meetup; Technical Mentor at Data Science Academy." data-pt="Palestrante no The Developers Conference (TDC) e DevFest BH; Organizador e Palestrante do Data Analytics Meetup; Mentor na Data Science Academy.">
                 Speaker at <strong>The Developers Conference (TDC)</strong> and <strong>DevFest BH</strong>; Organizer &amp; Speaker at <strong>Data Analytics Meetup</strong>; Technical Mentor at <strong>Data Science Academy</strong>.
@@ -662,11 +728,11 @@
 
           <div class="card">
             <div>
-              <div class="card-tag" style="color: var(--accent-emerald);" data-en="Languages" data-pt="Idiomas">Languages</div>
+              <div class="card-tag" data-en="Languages" data-pt="Idiomas">Languages</div>
               <h3 data-en="Portuguese &amp; English" data-pt="Português &amp; Inglês">Portuguese &amp; English</h3>
-              <p data-en="<strong>Portuguese:</strong> Native<br/><strong>English:</strong> Intermediate (B2 — Professional Technical Working Proficiency)" data-pt="<strong>Português:</strong> Nativo<br/><strong>Inglês:</strong> Intermediário (B2 — Proficiência Técnica Profissional)">
+              <p data-en="<strong>Portuguese:</strong> Native<br/><strong>English:</strong> Intermediate (B2, Professional Technical Working Proficiency)" data-pt="<strong>Português:</strong> Nativo<br/><strong>Inglês:</strong> Intermediário (B2, Proficiência Técnica Profissional)">
                 <strong>Portuguese:</strong> Native<br/>
-                <strong>English:</strong> Intermediate (B2 — Professional Technical Working Proficiency)
+                <strong>English:</strong> Intermediate (B2, Professional Technical Working Proficiency)
               </p>
             </div>
           </div>
@@ -686,18 +752,25 @@
         el.innerHTML = el.getAttribute('data-' + lang);
       });
       document.getElementById('lang-btn').textContent =
-        lang === 'en' ? '🌐 Idioma: EN → PT-BR' : '🌐 Language: PT-BR → EN';
+        lang === 'en' ? 'Português' : 'English';
+      drawTimeline();
     }
 
     function toggleTheme() {
       document.documentElement.classList.toggle('light');
+      drawTimeline();
+      setTimeout(drawTimeline, 320);
+    }
+
+    function drawTimeline() {
+      if (window.renderCareerTimeline) window.renderCareerTimeline(document.getElementById('career-timeline'), lang);
     }
 
     function toggleATS() {
       atsMode = !atsMode;
       document.body.classList.toggle('ats-mode', atsMode);
       const btn = document.getElementById('ats-btn');
-      btn.textContent = atsMode ? '📄 ATS 1-Col View: ON' : '📄 ATS 1-Col View: OFF';
+      btn.textContent = atsMode ? 'Cards' : 'Single column';
       btn.classList.toggle('btn-ats-active', atsMode);
     }
 
@@ -712,5 +785,8 @@
       }
     })();
   </script>
+  <script src="./vendor/echarts-5.5.1.min.js"></script>
+  <script src="./timeline.js"></script>
+  <script>drawTimeline();</script>
 </body>
 </html>
