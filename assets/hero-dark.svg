@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f17"/>
+      <stop offset="50%" stop-color="#0f1623"/>
+      <stop offset="100%" stop-color="#0b131e"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="50%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="pillBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9"/>
+    </linearGradient>
+    <style>
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      .font-mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+    </style>
+  </defs>
+
+  <!-- Outer Card -->
+  <rect x="1" y="1" width="918" height="338" rx="16" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="1.5"/>
+  <!-- Top Accent Line -->
+  <rect x="24" y="1" width="872" height="2" rx="1" fill="url(#accentGrad)" opacity="0.85"/>
+
+  <!-- Subtle Grid Dots -->
+  <circle cx="880" cy="36" r="3" fill="#3b82f6" opacity="0.5"/>
+  <circle cx="864" cy="36" r="3" fill="#10b981" opacity="0.5"/>
+  <circle cx="848" cy="36" r="3" fill="#8b5cf6" opacity="0.5"/>
+
+  <!-- Top Credential Pill -->
+  <rect x="32" y="26" width="600" height="26" rx="13" fill="url(#pillBg)" stroke="#334155" stroke-width="1"/>
+  <circle cx="48" cy="39" r="4" fill="#3b82f6"/>
+  <text x="60" y="43" class="font-mono" font-size="11" font-weight="600" fill="#e2e8f0" letter-spacing="0.4">
+    GOOGLE DEVELOPER EXPERT (CLOUD &amp; AI)  ·  GEMINI PRODUCT FEEDBACK COLLABORATOR
+  </text>
+
+  <!-- Main Name & Title -->
+  <text x="32" y="92" class="font-sans" font-size="32" font-weight="800" fill="#f8fafc" letter-spacing="-0.5">
+    Alisson Rosa
+  </text>
+  <text x="32" y="118" class="font-sans" font-size="16" font-weight="600" fill="#38bdf8">
+    Principal Engineer — Data &amp; AI  ·  Agentic Architect
+  </text>
+
+  <!-- Thesis Statement -->
+  <text x="32" y="148" class="font-sans" font-size="13.5" fill="#94a3b8">
+    Designing deterministic agentic runtimes, high-throughput data platforms, and durable distributed state
+  </text>
+  <text x="32" y="168" class="font-sans" font-size="13.5" fill="#94a3b8">
+    infrastructure where Gemini and large language models meet mission-critical production workloads.
+  </text>
+
+  <!-- Divider -->
+  <line x1="32" y1="192" x2="888" y2="192" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Pillar 1: Google Ecosystem -->
+  <rect x="32" y="208" width="274" height="108" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <text x="48" y="230" class="font-mono" font-size="10.5" font-weight="700" fill="#38bdf8" letter-spacing="0.8">
+    01 // GOOGLE ECOSYSTEM
+  </text>
+  <text x="48" y="250" class="font-sans" font-size="14" font-weight="700" fill="#f1f5f9">
+    GDE in Cloud &amp; AI
+  </text>
+  <text x="48" y="272" class="font-sans" font-size="12" fill="#94a3b8">
+    Architectural validation, Vertex AI &amp;
+  </text>
+  <text x="48" y="289" class="font-sans" font-size="12" fill="#94a3b8">
+    serverless patterns, and engineering
+  </text>
+  <text x="48" y="306" class="font-sans" font-size="12" fill="#94a3b8">
+    mentorship across the community.
+  </text>
+
+  <!-- Pillar 2: Shaping Gemini -->
+  <rect x="323" y="208" width="274" height="108" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <text x="339" y="230" class="font-mono" font-size="10.5" font-weight="700" fill="#fbbf24" letter-spacing="0.8">
+    02 // SHAPING GEMINI
+  </text>
+  <text x="339" y="250" class="font-sans" font-size="14" font-weight="700" fill="#f1f5f9">
+    Product &amp; Preview Feedback
+  </text>
+  <text x="339" y="272" class="font-sans" font-size="12" fill="#94a3b8">
+    Partnering with Google teams via early
+  </text>
+  <text x="339" y="289" class="font-sans" font-size="12" fill="#94a3b8">
+    feedback loops on model capabilities,
+  </text>
+  <text x="339" y="306" class="font-sans" font-size="12" fill="#94a3b8">
+    tool-calling ergonomics, and ADK.
+  </text>
+
+  <!-- Pillar 3: Core Systems -->
+  <rect x="614" y="208" width="274" height="108" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <text x="630" y="230" class="font-mono" font-size="10.5" font-weight="700" fill="#34d399" letter-spacing="0.8">
+    03 // CORE ARCHITECTURE
+  </text>
+  <text x="630" y="250" class="font-sans" font-size="14" font-weight="700" fill="#f1f5f9">
+    Go · Python · Rust · GCP
+  </text>
+  <text x="630" y="272" class="font-sans" font-size="12" fill="#94a3b8">
+    Single-binary orchestrators, optimistic
+  </text>
+  <text x="630" y="289" class="font-sans" font-size="12" fill="#94a3b8">
+    concurrency, HITL agent workflows, and
+  </text>
+  <text x="630" y="306" class="font-sans" font-size="12" fill="#94a3b8">
+    durable serverless state engines.
+  </text>
+</svg>

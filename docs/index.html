@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alisson Rosa — Principal Engineer · Data &amp; AI · Agentic Architect (Public CV)</title>
+  <meta name="description" content="Public Executive Curriculum &amp; Systems Architecture Dossier of Alisson Rosa — Principal Engineer (Data &amp; AI), Agentic Architect, Google Developer Expert (Cloud &amp; AI)." />
+  <style>
+    :root {
+      --bg: #090d16;
+      --surface: #0f172a;
+      --surface-elevated: #131c31;
+      --border: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-emerald: #34d399;
+      --accent-purple: #a78bfa;
+      --accent-amber: #fbbf24;
+    }
+    html.light {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-elevated: #f1f5f9;
+      --border: #cbd5e1;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --accent: #2563eb;
+      --accent-emerald: #059669;
+      --accent-purple: #7c3aed;
+      --accent-amber: #d97706;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      padding: 2rem 1rem 4rem;
+      transition: background-color 0.2s, color 0.2s;
+    }
+    .container { max-width: 920px; margin: 0 auto; }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      padding: 0.75rem 1.25rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .toolbar-left {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent-emerald); display: inline-block; }
+    .toolbar-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .btn {
+      background: var(--surface-elevated);
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 0.45rem 0.9rem;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: border-color 0.15s, transform 0.1s;
+    }
+    .btn:hover { border-color: var(--accent); }
+    .btn-primary {
+      background: #2563eb;
+      color: #ffffff;
+      border-color: #3b82f6;
+    }
+    .dossier {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    }
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1.5rem;
+      padding-bottom: 1.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .badge-row {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      background: var(--surface-elevated);
+      border: 1px solid var(--border);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.15; }
+    .headline { font-size: 1.05rem; font-weight: 600; color: var(--accent); margin-top: 0.35rem; }
+    .location { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem; }
+    .contact-box {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.35rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.8rem;
+    }
+    .contact-box a { color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--border); }
+    .contact-box a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+    .privacy-pill {
+      margin-top: 0.35rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      background: rgba(16, 185, 129, 0.12);
+      color: var(--accent-emerald);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+    .section { margin-top: 2rem; }
+    .section-title {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .summary-text { font-size: 0.96rem; color: var(--text); line-height: 1.7; }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background: var(--surface-elevated);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+    }
+    .card-tag {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.35rem;
+    }
+    .card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .card p, .card li { font-size: 0.86rem; color: var(--text-muted); line-height: 1.55; }
+    .card ul { padding-left: 1.1rem; margin-top: 0.5rem; }
+    .card li { margin-bottom: 0.35rem; }
+    .card-footer {
+      margin-top: 0.85rem;
+      padding-top: 0.65rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    .card-footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    .card-footer a:hover { text-decoration: underline; }
+    .matrix-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.86rem;
+    }
+    .matrix-table tr { border-bottom: 1px solid var(--border); }
+    .matrix-table tr:last-child { border-bottom: none; }
+    .matrix-table td { padding: 0.75rem 0.5rem; vertical-align: top; }
+    .matrix-table td:first-child {
+      width: 220px;
+      font-weight: 700;
+      color: var(--text);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.8rem;
+    }
+    .matrix-table td:last-child { color: var(--text-muted); }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.8rem;
+      padding: 0.1rem 0.35rem;
+      border-radius: 4px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+    @media (max-width: 640px) {
+      .dossier { padding: 1.5rem; }
+      .contact-box { align-items: flex-start; }
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+    @media print {
+      body { background: #ffffff !important; color: #0f172a !important; padding: 0; }
+      .toolbar { display: none !important; }
+      .dossier {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        background: #ffffff !important;
+      }
+      .card { background: #ffffff !important; border: 1px solid #cbd5e1 !important; break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Interactive Webmaster Toolbar -->
+    <div class="toolbar">
+      <div class="toolbar-left">
+        <span class="dot"></span>
+        <span>github.com/neochaotic // public-curriculum-v2</span>
+      </div>
+      <div class="toolbar-actions">
+        <button class="btn" onclick="toggleLang()" id="lang-btn">🌐 Idioma: EN (Mudar p/ PT-BR)</button>
+        <button class="btn" onclick="toggleTheme()" id="theme-btn">☀ Light / Dark</button>
+        <button class="btn btn-primary" onclick="window.print()">🖨 Print / Save as PDF</button>
+        <a class="btn" href="https://github.com/neochaotic">← Back to GitHub</a>
+      </div>
+    </div>
+
+    <!-- Main Curriculum Dossier -->
+    <main class="dossier">
+      <header class="header">
+        <div>
+          <div class="badge-row">
+            <span>✦ GOOGLE DEVELOPER EXPERT (CLOUD &amp; AI)</span>
+            <span>·</span>
+            <span>GEMINI PRODUCT FEEDBACK COLLABORATOR</span>
+          </div>
+          <h1>Alisson Rosa</h1>
+          <div class="headline" data-en="Principal Engineer — Data &amp; AI  ·  Agentic Architect" data-pt="Principal Engineer — Data &amp; AI  ·  Arquiteto de Sistemas Agênticos">
+            Principal Engineer — Data &amp; AI  ·  Agentic Architect
+          </div>
+          <div class="location" data-en="Belo Horizonte, MG — Brazil (Global / Remote)" data-pt="Belo Horizonte, MG — Brasil (Atuação Global / Remoto)">
+            Belo Horizonte, MG — Brazil (Global / Remote)
+          </div>
+        </div>
+
+        <div class="contact-box">
+          <a href="https://github.com/neochaotic" target="_blank" rel="noopener">github.com/neochaotic</a>
+          <a href="https://www.linkedin.com/in/alissonrosa/" target="_blank" rel="noopener">linkedin.com/in/alissonrosa</a>
+          <a href="https://www.instagram.com/neoChaotic/" target="_blank" rel="noopener">instagram.com/neoChaotic</a>
+          <a href="mailto:alisson.david.rosa@gmail.com">alisson.david.rosa@gmail.com</a>
+          <span class="privacy-pill" data-en="✓ Public Dossier (Direct Digital Contact · No Phone Exposed)" data-pt="✓ Currículo Público (Contato Digital Direto · Sem Telefone Exposto)">
+            ✓ Public Dossier (Direct Digital Contact · No Phone Exposed)
+          </span>
+        </div>
+      </header>
+
+      <!-- 01. EXECUTIVE THESIS -->
+      <section class="section">
+        <div class="section-title" data-en="01 // Executive Summary &amp; Engineering Thesis" data-pt="01 // Resumo Executivo &amp; Tese de Engenharia">
+          01 // Executive Summary &amp; Engineering Thesis
+        </div>
+        <p class="summary-text" data-en="Principal Engineer and Systems Architect specializing in deterministic agentic runtimes, high-throughput data platforms, and cloud-native distributed systems on Google Cloud. Recognized by Google as a Google Developer Expert (GDE) in Cloud &amp; AI and active contributor in Gemini product feedback programs. Focused on bridging probabilistic LLM capabilities with strict production engineering guarantees—concurrency control, durable state persistence, zero-GIL scheduling, and auditable human-in-the-loop (HITL) execution in Go, Python, and Rust." data-pt="Principal Engineer e Arquiteto de Sistemas especializado em runtimes agênticos determinísticos, plataformas de dados de alto throughput e sistemas distribuídos cloud-native no Google Cloud. Reconhecido pelo Google como Google Developer Expert (GDE) em Cloud &amp; AI e colaborador ativo nos programas de feedback de produto do ecossistema Gemini. Focado em unir capacidades de LLMs com garantias rigorosas de engenharia de produção—controle de concorrência, persistência durável de estado, agendamento sem GIL e execução Human-in-the-Loop (HITL) auditável em Go, Python e Rust.">
+          Principal Engineer and Systems Architect specializing in deterministic agentic runtimes, high-throughput data platforms, and cloud-native distributed systems on Google Cloud. Recognized by Google as a <strong>Google Developer Expert (GDE) in Cloud &amp; AI</strong> and active contributor in <strong>Gemini product feedback programs</strong>. Focused on bridging probabilistic LLM capabilities with strict production engineering guarantees—concurrency control, durable state persistence, zero-GIL scheduling, and auditable human-in-the-loop (HITL) execution in Go, Python, and Rust.
+        </p>
+      </section>
+
+      <!-- 02. GOOGLE ECOSYSTEM & ADVISORY -->
+      <section class="section">
+        <div class="section-title" data-en="02 // Google Ecosystem Leadership &amp; Product Shaping" data-pt="02 // Liderança no Ecossistema Google &amp; Evolução do Gemini">
+          02 // Google Ecosystem Leadership &amp; Product Shaping
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-tag" style="color: var(--accent);">Google Developers Program</div>
+            <h3 data-en="Google Developer Expert (Cloud &amp; AI)" data-pt="Google Developer Expert (Cloud &amp; AI)">Google Developer Expert (Cloud &amp; AI)</h3>
+            <p data-en="Vetted by Google for technical mastery and community impact across Google Cloud Platform, Vertex AI, and enterprise data/AI architectures." data-pt="Reconhecido oficialmente pelo Google pelo domínio técnico e impacto na comunidade em Google Cloud Platform, Vertex AI e arquiteturas corporativas de Dados &amp; IA.">
+              Vetted by Google for technical mastery and community impact across Google Cloud Platform, Vertex AI, and enterprise data/AI architectures.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-tag" style="color: var(--accent-amber);">Gemini Product Feedback</div>
+            <h3 data-en="Early-Access &amp; Preview Collaborator" data-pt="Colaborador de Feedback &amp; Preview do Gemini">Early-Access &amp; Preview Collaborator</h3>
+            <p data-en="Partnering with Google product and engineering teams to stress-test preview Gemini capabilities, structured outputs, tool-calling ergonomics, and ADK runtimes under real production constraints." data-pt="Colaboração direta em ciclos de feedback com times de produto e engenharia do Google, avaliando modelos Gemini em preview, ergonomia de tool-calling e runtimes do ADK sob restrições reais de produção.">
+              Partnering with Google product and engineering teams to stress-test preview Gemini capabilities, structured outputs, tool-calling ergonomics, and ADK runtimes under real production constraints.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-tag" style="color: var(--accent-emerald);">Architecture &amp; Mentorship</div>
+            <h3 data-en="Enterprise AI &amp; Data Advisory" data-pt="Arquitetura Corporativa &amp; Mentoria">Enterprise AI &amp; Data Advisory</h3>
+            <p data-en="Guiding engineering teams from fragile prompt prototypes to resilient multi-agent workflows, serverless GCP deployments, and modern data orchestration." data-pt="Orientando times de engenharia na transição de protótipos frágeis para workflows multi-agentes resilientes, implantações serverless no GCP e orquestração moderna de dados.">
+              Guiding engineering teams from fragile prompt prototypes to resilient multi-agent workflows, serverless GCP deployments, and modern data orchestration.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03. SELECTED OPEN-SOURCE & SYSTEMS ARCHITECTURE -->
+      <section class="section">
+        <div class="section-title" data-en="03 // Selected Systems Architecture &amp; Open-Source Impact" data-pt="03 // Sistemas em Destaque &amp; Contribuições Open Source">
+          03 // Selected Systems Architecture &amp; Open-Source Impact
+        </div>
+        <div class="grid-2">
+          <!-- Card 1 -->
+          <div class="card">
+            <div class="card-tag" style="color: var(--accent);">google / adk-go · Upstream Contribution</div>
+            <h3 data-en="Firestore Session Service for Google ADK Go v2" data-pt="Serviço de Sessão em Firestore para o Google ADK Go v2">Firestore Session Service for Google ADK Go v2</h3>
+            <p data-en="Authored the google.golang.org/adk/session/firestore module, closing the serverless persistence gap between ADK Go and ADK Python/Java." data-pt="Autor do submódulo google.golang.org/adk/session/firestore, fechando a lacuna de persistência serverless entre o ADK Go e o ADK Python/Java.">
+              Authored the <code>google.golang.org/adk/session/firestore</code> module, closing the serverless persistence gap between ADK Go and ADK Python/Java.
+            </p>
+            <ul>
+              <li data-en="Enables durable HITL workflow pause/resume (RequestInput / ReconstructRunState) across Cloud Run scaling events without Cloud SQL." data-pt="Habilita pausa e retomada durável de workflows HITL (RequestInput / ReconstructRunState) no Cloud Run sem exigir instância Cloud SQL.">
+                Enables durable HITL workflow pause/resume (<code>RequestInput</code> / <code>ReconstructRunState</code>) across Cloud Run scaling events without Cloud SQL.
+              </li>
+              <li data-en="Engineered optimistic concurrency control (revision CAS + configurable retry attempts), context-aware per-session semaphores, and 91.4% test coverage." data-pt="Implementou controle de concorrência otimista (CAS por revisão + tentativas configuráveis), semáforos por sessão sensíveis ao contexto e 91,4% de cobertura de testes.">
+                Engineered optimistic concurrency control (revision CAS + configurable retry attempts), context-aware per-session semaphores, and 91.4% test coverage.
+              </li>
+            </ul>
+            <div class="card-footer">
+              <span>Go 1.26 · Firestore · gRPC</span>
+              <div>
+                <a href="https://github.com/google/adk-go/pull/2058" target="_blank" rel="noopener">PR #2058 ↗</a>
+                &nbsp;·&nbsp;
+                <a href="https://github.com/google/adk-go/issues/2057" target="_blank" rel="noopener">Issue #2057 ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card">
+            <div class="card-tag" style="color: var(--accent-purple);">dexadata / dexaflow · Principal Architect</div>
+            <h3 data-en="Dexaflow — Airflow-Compatible Orchestrator in Go" data-pt="Dexaflow — Orquestrador Compatível com Airflow em Go">Dexaflow — Airflow-Compatible Orchestrator in Go</h3>
+            <p data-en="Re-engineered the Apache Airflow workflow orchestrator architecture in Go with a single-binary control plane." data-pt="Reengenharia da arquitetura de orquestração do Apache Airflow em Go com control plane em binário único.">
+              Re-engineered the Apache Airflow workflow orchestrator architecture in Go with a single-binary control plane.
+            </p>
+            <ul>
+              <li data-en="Provides drop-in Airflow UI and REST API compatibility while eliminating Python GIL scheduler overhead." data-pt="Entrega compatibilidade drop-in de UI e REST API do Airflow eliminando o gargalo do GIL do Python no agendador.">
+                Provides drop-in Airflow UI and REST API compatibility while eliminating Python GIL scheduler overhead.
+              </li>
+              <li data-en="Designed pod-per-task Kubernetes isolation and GitOps-native DAG synchronization for high-density data platforms." data-pt="Projetou isolamento pod-per-task no Kubernetes e sincronização de DAGs nativa em GitOps para plataformas de dados de alta densidade.">
+                Designed pod-per-task Kubernetes isolation and GitOps-native DAG synchronization for high-density data platforms.
+              </li>
+            </ul>
+            <div class="card-footer">
+              <span>Go · Kubernetes · Distributed Scheduling</span>
+              <a href="https://github.com/dexadata/dexaflow" target="_blank" rel="noopener">Repository ↗</a>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card">
+            <div class="card-tag" style="color: var(--accent-amber);">neochaotic / powerlab · Creator</div>
+            <h3 data-en="PowerLab — AI-Friendly Headless OS Control Plane" data-pt="PowerLab — Control Plane Headless OS para Borda &amp; IA">PowerLab — AI-Friendly Headless OS Control Plane</h3>
+            <p data-en="Self-hosted Go management plane and curated, security-vetted application catalog for edge boxes, home servers, and local AI inference appliances." data-pt="Plano de gerenciamento self-hosted em Go e catálogo de aplicações auditadas em segurança para servidores de borda e nós locais de inferência de IA.">
+              Self-hosted Go management plane and curated, security-vetted application catalog for edge boxes, home servers, and local AI inference appliances.
+            </p>
+            <div class="card-footer">
+              <span>Go · Edge Compute · Container Security</span>
+              <a href="https://github.com/neochaotic/powerlab" target="_blank" rel="noopener">Repository ↗</a>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="card">
+            <div class="card-tag" style="color: #fb7185;">neochaotic / pong · Creator</div>
+            <h3 data-en="Pong — Native Rust AI Telemetry Companion" data-pt="Pong — Companion Nativo em Rust para Telemetria de IA">Pong — Native Rust AI Telemetry Companion</h3>
+            <p data-en="Native macOS menu-bar utility written in Rust delivering real-time AI session telemetry, automated session warm-up, and active health checks." data-pt="Utilitário nativo de barra de menu para macOS escrito em Rust com telemetria em tempo real de sessões de IA, warm-up automatizado e health checks.">
+              Native macOS menu-bar utility written in Rust delivering real-time AI session telemetry, automated session warm-up, and active health checks.
+            </p>
+            <div class="card-footer">
+              <span>Rust · macOS Native · Homebrew Cask</span>
+              <a href="https://github.com/neochaotic/pong" target="_blank" rel="noopener">Repository ↗</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04. PRODUCTION ARCHITECTURE MATRIX -->
+      <section class="section">
+        <div class="section-title" data-en="04 // Production Architecture &amp; Technical Matrix" data-pt="04 // Matriz Técnica &amp; Arquitetura de Produção">
+          04 // Production Architecture &amp; Technical Matrix
+        </div>
+        <div class="card">
+          <table class="matrix-table">
+            <tr>
+              <td data-en="Systems &amp; Runtimes" data-pt="Sistemas &amp; Runtimes">Systems &amp; Runtimes</td>
+              <td>Go (1.26+), Python, Rust, gRPC, Protocol Buffers, Lock-Free / Optimistic Concurrency, Single-Binary Control Planes</td>
+            </tr>
+            <tr>
+              <td data-en="Agentic AI &amp; LLMs" data-pt="IA Agêntica &amp; LLMs">Agentic AI &amp; LLMs</td>
+              <td>Google ADK (Go &amp; Python), Gemini Models &amp; Live API, Vertex AI, Model Context Protocol (MCP), A2A Protocol, HITL Workflows</td>
+            </tr>
+            <tr>
+              <td data-en="Google Cloud &amp; Serverless" data-pt="Google Cloud &amp; Serverless">Google Cloud &amp; Serverless</td>
+              <td>Cloud Run, Cloud Firestore, BigQuery, Eventarc, Cloud Tasks, Google Kubernetes Engine (GKE), Cloud IAM &amp; KMS</td>
+            </tr>
+            <tr>
+              <td data-en="Data &amp; Orchestration" data-pt="Dados &amp; Orquestração">Data &amp; Orchestration</td>
+              <td>Dexaflow, Apache Airflow, OpenMetadata, Apache Spark / Dataproc, Dataform / dbt, PostgreSQL, ClickHouse</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <script>
+    let lang = 'en';
+    function toggleLang() {
+      lang = lang === 'en' ? 'pt' : 'en';
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.innerHTML = el.getAttribute('data-' + lang);
+      });
+      document.getElementById('lang-btn').textContent =
+        lang === 'en' ? '🌐 Idioma: EN (Mudar p/ PT-BR)' : '🌐 Language: PT-BR (Switch to EN)';
+    }
+    function toggleTheme() {
+      document.documentElement.classList.toggle('light');
+    }
+  </script>
+</body>
+</html>
