@@ -36,8 +36,10 @@
 
 <p>
   <sub>
-    <b>Direct Repository &amp; PR Links:</b> &nbsp;
-    <a href="https://github.com/google/adk-go/pull/2058"><code>google/adk-go</code> (PR #2058 · Issue #2057)</a> &nbsp;·&nbsp;
+    <b>Direct Repository &amp; Upstream PR Links:</b> &nbsp;
+    <a href="https://github.com/google/adk-go/pull/2058"><code>google/adk-go</code> (PR #2058)</a> &nbsp;·&nbsp;
+    <a href="https://github.com/open-metadata/OpenMetadata/pull/32065"><code>open-metadata/OpenMetadata</code> (PR #32065 · #33505)</a> &nbsp;·&nbsp;
+    <a href="https://github.com/apache/airflow/pull/73289"><code>apache/airflow</code> (PR #73289 · #67883)</a> &nbsp;·&nbsp;
     <a href="https://github.com/dexadata/dexaflow"><code>dexadata/dexaflow</code></a> &nbsp;·&nbsp;
     <a href="https://github.com/neochaotic/powerlab"><code>neochaotic/powerlab</code></a> &nbsp;·&nbsp;
     <a href="https://github.com/neochaotic/pong"><code>neochaotic/pong</code></a>
