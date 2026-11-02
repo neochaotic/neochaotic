@@ -25,12 +25,12 @@
 
   const TEXT = {
     en: {
-      direct: ["Direct", "Brazilian CLT or contractor"], shade: "Stronger tone, more senior role", out: ["Outsourced", "allocated to a client"],
+      direct: ["Direct", "Brazilian CLT or contractor"], shade: "Stronger tone, more senior role", compressed: "compressed scale", out: ["Outsourced", "allocated to a client"],
       y: "y", m: "m", to: "to", present: "Present", total: n => `${n} years in technology`,
       months: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
     },
     pt: {
-      direct: ["Direto", "CLT ou PJ"], shade: "Tom mais forte, cargo mais sênior", out: ["Alocado", "em cliente"],
+      direct: ["Direto", "CLT ou PJ"], shade: "Tom mais forte, cargo mais sênior", compressed: "escala comprimida", out: ["Alocado", "em cliente"],
       y: "a", m: "m", to: "a", present: "Atual", total: n => `${n} anos em tecnologia`,
       months: ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"],
     },
@@ -46,10 +46,14 @@
 
   // The years before 2015 are compressed into one unit so the early career
   // does not take half of the chart; every later year is one unit.
-  const EARLY_START = 2004.5, BREAK = 2015, EARLY_UNITS = 1.4, GAP = 0.7;
+  // Until mid 2018 the scale is compressed (with a break at 2015) so the
+  // recent roles get most of the width; from FULL on, one unit per year.
+  const EARLY_START = 2004.5, BREAK = 2015, EARLY_UNITS = 1.2, GAP = 0.45, FULL = 2018.5, MID_RATE = 0.45;
+  const MID_END = EARLY_UNITS + GAP + (FULL - BREAK) * MID_RATE;
   const warp = y => y < BREAK
     ? (y - EARLY_START) / (BREAK - EARLY_START) * EARLY_UNITS
-    : EARLY_UNITS + GAP + (y - BREAK);
+    : y < FULL ? EARLY_UNITS + GAP + (y - BREAK) * MID_RATE
+    : MID_END + (y - FULL);
 
   function themeColors() {
     const css = getComputedStyle(document.documentElement);
@@ -164,7 +168,7 @@
       row.sort((a, b) => a.ms - b.ms);
       row.forEach((it, k) => { it.vs = k ? Math.max(it.ms, row[k - 1].me) : it.ms; });
     }
-    const TOP = 44, LANE_GAP = 26, AXIS = 40, ROW_GAP = 4;
+    const TOP = 44, LANE_GAP = 26, AXIS = 58, ROW_GAP = 4;
     let y = TOP;
     const laneTop = {};
     for (const name of ["direct", "out"]) {
@@ -189,7 +193,9 @@
 
     const total = Math.ceil(months(FIRST, NOW) / 12);
     const years = [];
-    for (let y = BREAK; y <= NOW[0]; y++) years.push(y);
+    years.push(BREAK);
+    for (let y = Math.ceil(FULL); y <= NOW[0]; y++) years.push(y);
+    const yearAt = new Map([[0, 2004], ...years.map(y => [warp(y), y])]);
     const pattern = hatch(c);
     const font = "Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif";
 
@@ -213,7 +219,7 @@
         splitLine: { show: false }, axisLine: { show: false }, axisTick: { show: false },
         axisLabel: {
           customValues: [0, ...years.map(warp)],
-          formatter: v => (v === 0 ? "2004" : String(Math.round(v - EARLY_UNITS - GAP + BREAK))),
+          formatter: v => String(yearAt.get(v) ?? ""),
           color: c.muted, fontSize: 11, fontFamily: font,
         },
       },
@@ -237,7 +243,8 @@
         ...[1, 2, 3, 4, 5].map(l => ({ type: "rect", left: left + (l - 1) * 15, top: 9, shape: { width: 12, height: 8, r: 2 }, style: { fill: shade(l) } })),
         { type: "text", left: left + 5 * 15 + 6, top: 6, style: { text: t.shade, fill: c.muted, font: `400 12px ${fontFam}` } },
         { type: "text", right, top: 4, style: { text: t.total(total), fill: c.secondary, font: `500 13px ${font}`, align: "right" } },
-        { type: "text", left: left + EARLY_UNITS * pxPerUnit - 2, top: height - AXIS + 12, style: { text: "//", fill: c.muted, font: `400 12px ${font}` } },
+        { type: "line", shape: { x1: left, y1: height - AXIS + 34, x2: left + MID_END * pxPerUnit, y2: height - AXIS + 34 }, style: { stroke: c.muted, opacity: 0.45, lineWidth: 1 } },
+        { type: "text", left: left + MID_END * pxPerUnit / 2, top: height - AXIS + 38, style: { text: t.compressed, fill: c.muted, font: `400 11px ${font}`, align: "center", opacity: 0.85 } },
       ],
       series: [
         {
