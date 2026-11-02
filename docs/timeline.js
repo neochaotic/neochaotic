@@ -11,7 +11,7 @@
   const ROWS = [
     { co: "IT services", lane: "direct", s: [2004, 8], e: [2014, 12], role: { en: "Technician to business owner", pt: "Técnico a dono de negócio" } },
     { co: "Freelance", lane: "direct", s: [2014, 11], e: [2018, 7], role: { en: "BI Analyst and Python Developer", pt: "Analista de BI e Desenvolvedor Python" } },
-    { co: "IFMG", lane: "direct", s: [2015, 5], e: [2016, 4], role: { en: "Professor, Data Structures", pt: "Professor, Estrutura de Dados" } },
+    { co: "IFMG", lane: "direct", concurrent: true, s: [2015, 5], e: [2016, 4], role: { en: "Professor, Data Structures", pt: "Professor, Estrutura de Dados" } },
     { co: "BySat", lane: "direct", s: [2018, 8], e: [2019, 3], role: { en: "Senior BI Analyst", pt: "Analista de BI Sênior" } },
     { co: "Prodap", lane: "direct", s: [2019, 3], e: [2020, 10], role: { en: "Principal Data Engineer", pt: "Principal Data Engineer" } },
     { co: "Engineering", lane: "direct", s: [2020, 10], e: [2021, 8], role: { en: "Data Architect", pt: "Arquiteto de Dados" } },
@@ -126,7 +126,7 @@
     const lanes = { direct: [], out: [] };
     for (const it of items) {
       const rows = lanes[it.r.lane];
-      let k = rows.findIndex(row => row.every(o => it.ms >= o.me - 2.5 / 12 || it.me <= o.ms + 2.5 / 12));
+      let k = it.r.concurrent ? 0 : rows.findIndex(row => row.every(o => it.ms >= o.me - 2.5 / 12 || it.me <= o.ms + 2.5 / 12));
       if (k < 0) { rows.push([]); k = rows.length - 1; }
       rows[k].push(it); it.row = k;
     }
@@ -255,6 +255,13 @@
               style: out ? { fill: pattern, stroke: c.accent, lineWidth: 1 } : { fill: c.accent },
               emphasis: { style: out ? { lineWidth: 2 } : { shadowBlur: 12, shadowColor: c.accent } },
             }];
+            // A role held at the same time as another one is drawn inside
+            // that bar as an outlined segment, on the same row.
+            if (it.r.concurrent) kids[0] = {
+              type: "rect", shape: { x: x + 2, y: y + 3, width: w - 4, height: h - 6, r: 3 },
+              style: { fill: c.bg, stroke: c.bg, lineWidth: 2 },
+              emphasis: { style: { fill: c.secondary } },
+            };
             const ax = it.alignRight ? x + w : x, align = it.alignRight ? "right" : "left";
             const ly = it.lblY;
             const tx = it.depth > 0 ? ax + (it.alignRight ? -6 : 6) : ax;
