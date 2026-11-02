@@ -2,15 +2,16 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="./assets/hero-light.svg" />
-    <img alt="Alisson Rosa, Principal Engineer, Data Platforms. Google Developer Expert in Cloud. 88% lower data lake cost, 57% lower Databricks spend, 40+ TB moved to Google Cloud, AgTech data lake built from zero." src="./assets/hero-light.svg" width="100%" />
+    <img alt="Alisson Rosa, Principal Engineer, Data Platforms. Google Developer Expert in Cloud. 88% lower data lake cost, 68% lower Databricks spend, 40 PB moved to Google Cloud, AgTech data lake built from zero." src="./assets/hero-light.svg" width="100%" />
   </picture>
 </p>
 
 I build data platforms and the systems around them, and I lead the teams that run them.
 I created [Dexaflow](https://github.com/dexadata/dexaflow), an Airflow-compatible workflow orchestrator written in Go, and I am a Google Developer Expert in Cloud.
 
-- Cut a fintech data lake's cost by 88% by moving it from Databricks to BigQuery.
-- Led a 4-project, 40+ TB migration from Hadoop, Oracle and Greenplum to Google Cloud, working with Google Professional Services.
+- Cut a fintech data lake's cost by 88% by moving it from Azure and Databricks to BigQuery.
+- Cut Databricks cost by 68% on a multi-tenant data platform with FinOps cost segmentation.
+- Worked on Latin America's largest big data migration, 40 PB from Hadoop to Google Cloud, as a partner engineer with Google Cloud Professional Services.
 - Built an AgTech data lake from zero on AWS, moved it to Google Cloud, and supported the company through its acquisition by a European group.
 - Managed data, ML, DevOps and software teams at RD Station, Avenue Code and Acerto.
 
