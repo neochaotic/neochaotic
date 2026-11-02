@@ -8,7 +8,7 @@
 
 <br/>
 
-**[↗ Interactive Public Curriculum & Architecture Dossier (EN / PT-BR)](https://neochaotic.github.io/neochaotic/)** &nbsp;·&nbsp; **[LinkedIn](https://www.linkedin.com/in/alissonrosa/)** &nbsp;·&nbsp; **[Instagram (@neoChaotic)](https://www.instagram.com/neoChaotic/)** &nbsp;·&nbsp; **[alisson.david.rosa@gmail.com](mailto:alisson.david.rosa@gmail.com)**
+**[↗ Interactive Public CV & Dossier (EN / PT-BR)](https://neochaotic.github.io/neochaotic/)** &nbsp;·&nbsp; **[✦ Verified GDE Directory](https://me.developers.google.com/communities/experts?q=alisson%20rosa)** &nbsp;·&nbsp; **[Google Dev Profile](https://me.developers.google.com/u/neoChaotic)** &nbsp;·&nbsp; **[LinkedIn](https://www.linkedin.com/in/alissonrosa/)** &nbsp;·&nbsp; **[Instagram (@neoChaotic)](https://www.instagram.com/neoChaotic/)** &nbsp;·&nbsp; **[alisson.david.rosa@gmail.com](mailto:alisson.david.rosa@gmail.com)**
 
 </div>
 
@@ -38,6 +38,7 @@
 ### Google Ecosystem & Technical Advisory
 
 - **Google Developer Expert (GDE) — Cloud & AI**: Recognized by Google for deep architectural expertise across Google Cloud Platform, distributed data platforms, and production Generative AI systems.
+  - **Canonical Verification**: [Official Google Developer Experts Directory (`q=alisson rosa`)](https://me.developers.google.com/communities/experts?q=alisson%20rosa) · [Google Developer Profile (`@neoChaotic`)](https://me.developers.google.com/u/neoChaotic)
 - **Gemini Product Feedback Collaborator**: Active participant in Google's early-access and developer feedback loops—stress-testing preview Gemini models, structured outputs, tool-calling ergonomics, and Agent Development Kit (ADK) runtimes against real enterprise workloads.
 - **Production Architecture Matrix**:
   - **Runtimes & Systems**: `Go (1.26+)`, `Python`, `Rust`, `gRPC`, `Protocol Buffers`, `Concurrent State Machines`
