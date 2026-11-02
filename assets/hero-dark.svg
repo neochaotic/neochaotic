@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 356" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 364" width="100%" height="100%">
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#090d16"/>
@@ -12,111 +12,112 @@
     </linearGradient>
     <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#131c31"/>
-      <stop offset="100%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#0c1322"/>
     </linearGradient>
     <style>
-      .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif; }
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif; }
       .font-mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
     </style>
   </defs>
 
-  <!-- Outer Frame -->
-  <rect x="1" y="1" width="918" height="354" rx="16" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="1.5"/>
-  <rect x="20" y="1" width="880" height="2.5" rx="1.25" fill="url(#topBarGrad)"/>
+  <!-- Outer Frame (920 x 364, 24px outer padding) -->
+  <rect x="1" y="1" width="918" height="362" rx="16" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="1.5"/>
+  <rect x="24" y="1" width="872" height="2.5" rx="1.25" fill="url(#topBarGrad)"/>
 
-  <!-- Window Header Bar -->
-  <rect x="1" y="1" width="918" height="38" rx="16" fill="#0b1120" opacity="0.6"/>
-  <line x1="1" y1="39" x2="919" y2="39" stroke="#1e293b" stroke-width="1"/>
-  <circle cx="24" cy="20" r="4.5" fill="#38bdf8" opacity="0.8"/>
-  <circle cx="40" cy="20" r="4.5" fill="#34d399" opacity="0.8"/>
-  <circle cx="56" cy="20" r="4.5" fill="#a78bfa" opacity="0.8"/>
-  <text x="76" y="24" class="font-mono" font-size="11" fill="#64748b">
-    alisson-rosa // principal-architect.profile
+  <!-- Window Header Bar (height 40px) -->
+  <line x1="1" y1="41" x2="919" y2="41" stroke="#1e293b" stroke-width="1"/>
+  <circle cx="26" cy="21" r="4.5" fill="#38bdf8" opacity="0.85"/>
+  <circle cx="42" cy="21" r="4.5" fill="#34d399" opacity="0.85"/>
+  <circle cx="58" cy="21" r="4.5" fill="#a78bfa" opacity="0.85"/>
+  <text x="78" y="25" class="font-mono" font-size="11" fill="#64748b">
+    alisson-rosa // principal-architect.dossier
   </text>
-  <text x="892" y="24" text-anchor="end" class="font-mono" font-size="11" fill="#34d399">
-    ● VERIFIED GDE (CLOUD &amp; AI)
+  <text x="896" y="25" text-anchor="end" class="font-mono" font-size="11" font-weight="600" fill="#34d399">
+    ● VERIFIED GOOGLE DEVELOPER EXPERT
   </text>
 
-  <!-- Credential Badge Pill -->
-  <rect x="32" y="56" width="618" height="26" rx="6" fill="#131c31" stroke="#334155" stroke-width="1"/>
-  <text x="44" y="73" class="font-mono" font-size="11" font-weight="600" fill="#38bdf8" letter-spacing="0.4">
+  <!-- Eyebrow Pill -->
+  <rect x="24" y="58" width="566" height="26" rx="6" fill="#131c31" stroke="#334155" stroke-width="1"/>
+  <text x="38" y="75" class="font-mono" font-size="11" font-weight="600" fill="#38bdf8" letter-spacing="0.4">
     ✦ GOOGLE DEVELOPER EXPERT (CLOUD &amp; AI)   ·   GEMINI PRODUCT FEEDBACK COLLABORATOR
   </text>
 
-  <!-- Name & Role -->
-  <text x="32" y="118" class="font-sans" font-size="34" font-weight="800" fill="#f8fafc" letter-spacing="-0.6">
+  <!-- Name & Location -->
+  <text x="24" y="122" class="font-sans" font-size="34" font-weight="800" fill="#f8fafc" letter-spacing="-0.6">
     Alisson Rosa
   </text>
-  <text x="255" y="116" class="font-mono" font-size="13" font-weight="600" fill="#64748b">
-    @neochaotic · Belo Horizonte, Brazil
-  </text>
-  <text x="32" y="144" class="font-sans" font-size="16.5" font-weight="600" fill="#38bdf8">
-    Principal Engineer — Data &amp; AI  ·  Agentic Architect  ·  Engineering Leader
+  <text x="896" y="118" text-anchor="end" class="font-mono" font-size="12" fill="#64748b">
+    Belo Horizonte, Brazil · Global / Remote
   </text>
 
-  <!-- Positioning Statement -->
-  <text x="32" y="172" class="font-sans" font-size="13.5" fill="#cbd5e1">
+  <!-- Primary Headline -->
+  <text x="24" y="148" class="font-sans" font-size="16" font-weight="600" fill="#38bdf8">
+    Principal Engineer — Data &amp; AI   ·   Agentic Architect   ·   Engineering Leader
+  </text>
+
+  <!-- Positioning Thesis (2 lines, comfortable 21px leading) -->
+  <text x="24" y="176" class="font-sans" font-size="13.5" fill="#cbd5e1">
     Architecting deterministic agentic runtimes, greenfield data platforms, and high-performing engineering teams.
   </text>
-  <text x="32" y="191" class="font-sans" font-size="13.5" fill="#94a3b8">
-    Combining hands-on systems engineering (Go, Python, Rust, GCP) with human-centric technical leadership.
+  <text x="24" y="197" class="font-sans" font-size="13.5" fill="#94a3b8">
+    Combining deep systems execution (Go, Python, Rust, GCP) with measurable FinOps ROI and human-centric leadership.
   </text>
 
-  <!-- 3 Bento Pillars -->
+  <!-- 3 Equal Bento Pillars: x = 24, 318, 612 | width = 284 | gap = 10 | y = 218..340 (height = 122) -->
   <!-- Pillar 1 -->
-  <rect x="32" y="212" width="274" height="122" rx="10" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1"/>
-  <rect x="32" y="226" width="3" height="24" rx="1.5" fill="#38bdf8"/>
-  <text x="48" y="234" class="font-mono" font-size="10.5" font-weight="700" fill="#38bdf8" letter-spacing="0.7">
+  <rect x="24" y="218" width="280" height="122" rx="10" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1"/>
+  <rect x="24" y="234" width="3" height="22" rx="1.5" fill="#38bdf8"/>
+  <text x="40" y="241" class="font-mono" font-size="10.5" font-weight="700" fill="#38bdf8" letter-spacing="0.6">
     01 // GOOGLE CLOUD &amp; GEMINI
   </text>
-  <text x="48" y="254" class="font-sans" font-size="14" font-weight="700" fill="#f8fafc">
-    GDE &amp; Product Feedback
+  <text x="40" y="262" class="font-sans" font-size="14" font-weight="700" fill="#f8fafc">
+    GDE &amp; Product Shaping
   </text>
-  <text x="48" y="275" class="font-sans" font-size="12" fill="#94a3b8">
+  <text x="40" y="284" class="font-sans" font-size="12" fill="#94a3b8">
     Early-access Gemini &amp; ADK feedback,
   </text>
-  <text x="48" y="292" class="font-sans" font-size="12" fill="#94a3b8">
-    upstream OSS contributor (adk-go), and
+  <text x="40" y="302" class="font-sans" font-size="12" fill="#94a3b8">
+    Google PSO delivery, upstream OSS,
   </text>
-  <text x="48" y="309" class="font-sans" font-size="12" fill="#94a3b8">
-    speaker at TDC &amp; DevFest BH.
+  <text x="40" y="320" class="font-sans" font-size="12" fill="#94a3b8">
+    and speaker at TDC &amp; DevFest BH.
   </text>
 
   <!-- Pillar 2 -->
-  <rect x="323" y="212" width="274" height="122" rx="10" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1"/>
-  <rect x="323" y="226" width="3" height="24" rx="1.5" fill="#a78bfa"/>
-  <text x="339" y="234" class="font-mono" font-size="10.5" font-weight="700" fill="#a78bfa" letter-spacing="0.7">
+  <rect x="320" y="218" width="280" height="122" rx="10" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1"/>
+  <rect x="320" y="234" width="3" height="22" rx="1.5" fill="#a78bfa"/>
+  <text x="336" y="241" class="font-mono" font-size="10.5" font-weight="700" fill="#a78bfa" letter-spacing="0.6">
     02 // SYSTEMS &amp; DATA PLATFORMS
   </text>
-  <text x="339" y="254" class="font-sans" font-size="14" font-weight="700" fill="#f8fafc">
+  <text x="336" y="262" class="font-sans" font-size="14" font-weight="700" fill="#f8fafc">
     Principal IC &amp; Creator
   </text>
-  <text x="339" y="275" class="font-sans" font-size="12" fill="#94a3b8">
+  <text x="336" y="284" class="font-sans" font-size="12" fill="#94a3b8">
     Creator of Dexaflow (Airflow in Go),
   </text>
-  <text x="339" y="292" class="font-sans" font-size="12" fill="#94a3b8">
-    greenfield Data Lakes, MDM &amp; AI systems
+  <text x="336" y="302" class="font-sans" font-size="12" fill="#94a3b8">
+    40+ TB migrations, Data Lakes &amp; MDM
   </text>
-  <text x="339" y="309" class="font-sans" font-size="12" fill="#94a3b8">
-    (Engineering, Prodap, Bysat, D-Analytics).
+  <text x="336" y="320" class="font-sans" font-size="12" fill="#94a3b8">
+    with up to 88% FinOps cost reduction.
   </text>
 
   <!-- Pillar 3 -->
-  <rect x="614" y="212" width="274" height="122" rx="10" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1"/>
-  <rect x="614" y="226" width="3" height="24" rx="1.5" fill="#34d399"/>
-  <text x="630" y="234" class="font-mono" font-size="10.5" font-weight="700" fill="#34d399" letter-spacing="0.7">
+  <rect x="616" y="218" width="280" height="122" rx="10" fill="url(#cardGrad)" stroke="#1e293b" stroke-width="1"/>
+  <rect x="616" y="234" width="3" height="22" rx="1.5" fill="#34d399"/>
+  <text x="632" y="241" class="font-mono" font-size="10.5" font-weight="700" fill="#34d399" letter-spacing="0.6">
     03 // LEADERSHIP &amp; FOUNDER
   </text>
-  <text x="630" y="254" class="font-sans" font-size="14" font-weight="700" fill="#f8fafc">
+  <text x="632" y="262" class="font-sans" font-size="14" font-weight="700" fill="#f8fafc">
     High-Performing Teams
   </text>
-  <text x="630" y="275" class="font-sans" font-size="12" fill="#94a3b8">
+  <text x="632" y="284" class="font-sans" font-size="12" fill="#94a3b8">
     Tech Leader &amp; Manager (RD Station,
   </text>
-  <text x="630" y="292" class="font-sans" font-size="12" fill="#94a3b8">
+  <text x="632" y="302" class="font-sans" font-size="12" fill="#94a3b8">
     Avenue Code, Acerto) &amp; 2x Startup
   </text>
-  <text x="630" y="309" class="font-sans" font-size="12" fill="#94a3b8">
-    Founder combining delivery &amp; human care.
+  <text x="632" y="320" class="font-sans" font-size="12" fill="#94a3b8">
+    Founder uniting results &amp; human care.
   </text>
 </svg>

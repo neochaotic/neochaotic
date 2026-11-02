@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alisson Rosa — Principal Engineer · Data &amp; AI · Agentic Architect (ATS Resume &amp; Executive Dossier)</title>
-  <meta name="description" content="ATS-Optimized Curriculum Vitae &amp; Architecture Dossier of Alisson Rosa — Principal Engineer (Data &amp; AI), Agentic Architect, Google Developer Expert (Cloud &amp; AI)." />
+  <title>Alisson Rosa — Principal Engineer · Data &amp; AI · Agentic Architect (ATS Curriculum Vitae)</title>
+  <meta name="description" content="ATS-Optimized Curriculum Vitae &amp; Executive Architecture Dossier of Alisson Rosa — Principal Engineer (Data &amp; AI), Agentic Architect, Google Developer Expert (Cloud &amp; AI)." />
   <style>
     :root {
-      --bg: #090d16;
-      --surface: #0f172a;
+      --bg: #070a12;
+      --surface: #0d1322;
       --surface-elevated: #131c31;
-      --border: #1e293b;
+      --border: rgba(148, 163, 184, 0.16);
+      --border-strong: rgba(148, 163, 184, 0.28);
       --text: #f8fafc;
+      --text-secondary: #cbd5e1;
       --text-muted: #94a3b8;
       --accent: #38bdf8;
       --accent-emerald: #34d399;
@@ -19,89 +21,105 @@
       --accent-amber: #fbbf24;
     }
     html.light {
-      --bg: #f8fafc;
+      --bg: #f5f5f7;
       --surface: #ffffff;
-      --surface-elevated: #f1f5f9;
-      --border: #cbd5e1;
-      --text: #0f172a;
-      --text-muted: #475569;
-      --accent: #2563eb;
+      --surface-elevated: #f8fafc;
+      --border: rgba(15, 23, 42, 0.1);
+      --border-strong: rgba(15, 23, 42, 0.2);
+      --text: #1d1d1f;
+      --text-secondary: #334155;
+      --text-muted: #515154;
+      --accent: #0066cc;
       --accent-emerald: #059669;
-      --accent-purple: #7c3aed;
-      --accent-amber: #d97706;
+      --accent-purple: #6d28d9;
+      --accent-amber: #b45309;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       background-color: var(--bg);
       color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
       line-height: 1.6;
-      padding: 2rem 1rem 4rem;
-      transition: background-color 0.2s, color 0.2s;
+      padding: 1.75rem 1.25rem 4.5rem;
+      transition: background-color 0.25s ease, color 0.25s ease;
     }
     .container { max-width: 920px; margin: 0 auto; }
+
+    /* Apple-style Sticky Command Bar */
     .toolbar {
+      position: sticky;
+      top: 1rem;
+      z-index: 30;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       gap: 0.75rem;
-      margin-bottom: 1.5rem;
-      padding: 0.75rem 1.25rem;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
+      margin-bottom: 1.75rem;
+      padding: 0.7rem 1.1rem;
+      background: color-mix(in srgb, var(--surface) 88%, transparent);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-strong);
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
     }
     .toolbar-left {
       display: flex;
       align-items: center;
-      gap: 0.6rem;
-      font-size: 0.8rem;
+      gap: 0.55rem;
+      font-size: 0.78rem;
       color: var(--text-muted);
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
     }
     .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent-emerald); display: inline-block; }
-    .toolbar-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .toolbar-actions { display: flex; gap: 0.45rem; flex-wrap: wrap; }
     .btn {
       background: var(--surface-elevated);
       color: var(--text);
-      border: 1px solid var(--border);
-      padding: 0.45rem 0.85rem;
+      border: 1px solid var(--border-strong);
+      padding: 0.42rem 0.8rem;
       border-radius: 8px;
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       font-weight: 600;
       cursor: pointer;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      transition: border-color 0.15s;
+      gap: 0.35rem;
+      transition: all 0.15s ease;
     }
-    .btn:hover { border-color: var(--accent); }
+    .btn:hover { border-color: var(--accent); transform: translateY(-1px); }
     .btn-primary {
-      background: #2563eb;
+      background: #0066cc;
       color: #ffffff;
-      border-color: #3b82f6;
+      border-color: #38bdf8;
     }
     .btn-ats-active {
       background: #059669;
       color: #ffffff;
       border-color: #10b981;
     }
+
+    /* Main Document Sheet */
     .dossier {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 2.5rem;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      padding: 3rem;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
     }
+
+    /* Header */
     .header {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: flex-start;
       gap: 1.5rem;
-      padding-bottom: 1.5rem;
+      padding-bottom: 1.75rem;
       border-bottom: 1px solid var(--border);
     }
     .badge-row {
@@ -109,50 +127,74 @@
       flex-wrap: wrap;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.3rem 0.8rem;
+      padding: 0.32rem 0.85rem;
       border-radius: 999px;
       background: var(--surface-elevated);
-      border: 1px solid var(--border);
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 0.72rem;
+      border: 1px solid var(--border-strong);
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 0.7rem;
       font-weight: 600;
       color: var(--accent);
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.85rem;
+      letter-spacing: 0.03em;
     }
-    h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.15; }
-    .headline { font-size: 1.05rem; font-weight: 600; color: var(--accent); margin-top: 0.35rem; }
-    .location { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem; }
+    h1 {
+      font-size: 2.35rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+    .headline {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-top: 0.45rem;
+      letter-spacing: -0.01em;
+    }
+    .location {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      margin-top: 0.3rem;
+    }
     .contact-box {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      gap: 0.3rem;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      gap: 0.32rem;
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
       font-size: 0.78rem;
     }
-    .contact-box a { color: var(--text); text-decoration: none; border-bottom: 1px dashed var(--border); }
+    .contact-box a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
     .contact-box a:hover { color: var(--accent); border-bottom-color: var(--accent); }
     .privacy-pill {
-      margin-top: 0.35rem;
-      padding: 0.2rem 0.6rem;
+      margin-top: 0.4rem;
+      padding: 0.22rem 0.65rem;
       border-radius: 6px;
       font-size: 0.7rem;
+      font-weight: 600;
       background: rgba(16, 185, 129, 0.12);
       color: var(--accent-emerald);
-      border: 1px solid rgba(16, 185, 129, 0.3);
+      border: 1px solid rgba(16, 185, 129, 0.28);
     }
-    .section { margin-top: 1.85rem; }
+
+    /* Sections */
+    .section { margin-top: 2.25rem; }
     .section-title {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 0.8rem;
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 0.76rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.09em;
       color: var(--accent);
-      margin-bottom: 0.85rem;
+      margin-bottom: 1rem;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.65rem;
     }
     .section-title::after {
       content: "";
@@ -160,64 +202,89 @@
       height: 1px;
       background: var(--border);
     }
-    .summary-text { font-size: 0.94rem; color: var(--text); line-height: 1.65; }
+    .summary-text {
+      font-size: 0.96rem;
+      color: var(--text-secondary);
+      line-height: 1.72;
+    }
+    .summary-text strong { color: var(--text); font-weight: 600; }
+
+    /* ATS Keywords Block */
     .keywords-block {
-      font-size: 0.86rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.55rem;
+      font-size: 0.87rem;
       color: var(--text-muted);
-      line-height: 1.65;
+      line-height: 1.6;
       background: var(--surface-elevated);
       border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1rem 1.25rem;
+      border-radius: 12px;
+      padding: 1.25rem 1.4rem;
     }
-    .keywords-block strong { color: var(--text); }
+    .keywords-block strong { color: var(--text); font-weight: 600; }
+
+    /* Grids & Cards */
     .grid-3 {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 1rem;
     }
     .grid-2 {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
     }
     .card {
       background: var(--surface-elevated);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 1.2rem;
+      padding: 1.35rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     .card-tag {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 0.72rem;
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 0.7rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.35rem;
     }
-    .card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--text); }
-    .card p, .card li { font-size: 0.86rem; color: var(--text-muted); line-height: 1.55; }
-    .card ul { padding-left: 1.15rem; margin-top: 0.45rem; }
-    .card li { margin-bottom: 0.3rem; }
+    .card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.45rem;
+      color: var(--text);
+      letter-spacing: -0.01em;
+      line-height: 1.35;
+    }
+    .card p, .card li {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .card p strong, .card li strong { color: var(--text-secondary); }
     .card-footer {
-      margin-top: 0.75rem;
-      padding-top: 0.6rem;
+      margin-top: 1rem;
+      padding-top: 0.65rem;
       border-top: 1px solid var(--border);
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       gap: 0.5rem;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 0.74rem;
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 0.73rem;
       color: var(--text-muted);
     }
     .card-footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
     .card-footer a:hover { text-decoration: underline; }
     code {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 0.8rem;
-      padding: 0.05rem 0.3rem;
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 0.79rem;
+      padding: 0.08rem 0.32rem;
       border-radius: 4px;
       background: var(--surface);
       border: 1px solid var(--border);
@@ -225,22 +292,21 @@
     }
 
     /* =========================================================================
-       ATS LINEAR MODE (Single-Column Harvard/Executive Standard for Parsers)
-       Activated via the "ATS Mode" button OR automatically on Print/Save PDF
+       ATS 1-COLUMN MODE (Single-Column Harvard/Executive Standard for Parsers)
        ========================================================================= */
     body.ats-mode .grid-2,
     body.ats-mode .grid-3 {
       display: flex !important;
       flex-direction: column !important;
-      gap: 0.85rem !important;
+      gap: 0.9rem !important;
     }
     body.ats-mode .card,
     body.ats-mode .keywords-block {
       background: transparent !important;
       border: none !important;
-      border-left: 2px solid var(--border) !important;
+      border-left: 2.5px solid var(--accent) !important;
       border-radius: 0 !important;
-      padding: 0.25rem 0 0.25rem 1rem !important;
+      padding: 0.2rem 0 0.2rem 1.1rem !important;
     }
     body.ats-mode .header {
       flex-direction: column !important;
@@ -250,100 +316,128 @@
       align-items: flex-start !important;
       flex-direction: row !important;
       flex-wrap: wrap !important;
-      gap: 0.75rem !important;
+      gap: 0.85rem !important;
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 780px) {
       .dossier { padding: 1.5rem; }
       .contact-box { align-items: flex-start; }
-      .grid-2 { grid-template-columns: 1fr; }
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
     }
 
-    /* Print / Save as PDF ALWAYS outputs 100% ATS-Compliant Single-Column Document */
+    /* =========================================================================
+       PRINT / EXPORT PDF (100% ATS-Compliant Single-Page Executive A4 Document)
+       ========================================================================= */
     @media print {
+      @page { margin: 6.5mm 11mm; size: A4; }
+      :root, html, html.dark, html.light {
+        --bg: #ffffff !important;
+        --surface: #ffffff !important;
+        --surface-elevated: #ffffff !important;
+        --border: #cbd5e1 !important;
+        --border-strong: #94a3b8 !important;
+        --text: #000000 !important;
+        --text-secondary: #111111 !important;
+        --text-muted: #222222 !important;
+        --accent: #000000 !important;
+        --accent-emerald: #000000 !important;
+        --accent-purple: #000000 !important;
+        --accent-amber: #000000 !important;
+      }
       body {
         background: #ffffff !important;
         color: #000000 !important;
         padding: 0 !important;
-        font-size: 10.5pt !important;
-        line-height: 1.45 !important;
+        font-size: 7.9pt !important;
+        line-height: 1.21 !important;
       }
       .toolbar, .privacy-pill, .badge-row { display: none !important; }
+      .container { max-width: 100% !important; }
       .dossier {
         box-shadow: none !important;
         border: none !important;
         padding: 0 !important;
         background: #ffffff !important;
       }
-      .header {
+      .header, body.ats-mode .header {
         flex-direction: column !important;
-        gap: 0.35rem !important;
-        padding-bottom: 0.75rem !important;
+        gap: 0.05rem !important;
+        padding-bottom: 0.22rem !important;
         border-bottom: 1.5px solid #000000 !important;
       }
-      h1 { font-size: 18pt !important; color: #000000 !important; }
-      .headline { font-size: 11pt !important; color: #000000 !important; }
-      .location { font-size: 9.5pt !important; color: #333333 !important; }
-      .contact-box {
-        align-items: flex-start !important;
+      h1 { font-size: 14pt !important; color: #000000 !important; }
+      .headline { font-size: 8.8pt !important; color: #000000 !important; margin-top: 0.02rem !important; }
+      .location { font-size: 7.6pt !important; color: #222222 !important; margin-top: 0.01rem !important; }
+      .contact-box, body.ats-mode .contact-box {
+        align-items: center !important;
         flex-direction: row !important;
         flex-wrap: wrap !important;
-        gap: 0.75rem !important;
-        font-size: 9pt !important;
+        gap: 0.3rem !important;
+        font-size: 7pt !important;
+        margin-top: 0.03rem !important;
       }
       .contact-box a { color: #000000 !important; border: none !important; }
-      .section { margin-top: 1rem !important; }
+      .section { margin-top: 0.32rem !important; }
       .section-title {
         color: #000000 !important;
-        font-size: 10pt !important;
+        font-size: 8pt !important;
         border-bottom: 1px solid #000000 !important;
-        padding-bottom: 0.15rem !important;
-        margin-bottom: 0.5rem !important;
+        padding-bottom: 0.02rem !important;
+        margin-bottom: 0.15rem !important;
       }
       .section-title::after { display: none !important; }
-      .grid-2, .grid-3 {
+      .grid-2, .grid-3, body.ats-mode .grid-2, body.ats-mode .grid-3 {
         display: block !important;
+        gap: 0 !important;
       }
-      .card, .keywords-block {
+      .keywords-block, body.ats-mode .keywords-block { gap: 0.12rem !important; }
+      .card, .keywords-block, body.ats-mode .card, body.ats-mode .keywords-block {
         background: #ffffff !important;
         border: none !important;
+        border-left: none !important;
         padding: 0 !important;
-        margin-bottom: 0.65rem !important;
+        margin-bottom: 0.18rem !important;
         break-inside: avoid;
       }
-      .card-tag { color: #333333 !important; font-size: 8.5pt !important; margin-bottom: 0.1rem !important; }
-      .card h3 { color: #000000 !important; font-size: 10.5pt !important; margin-bottom: 0.15rem !important; }
-      .card p, .card li, .summary-text, .keywords-block { color: #111111 !important; font-size: 9.5pt !important; }
+      .card-tag { color: #333333 !important; font-size: 6.5pt !important; margin-bottom: 0.01rem !important; }
+      .card h3 { color: #000000 !important; font-size: 8.1pt !important; margin-bottom: 0.02rem !important; }
+      .card p, .card li, .summary-text, .keywords-block p { color: #111111 !important; font-size: 7.55pt !important; line-height: 1.19 !important; }
+      strong, b, .summary-text strong, .keywords-block strong, .card p strong, .card li strong {
+        color: #000000 !important;
+        font-weight: 700 !important;
+      }
       .card-footer {
         border-top: none !important;
-        margin-top: 0.15rem !important;
+        margin-top: 0.02rem !important;
         padding-top: 0 !important;
-        font-size: 8.5pt !important;
-        color: #333333 !important;
+        font-size: 6.9pt !important;
+        color: #222222 !important;
       }
-      code { border: none !important; padding: 0 !important; background: transparent !important; color: #000000 !important; }
+      .card-footer a { color: #000000 !important; }
+      code { border: none !important; padding: 0 !important; background: transparent !important; color: #000000 !important; font-weight: 600 !important; }
     }
   </style>
 </head>
 <body>
   <div class="container">
 
-    <!-- Interactive Webmaster & ATS Toolbar -->
-    <div class="toolbar">
+    <!-- Apple-style Sticky Command Bar -->
+    <nav class="toolbar" aria-label="Document Controls">
       <div class="toolbar-left">
         <span class="dot"></span>
-        <span>ATS-Compliant Resume &amp; Executive Dossier</span>
+        <span>Alisson Rosa // Executive &amp; ATS Resume</span>
       </div>
       <div class="toolbar-actions">
-        <button class="btn" onclick="toggleATS()" id="ats-btn">📄 ATS 1-Column Mode: OFF</button>
-        <button class="btn" onclick="toggleLang()" id="lang-btn">🌐 Idioma: EN (Mudar p/ PT-BR)</button>
+        <button class="btn" onclick="toggleATS()" id="ats-btn">📄 ATS 1-Col View: OFF</button>
+        <button class="btn" onclick="toggleLang()" id="lang-btn">🌐 Idioma: EN → PT-BR</button>
         <button class="btn" onclick="toggleTheme()" id="theme-btn">☀ Light / Dark</button>
-        <button class="btn btn-primary" onclick="window.print()">🖨 Print / Export ATS PDF</button>
+        <a class="btn btn-primary" href="./Alisson_Rosa_CV_EN.pdf" download id="pdf-download-btn">⬇ Download ATS PDF (EN)</a>
+        <a class="btn" href="./Alisson_Rosa_CV_PT.pdf" download>⬇ PDF (PT-BR)</a>
         <a class="btn" href="https://github.com/neochaotic">← GitHub</a>
       </div>
-    </div>
+    </nav>
 
-    <!-- Main Curriculum Dossier (Semantic HTML5 for ATS Parsers) -->
+    <!-- Main Curriculum Dossier -->
     <main class="dossier">
       <header class="header">
         <div>
@@ -367,13 +461,13 @@
           <a href="https://github.com/neochaotic" target="_blank" rel="noopener">github.com/neochaotic</a>
           <a href="https://me.developers.google.com/communities/experts?q=alisson%20rosa" target="_blank" rel="noopener">GDE Directory: Alisson Rosa ↗</a>
           <a href="https://me.developers.google.com/u/neoChaotic" target="_blank" rel="noopener">me.developers.google.com/u/neoChaotic</a>
-          <span class="privacy-pill" data-en="✓ ATS-Optimized · Privacy-Safe (No Phone Exposed)" data-pt="✓ Otimizado p/ ATS · Sem Telefone Exposto">
-            ✓ ATS-Optimized · Privacy-Safe (No Phone Exposed)
+          <span class="privacy-pill" data-en="✓ ATS-Verified · Privacy-Safe (No Phone Exposed)" data-pt="✓ Verificado p/ ATS · Sem Telefone Exposto">
+            ✓ ATS-Verified · Privacy-Safe (No Phone Exposed)
           </span>
         </div>
       </header>
 
-      <!-- 01. PROFESSIONAL SUMMARY (Standard ATS Heading) -->
+      <!-- 01. PROFESSIONAL SUMMARY -->
       <section class="section">
         <h2 class="section-title" data-en="Professional Summary" data-pt="Resumo Profissional">
           Professional Summary
@@ -383,7 +477,7 @@
         </p>
       </section>
 
-      <!-- 02. CORE COMPETENCIES & ATS KEYWORDS (Standard ATS Heading) -->
+      <!-- 02. CORE COMPETENCIES & TECHNICAL SKILLS -->
       <section class="section">
         <h2 class="section-title" data-en="Core Competencies &amp; Technical Skills" data-pt="Competências Essenciais &amp; Habilidades Técnicas">
           Core Competencies &amp; Technical Skills
@@ -411,67 +505,81 @@
         </h2>
         <div class="grid-2">
           <div class="card">
-            <div class="card-tag" style="color: var(--accent-emerald);">FinOps &amp; Cloud Migration · Brazilian Fintech</div>
-            <h3 data-en="88% Data Lake Cost Reduction (Databricks to BigQuery)" data-pt="Redução de 88% em Custos de Data Lake (Databricks para BigQuery)">88% Data Lake Cost Reduction (Databricks to BigQuery)</h3>
-            <p data-en="Architected and led the migration of an enterprise Data Lake from Databricks to Google BigQuery at a Brazilian Fintech, achieving an 88% reduction in infrastructure cost while improving query SLA and data governance." data-pt="Projetou e liderou a migração de um Data Lake corporativo de Databricks para Google BigQuery em uma Fintech brasileira, alcançando 88% de redução em custos de infraestrutura com ganho de SLA e governança.">
-              Architected and led the migration of an enterprise Data Lake from Databricks to Google BigQuery at a Brazilian Fintech, achieving an <strong>88% reduction</strong> in infrastructure cost while improving query SLA and data governance.
-            </p>
+            <div>
+              <div class="card-tag" style="color: var(--accent-emerald);" data-en="FinOps &amp; Cloud Migration · Brazilian Fintech" data-pt="FinOps &amp; Migração Cloud · Fintech Brasileira">FinOps &amp; Cloud Migration · Brazilian Fintech</div>
+              <h3 data-en="88% Data Lake Cost Reduction (Databricks to BigQuery)" data-pt="Redução de 88% em Custos de Data Lake (Databricks para BigQuery)">88% Data Lake Cost Reduction (Databricks to BigQuery)</h3>
+              <p data-en="Architected and led the migration of an enterprise Data Lake from Databricks to Google BigQuery at a Brazilian Fintech, achieving an 88% reduction in infrastructure cost while improving query SLA and data governance." data-pt="Projetou e liderou a migração de um Data Lake corporativo de Databricks para Google BigQuery em uma Fintech brasileira, alcançando 88% de redução em custos de infraestrutura com ganho de SLA e governança.">
+                Architected and led the migration of an enterprise Data Lake from Databricks to Google BigQuery at a Brazilian Fintech, achieving an <strong>88% reduction</strong> in infrastructure cost while improving query SLA and data governance.
+              </p>
+            </div>
           </div>
 
           <div class="card">
-            <div class="card-tag" style="color: var(--accent);">FinOps &amp; Serverless Architecture · Databricks</div>
-            <h3 data-en="57% Cost Reduction on Databricks via Serverless &amp; FinOps" data-pt="Redução de 57% em Custos Databricks via Serverless &amp; FinOps">57% Cost Reduction on Databricks via Serverless &amp; FinOps</h3>
-            <p data-en="Delivered a 57% cost reduction on Databricks workloads by implementing FinOps governance, migrating pipelines to serverless compute, and applying storage/partitioning architectural best practices." data-pt="Entregou 57% de redução nos custos de workloads Databricks implementando governança FinOps, migração para computação serverless e boas práticas de arquitetura e particionamento.">
-              Delivered a <strong>57% cost reduction</strong> on Databricks workloads by implementing FinOps governance, migrating pipelines to serverless compute, and applying storage/partitioning architectural best practices.
-            </p>
+            <div>
+              <div class="card-tag" style="color: var(--accent);" data-en="FinOps &amp; Serverless Architecture · Databricks" data-pt="FinOps &amp; Arquitetura Serverless · Databricks">FinOps &amp; Serverless Architecture · Databricks</div>
+              <h3 data-en="57% Cost Reduction on Databricks via Serverless &amp; FinOps" data-pt="Redução de 57% em Custos Databricks via Serverless &amp; FinOps">57% Cost Reduction on Databricks via Serverless &amp; FinOps</h3>
+              <p data-en="Delivered a 57% cost reduction on Databricks workloads by implementing FinOps governance, migrating pipelines to serverless compute, and applying storage/partitioning architectural best practices." data-pt="Entregou 57% de redução nos custos de workloads Databricks implementando governança FinOps, migração para computação serverless e boas práticas de arquitetura e particionamento.">
+                Delivered a <strong>57% cost reduction</strong> on Databricks workloads by implementing FinOps governance, migrating pipelines to serverless compute, and applying storage/partitioning architectural best practices.
+              </p>
+            </div>
           </div>
 
           <div class="card">
-            <div class="card-tag" style="color: var(--accent-purple);">LatAm-Scale Program &amp; Google PSO</div>
-            <h3 data-en="40+ TB Legacy Migration Program &amp; Google PSO Engagements" data-pt="Programa de Migração de ~40 TB p/ GCP &amp; Google PSO">40+ TB Legacy Migration Program &amp; Google PSO Engagements</h3>
-            <p data-en="Led a 4-project enterprise migration program transferring ~40 TB of data from legacy Hadoop, Oracle, and Greenplum environments to Google Cloud (among the largest in Latin America), and acted alongside the Google Professional Services (PSO) team on flagship enterprise projects in Brazil." data-pt="Liderou um programa de 4 projetos que migrou aproximadamente 40 TB de dados de Hadoop, Oracle e Greenplum para a nuvem GCP (dentre os maiores da América Latina), além de atuar junto ao time do Google Professional Services (PSO) nos principais projetos do Brasil.">
-              Led a 4-project enterprise migration program transferring <strong>~40 TB</strong> of data from legacy Hadoop, Oracle, and Greenplum environments to Google Cloud (among the largest in Latin America), and acted alongside the <strong>Google Professional Services (PSO)</strong> team on flagship enterprise projects in Brazil.
-            </p>
+            <div>
+              <div class="card-tag" style="color: var(--accent-purple);" data-en="LatAm-Scale Program &amp; Google PSO" data-pt="Programa Escala LatAm &amp; Google PSO">LatAm-Scale Program &amp; Google PSO</div>
+              <h3 data-en="40+ TB Legacy Migration Program &amp; Google PSO Engagements" data-pt="Programa de Migração de ~40 TB p/ GCP &amp; Google PSO">40+ TB Legacy Migration Program &amp; Google PSO Engagements</h3>
+              <p data-en="Led a 4-project enterprise migration program transferring ~40 TB of data from legacy Hadoop, Oracle, and Greenplum environments to Google Cloud (among the largest in Latin America), and acted alongside the Google Professional Services (PSO) team on flagship enterprise projects in Brazil." data-pt="Liderou um programa de 4 projetos que migrou aproximadamente 40 TB de dados de Hadoop, Oracle e Greenplum para a nuvem GCP (dentre os maiores da América Latina), além de atuar junto ao time do Google Professional Services (PSO) nos principais projetos do Brasil.">
+                Led a 4-project enterprise migration program transferring <strong>~40 TB</strong> of data from legacy Hadoop, Oracle, and Greenplum environments to Google Cloud (among the largest in Latin America), and acted alongside the <strong>Google Professional Services (PSO)</strong> team on flagship enterprise projects in Brazil.
+              </p>
+            </div>
           </div>
 
           <div class="card">
-            <div class="card-tag" style="color: var(--accent-amber);">Greenfield AgTech Platform · European M&amp;A Exit</div>
-            <h3 data-en="Americas' Largest Livestock Data Lake → European Acquisition" data-pt="Maior Data Lake de Pecuária das Américas → Aquisição Europeia">Americas' Largest Livestock Data Lake → European Acquisition</h3>
-            <p data-en="Founded and architected from scratch an AgTech Data Lake on AWS and subsequently led its migration to GCP—establishing the largest livestock data platform in the Americas, driving revenue growth and enabling the company's acquisition by a European group." data-pt="Construiu do zero um Data Lake na AWS no setor de agropecuária e posteriormente liderou sua migração para o GCP—consolidando a maior base de dados de pecuária das Américas, alavancando as receitas da empresa brasileira e viabilizando sua aquisição por um grupo europeu.">
-              Founded and architected from scratch an AgTech Data Lake on AWS and subsequently led its migration to GCP—establishing the largest livestock data platform in the Americas, driving revenue growth and enabling the company's acquisition by a European group.
-            </p>
+            <div>
+              <div class="card-tag" style="color: var(--accent-amber);" data-en="Greenfield AgTech Platform · European M&amp;A Exit" data-pt="Plataforma AgTech Greenfield · Aquisição Europeia (M&amp;A)">Greenfield AgTech Platform · European M&amp;A Exit</div>
+              <h3 data-en="Americas' Largest Livestock Data Lake → European Acquisition" data-pt="Maior Data Lake de Pecuária das Américas → Aquisição Europeia">Americas' Largest Livestock Data Lake → European Acquisition</h3>
+              <p data-en="Founded and architected from scratch an AgTech Data Lake on AWS and subsequently led its migration to GCP—establishing the largest livestock data platform in the Americas, driving revenue growth and enabling the company's acquisition by a European group." data-pt="Construiu do zero um Data Lake na AWS no setor de agropecuária e posteriormente liderou sua migração para o GCP—consolidando a maior base de dados de pecuária das Américas, alavancando as receitas da empresa brasileira e viabilizando sua aquisição por um grupo europeu.">
+                Founded and architected from scratch an AgTech Data Lake on AWS and subsequently led its migration to GCP—establishing the largest livestock data platform in the Americas, driving revenue growth and enabling the company's acquisition by a European group.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- 04. PROFESSIONAL EXPERIENCE & LEADERSHIP TRAJECTORY (Standard ATS Heading) -->
+      <!-- 04. PROFESSIONAL EXPERIENCE & LEADERSHIP TRAJECTORY -->
       <section class="section">
         <h2 class="section-title" data-en="Professional Experience &amp; Leadership Trajectory" data-pt="Experiência Profissional &amp; Trajetória de Liderança">
           Professional Experience &amp; Leadership Trajectory
         </h2>
         <div class="grid-3">
           <div class="card">
-            <div class="card-tag" style="color: var(--accent);">Engineering Manager &amp; Technical Leader</div>
-            <h3 data-en="RD Station · Avenue Code · Acerto" data-pt="RD Station · Avenue Code · Acerto">RD Station · Avenue Code · Acerto</h3>
-            <p data-en="Managed and technically led multidisciplinary teams across Data Engineering, Artificial Intelligence, DevOps, and Software Engineering—building high-performing engineering cultures focused on measurable business outcomes and human care." data-pt="Gestor e líder técnico de projetos envolvendo Engenharia de Dados, IA, DevOps e Engenharia de Software—atuando na construção de times de alta performance com foco em resultado e cuidado humano.">
-              Managed and technically led multidisciplinary teams across Data Engineering, Artificial Intelligence, DevOps, and Software Engineering—building high-performing engineering cultures focused on measurable business outcomes and human care.
-            </p>
+            <div>
+              <div class="card-tag" style="color: var(--accent);" data-en="Engineering Manager &amp; Technical Leader" data-pt="Gestor de Engenharia &amp; Líder Técnico">Engineering Manager &amp; Technical Leader</div>
+              <h3 data-en="RD Station · Avenue Code · Acerto" data-pt="RD Station · Avenue Code · Acerto">RD Station · Avenue Code · Acerto</h3>
+              <p data-en="Managed and technically led multidisciplinary teams across Data Engineering, Artificial Intelligence, DevOps, and Software Engineering—building high-performing engineering cultures focused on measurable business outcomes and human care." data-pt="Gestor e líder técnico de projetos envolvendo Engenharia de Dados, IA, DevOps e Engenharia de Software—atuando na construção de times de alta performance com foco em resultado e cuidado humano.">
+                Managed and technically led multidisciplinary teams across Data Engineering, Artificial Intelligence, DevOps, and Software Engineering—building high-performing engineering cultures focused on measurable business outcomes and human care.
+              </p>
+            </div>
           </div>
 
           <div class="card">
-            <div class="card-tag" style="color: var(--accent-purple);">Principal IC — Data &amp; AI Engineer</div>
-            <h3 data-en="Engineering · Prodap · Bysat · D-Analytics" data-pt="Engineering do Brasil · Prodap · Bysat · D-Analytics">Engineering · Prodap · Bysat · D-Analytics</h3>
-            <p data-en="Hands-on Principal Software &amp; Data Engineer delivering enterprise Data Platforms, greenfield Data Lakes, Master Data Management (MDM), BI, and AI initiatives across GCP, AWS, Hadoop, Python, Go, and SQL (including own consultancy, D-Analytics)." data-pt="Colaborador Individual de alta senioridade em projetos de construção de plataformas de dados, Data Lakes do zero, MDM, BI e Inteligência Artificial como Engenheiro de Software e Engenheiro de Dados (incluindo consultoria própria, D-Analytics).">
-              Hands-on Principal Software &amp; Data Engineer delivering enterprise Data Platforms, greenfield Data Lakes, Master Data Management (MDM), BI, and AI initiatives across GCP, AWS, Hadoop, Python, Go, and SQL (including own consultancy, D-Analytics).
-            </p>
+            <div>
+              <div class="card-tag" style="color: var(--accent-purple);" data-en="Principal IC — Data &amp; AI Engineer" data-pt="Principal IC — Engenheiro de Dados &amp; IA">Principal IC — Data &amp; AI Engineer</div>
+              <h3 data-en="Engineering · Prodap · Bysat · D-Analytics" data-pt="Engineering do Brasil · Prodap · Bysat · D-Analytics">Engineering · Prodap · Bysat · D-Analytics</h3>
+              <p data-en="Hands-on Principal Software &amp; Data Engineer delivering enterprise Data Platforms, greenfield Data Lakes, Master Data Management (MDM), BI, and AI initiatives across GCP, AWS, Hadoop, Python, Go, and SQL (including own consultancy, D-Analytics)." data-pt="Colaborador Individual de alta senioridade em projetos de construção de plataformas de dados, Data Lakes do zero, MDM, BI e Inteligência Artificial como Engenheiro de Software e Engenheiro de Dados (incluindo consultoria própria, D-Analytics).">
+                Hands-on Principal Software &amp; Data Engineer delivering enterprise Data Platforms, greenfield Data Lakes, Master Data Management (MDM), BI, and AI initiatives across GCP, AWS, Hadoop, Python, Go, and SQL (including own consultancy, D-Analytics).
+              </p>
+            </div>
           </div>
 
           <div class="card">
-            <div class="card-tag" style="color: var(--accent-emerald);">Entrepreneur &amp; Startup Founder (2x)</div>
-            <h3 data-en="Conserta AI &amp; Consertos Legais" data-pt="Conserta AI &amp; Consertos Legais">Conserta AI &amp; Consertos Legais</h3>
-            <p data-en="Founded Consertos Legais (an Uber-like on-demand marketplace for home appliance maintenance) and led its product pivot into Conserta AI—an intelligent diagnostic chatbot providing automated repair instructions." data-pt="Empreendedor fundador de 2 startups e proprietário de negócio local: fundou a Consertos Legais (marketplace estilo Uber de eletrodomésticos) e liderou o pivot para a Conserta AI (chatbot inteligente para instruções de manutenção).">
-              Founded <strong>Consertos Legais</strong> (an Uber-like on-demand marketplace for home appliance maintenance) and led its product pivot into <strong>Conserta AI</strong>—an intelligent diagnostic chatbot providing automated repair instructions.
-            </p>
+            <div>
+              <div class="card-tag" style="color: var(--accent-emerald);" data-en="Entrepreneur &amp; Startup Founder (2x)" data-pt="Empreendedor &amp; Fundador de Startups (2x)">Entrepreneur &amp; Startup Founder (2x)</div>
+              <h3 data-en="Conserta AI &amp; Consertos Legais" data-pt="Conserta AI &amp; Consertos Legais">Conserta AI &amp; Consertos Legais</h3>
+              <p data-en="Founded Consertos Legais (an Uber-like on-demand marketplace for home appliance maintenance) and led its product pivot into Conserta AI—an intelligent diagnostic chatbot providing automated repair instructions." data-pt="Empreendedor fundador de 2 startups e proprietário de negócio local: fundou a Consertos Legais (marketplace estilo Uber de eletrodomésticos) e liderou o pivot para a Conserta AI (chatbot inteligente para instruções de manutenção).">
+                Founded <strong>Consertos Legais</strong> (an Uber-like on-demand marketplace for home appliance maintenance) and led its product pivot into <strong>Conserta AI</strong>—an intelligent diagnostic chatbot providing automated repair instructions.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -483,11 +591,13 @@
         </h2>
         <div class="grid-2">
           <div class="card">
-            <div class="card-tag" style="color: var(--accent);">google / adk-go · Upstream Contributor</div>
-            <h3 data-en="Firestore Session Service for Google ADK Go v2" data-pt="Serviço de Sessão em Firestore para o Google ADK Go v2">Firestore Session Service for Google ADK Go v2</h3>
-            <p data-en="Designed and implemented google.golang.org/adk/session/firestore (PR #2058 / Issue #2057), enabling durable HITL agent pause/resume on serverless GCP stacks with optimistic concurrency control and 91.4% test coverage." data-pt="Projetou e implementou google.golang.org/adk/session/firestore (PR #2058 / Issue #2057), habilitando pausa/retomada durável de agentes HITL em stacks serverless GCP com controle de concorrência otimista e 91,4% de cobertura de testes.">
-              Designed and implemented <code>google.golang.org/adk/session/firestore</code> (PR #2058 / Issue #2057), enabling durable HITL agent pause/resume on serverless GCP stacks with optimistic concurrency control and 91.4% test coverage.
-            </p>
+            <div>
+              <div class="card-tag" style="color: var(--accent);" data-en="google / adk-go · Upstream Contributor" data-pt="google / adk-go · Contribuidor Upstream">google / adk-go · Upstream Contributor</div>
+              <h3 data-en="Firestore Session Service for Google ADK Go v2" data-pt="Serviço de Sessão em Firestore para o Google ADK Go v2">Firestore Session Service for Google ADK Go v2</h3>
+              <p data-en="Designed and implemented google.golang.org/adk/session/firestore (PR #2058 / Issue #2057), enabling durable HITL agent pause/resume on serverless GCP stacks with optimistic concurrency control and 91.4% test coverage." data-pt="Projetou e implementou google.golang.org/adk/session/firestore (PR #2058 / Issue #2057), habilitando pausa/retomada durável de agentes HITL em stacks serverless GCP com controle de concorrência otimista e 91.4% de cobertura de testes.">
+                Designed and implemented <code>google.golang.org/adk/session/firestore</code> (PR #2058 / Issue #2057), enabling durable HITL agent pause/resume on serverless GCP stacks with optimistic concurrency control and 91.4% test coverage.
+              </p>
+            </div>
             <div class="card-footer">
               <span>Go 1.26 · Firestore · gRPC</span>
               <a href="https://github.com/google/adk-go/pull/2058" target="_blank" rel="noopener">github.com/google/adk-go/pull/2058 ↗</a>
@@ -495,11 +605,13 @@
           </div>
 
           <div class="card">
-            <div class="card-tag" style="color: var(--accent-purple);">dexadata / dexaflow · Creator &amp; Principal Architect</div>
-            <h3 data-en="Dexaflow — Airflow-Compatible Orchestrator in Go" data-pt="Dexaflow — Orquestrador Compatível com Airflow em Go">Dexaflow — Airflow-Compatible Orchestrator in Go</h3>
-            <p data-en="Re-engineered Apache Airflow's scheduling and REST/UI control plane into a single Go binary, eliminating Python GIL bottlenecks while providing Kubernetes pod-per-task isolation and GitOps-native DAGs." data-pt="Reengenharia do orquestrador Apache Airflow em Go em um control plane de binário único, eliminando gargalos de GIL do Python com isolamento pod-per-task no Kubernetes e DAGs GitOps.">
-              Re-engineered Apache Airflow's scheduling and REST/UI control plane into a single Go binary, eliminating Python GIL bottlenecks while providing Kubernetes pod-per-task isolation and GitOps-native DAGs.
-            </p>
+            <div>
+              <div class="card-tag" style="color: var(--accent-purple);" data-en="dexadata / dexaflow · Creator &amp; Principal Architect" data-pt="dexadata / dexaflow · Criador &amp; Principal Architect">dexadata / dexaflow · Creator &amp; Principal Architect</div>
+              <h3 data-en="Dexaflow — Airflow-Compatible Orchestrator in Go" data-pt="Dexaflow — Orquestrador Compatível com Airflow em Go">Dexaflow — Airflow-Compatible Orchestrator in Go</h3>
+              <p data-en="Re-engineered Apache Airflow's scheduling and REST/UI control plane into a single Go binary, eliminating Python GIL bottlenecks while providing Kubernetes pod-per-task isolation and GitOps-native DAGs." data-pt="Reengenharia do orquestrador Apache Airflow em Go em um control plane de binário único, eliminando gargalos de GIL do Python com isolamento pod-per-task no Kubernetes e DAGs GitOps.">
+                Re-engineered Apache Airflow's scheduling and REST/UI control plane into a single Go binary, eliminating Python GIL bottlenecks while providing Kubernetes pod-per-task isolation and GitOps-native DAGs.
+              </p>
+            </div>
             <div class="card-footer">
               <span>Go · Kubernetes · Workflow Orchestration</span>
               <a href="https://github.com/dexadata/dexaflow" target="_blank" rel="noopener">github.com/dexadata/dexaflow ↗</a>
@@ -508,38 +620,44 @@
         </div>
       </section>
 
-      <!-- 06. CERTIFICATIONS, AWARDS, COMMUNITY & LANGUAGES -->
+      <!-- 06. AWARDS, COMMUNITY SPEAKING & LANGUAGES -->
       <section class="section">
         <h2 class="section-title" data-en="Awards, Community Speaking &amp; Languages" data-pt="Reconhecimentos, Comunidade, Palestras &amp; Idiomas">
           Awards, Community Speaking &amp; Languages
         </h2>
         <div class="grid-3">
           <div class="card">
-            <div class="card-tag" style="color: var(--accent);">Google Recognition</div>
-            <h3 data-en="Google Developer Expert (Cloud &amp; AI) &amp; Gemini Feedback" data-pt="Google Developer Expert (Cloud &amp; AI) &amp; Feedback Gemini">Google Developer Expert (Cloud &amp; AI) &amp; Gemini Feedback</h3>
-            <p data-en="Official Google Developer Expert in Cloud &amp; AI and active contributor in Google's early-access Gemini product feedback loops." data-pt="Google Developer Expert oficial em Cloud &amp; AI e colaborador ativo nos ciclos de feedback de produto do ecossistema Gemini.">
-              Official Google Developer Expert in Cloud &amp; AI and active contributor in Google's early-access Gemini product feedback loops.
-            </p>
+            <div>
+              <div class="card-tag" style="color: var(--accent);" data-en="Google Recognition" data-pt="Reconhecimento Oficial Google">Google Recognition</div>
+              <h3 data-en="Google Developer Expert (Cloud &amp; AI) &amp; Gemini Feedback" data-pt="Google Developer Expert (Cloud &amp; AI) &amp; Feedback Gemini">Google Developer Expert (Cloud &amp; AI) &amp; Gemini Feedback</h3>
+              <p data-en="Official Google Developer Expert in Cloud &amp; AI and active contributor in Google's early-access Gemini product feedback loops." data-pt="Google Developer Expert oficial em Cloud &amp; AI e colaborador ativo nos ciclos de feedback de produto do ecossistema Gemini.">
+                Official Google Developer Expert in Cloud &amp; AI and active contributor in Google's early-access Gemini product feedback loops.
+              </p>
+            </div>
             <div class="card-footer">
-              <a href="https://me.developers.google.com/communities/experts?q=alisson%20rosa" target="_blank" rel="noopener">Verify in GDE Directory ↗</a>
+              <a href="https://me.developers.google.com/communities/experts?q=alisson%20rosa" target="_blank" rel="noopener" data-en="Verify in GDE Directory ↗" data-pt="Verificar no Diretório GDE ↗">Verify in GDE Directory ↗</a>
             </div>
           </div>
 
           <div class="card">
-            <div class="card-tag" style="color: var(--accent-amber);">Speaking &amp; Mentorship</div>
-            <h3 data-en="TDC · DevFest BH · Data Science Academy" data-pt="TDC · DevFest BH · Data Science Academy">TDC · DevFest BH · Data Science Academy</h3>
-            <p data-en="Speaker at The Developers Conference (TDC) and DevFest BH; Organizer &amp; Speaker at Data Analytics Meetup; Technical Mentor at Data Science Academy." data-pt="Palestrante no The Developers Conference (TDC) e DevFest BH; Organizador e Palestrante do Data Analytics Meetup; Mentor na Data Science Academy.">
-              Speaker at <strong>The Developers Conference (TDC)</strong> and <strong>DevFest BH</strong>; Organizer &amp; Speaker at <strong>Data Analytics Meetup</strong>; Technical Mentor at <strong>Data Science Academy</strong>.
-            </p>
+            <div>
+              <div class="card-tag" style="color: var(--accent-amber);" data-en="Speaking &amp; Mentorship" data-pt="Palestras, Comunidade &amp; Mentoria">Speaking &amp; Mentorship</div>
+              <h3 data-en="TDC · DevFest BH · Data Science Academy" data-pt="TDC · DevFest BH · Data Science Academy">TDC · DevFest BH · Data Science Academy</h3>
+              <p data-en="Speaker at The Developers Conference (TDC) and DevFest BH; Organizer &amp; Speaker at Data Analytics Meetup; Technical Mentor at Data Science Academy." data-pt="Palestrante no The Developers Conference (TDC) e DevFest BH; Organizador e Palestrante do Data Analytics Meetup; Mentor na Data Science Academy.">
+                Speaker at <strong>The Developers Conference (TDC)</strong> and <strong>DevFest BH</strong>; Organizer &amp; Speaker at <strong>Data Analytics Meetup</strong>; Technical Mentor at <strong>Data Science Academy</strong>.
+              </p>
+            </div>
           </div>
 
           <div class="card">
-            <div class="card-tag" style="color: var(--accent-emerald);">Languages</div>
-            <h3 data-en="Portuguese &amp; English" data-pt="Português &amp; Inglês">Portuguese &amp; English</h3>
-            <p data-en="Portuguese: Native  |  English: Intermediate (B2 — Professional Technical Working Proficiency)" data-pt="Português: Nativo  |  Inglês: Intermediário (B2 — Proficiência Técnica Profissional)">
-              <strong>Portuguese:</strong> Native<br/>
-              <strong>English:</strong> Intermediate (B2 — Professional Technical Working Proficiency)
-            </p>
+            <div>
+              <div class="card-tag" style="color: var(--accent-emerald);" data-en="Languages" data-pt="Idiomas">Languages</div>
+              <h3 data-en="Portuguese &amp; English" data-pt="Português &amp; Inglês">Portuguese &amp; English</h3>
+              <p data-en="<strong>Portuguese:</strong> Native<br/><strong>English:</strong> Intermediate (B2 — Professional Technical Working Proficiency)" data-pt="<strong>Português:</strong> Nativo<br/><strong>Inglês:</strong> Intermediário (B2 — Proficiência Técnica Profissional)">
+                <strong>Portuguese:</strong> Native<br/>
+                <strong>English:</strong> Intermediate (B2 — Professional Technical Working Proficiency)
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -557,7 +675,7 @@
         el.innerHTML = el.getAttribute('data-' + lang);
       });
       document.getElementById('lang-btn').textContent =
-        lang === 'en' ? '🌐 Idioma: EN (Mudar p/ PT-BR)' : '🌐 Language: PT-BR (Switch to EN)';
+        lang === 'en' ? '🌐 Idioma: EN → PT-BR' : '🌐 Language: PT-BR → EN';
     }
 
     function toggleTheme() {
@@ -568,9 +686,20 @@
       atsMode = !atsMode;
       document.body.classList.toggle('ats-mode', atsMode);
       const btn = document.getElementById('ats-btn');
-      btn.textContent = atsMode ? '📄 ATS 1-Column Mode: ON' : '📄 ATS 1-Column Mode: OFF';
+      btn.textContent = atsMode ? '📄 ATS 1-Col View: ON' : '📄 ATS 1-Col View: OFF';
       btn.classList.toggle('btn-ats-active', atsMode);
     }
+
+    // Support ?lang=pt and ?ats=1 query parameters for automated PDF generation & direct sharing
+    (function initFromQuery() {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('lang') === 'pt') {
+        toggleLang();
+      }
+      if (params.get('ats') === '1') {
+        toggleATS();
+      }
+    })();
   </script>
 </body>
 </html>

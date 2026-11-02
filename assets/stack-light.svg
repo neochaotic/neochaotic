@@ -1,74 +1,74 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 176" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 184" width="100%" height="100%">
   <defs>
     <style>
-      .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif; }
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif; }
       .font-mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
     </style>
   </defs>
 
-  <rect x="1" y="1" width="918" height="174" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
-  <text x="24" y="27" class="font-mono" font-size="11" font-weight="700" fill="#2563eb" letter-spacing="0.8">
+  <rect x="1" y="1" width="918" height="182" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="24" y="28" class="font-mono" font-size="11" font-weight="700" fill="#2563eb" letter-spacing="0.8">
     PRODUCTION ARCHITECTURE MATRIX // CORE RUNTIMES, AGENTIC AI, CLOUD &amp; DATA PLATFORMS
   </text>
-  <line x1="24" y1="39" x2="896" y2="39" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="24" y1="40" x2="896" y2="40" stroke="#e2e8f0" stroke-width="1"/>
 
-  <!-- Col 1 -->
-  <rect x="20" y="52" width="210" height="108" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
-  <text x="34" y="74" class="font-mono" font-size="10.5" font-weight="700" fill="#2563eb">
+  <!-- Col 1: x=24, width=206 -->
+  <rect x="24" y="54" width="206" height="108" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="40" y="76" class="font-mono" font-size="10" font-weight="700" fill="#2563eb" letter-spacing="0.4">
     SYSTEMS &amp; RUNTIMES
   </text>
-  <text x="34" y="96" class="font-sans" font-size="12" font-weight="600" fill="#0f172a">
+  <text x="40" y="98" class="font-sans" font-size="12.5" font-weight="700" fill="#0f172a">
     Go (1.26+) · Python · Rust
   </text>
-  <text x="34" y="116" class="font-sans" font-size="11.5" fill="#475569">
+  <text x="40" y="118" class="font-sans" font-size="11.5" fill="#475569">
     gRPC, Protobuf, Optimistic CAS,
   </text>
-  <text x="34" y="133" class="font-sans" font-size="11.5" fill="#475569">
+  <text x="40" y="135" class="font-sans" font-size="11.5" fill="#475569">
     Single-Binary Control Planes
   </text>
 
-  <!-- Col 2 -->
-  <rect x="243" y="52" width="210" height="108" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
-  <text x="257" y="74" class="font-mono" font-size="10.5" font-weight="700" fill="#d97706">
+  <!-- Col 2: x=246, width=206 -->
+  <rect x="246" y="54" width="206" height="108" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="262" y="76" class="font-mono" font-size="10" font-weight="700" fill="#d97706" letter-spacing="0.4">
     AGENTIC AI &amp; LLMS
   </text>
-  <text x="257" y="96" class="font-sans" font-size="12" font-weight="600" fill="#0f172a">
-    Google ADK · Gemini · Vertex AI
+  <text x="262" y="98" class="font-sans" font-size="12.5" font-weight="700" fill="#0f172a">
+    Google ADK · Gemini · Vertex
   </text>
-  <text x="257" y="116" class="font-sans" font-size="11.5" fill="#475569">
+  <text x="262" y="118" class="font-sans" font-size="11.5" fill="#475569">
     Model Context Protocol (MCP),
   </text>
-  <text x="257" y="133" class="font-sans" font-size="11.5" fill="#475569">
+  <text x="262" y="135" class="font-sans" font-size="11.5" fill="#475569">
     A2A Protocol, HITL Workflows
   </text>
 
-  <!-- Col 3 -->
-  <rect x="466" y="52" width="210" height="108" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
-  <text x="480" y="74" class="font-mono" font-size="10.5" font-weight="700" fill="#059669">
+  <!-- Col 3: x=468, width=206 -->
+  <rect x="468" y="54" width="206" height="108" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="484" y="76" class="font-mono" font-size="10" font-weight="700" fill="#059669" letter-spacing="0.4">
     CLOUD &amp; SERVERLESS FINOPS
   </text>
-  <text x="480" y="96" class="font-sans" font-size="12" font-weight="600" fill="#0f172a">
-    GCP · AWS · Kubernetes (GKE)
+  <text x="484" y="98" class="font-sans" font-size="12.5" font-weight="700" fill="#0f172a">
+    GCP · AWS · Kubernetes
   </text>
-  <text x="480" y="116" class="font-sans" font-size="11.5" fill="#475569">
+  <text x="484" y="118" class="font-sans" font-size="11.5" fill="#475569">
     Cloud Run, Firestore, Eventarc,
   </text>
-  <text x="480" y="133" class="font-sans" font-size="11.5" fill="#475569">
+  <text x="484" y="135" class="font-sans" font-size="11.5" fill="#475569">
     Cloud Tasks, IAM/KMS, DevOps
   </text>
 
-  <!-- Col 4 -->
-  <rect x="689" y="52" width="211" height="108" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
-  <text x="703" y="74" class="font-mono" font-size="10.5" font-weight="700" fill="#7c3aed">
+  <!-- Col 4: x=690, width=206 -->
+  <rect x="690" y="54" width="206" height="108" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="706" y="76" class="font-mono" font-size="10" font-weight="700" fill="#7c3aed" letter-spacing="0.4">
     DATA PLATFORMS &amp; MDM
   </text>
-  <text x="703" y="96" class="font-sans" font-size="12" font-weight="600" fill="#0f172a">
-    BigQuery · Databricks · Spark
+  <text x="706" y="98" class="font-sans" font-size="12.5" font-weight="700" fill="#0f172a">
+    BigQuery · Databricks
   </text>
-  <text x="703" y="116" class="font-sans" font-size="11.5" fill="#475569">
+  <text x="706" y="118" class="font-sans" font-size="11.5" fill="#475569">
     Dexaflow, Airflow, Data Lakes,
   </text>
-  <text x="703" y="133" class="font-sans" font-size="11.5" fill="#475569">
-    MDM, Hadoop, Oracle, Greenplum
+  <text x="706" y="135" class="font-sans" font-size="11.5" fill="#475569">
+    MDM, Hadoop, Spark &amp; SQL
   </text>
 </svg>
