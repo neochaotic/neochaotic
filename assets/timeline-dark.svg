@@ -12,7 +12,7 @@
 <path d="M2 0L10 0A2 2 0 0 1 12 2L12 6A2 2 0 0 1 10 8L2 8A2 2 0 0 1 0 6L0 2A2 2 0 0 1 2 0" transform="translate(173 9)" fill="rgb(117,152,210)" class="zr0-cls-4"></path>
 <path d="M2 0L10 0A2 2 0 0 1 12 2L12 6A2 2 0 0 1 10 8L2 8A2 2 0 0 1 0 6L0 2A2 2 0 0 1 2 0" transform="translate(188 9)" fill="rgb(138,180,248)" class="zr0-cls-5"></path>
 <text dominant-baseline="central" text-anchor="start" style="font: 400 12px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" y="6" transform="translate(209 6)" fill="#7C7C86">Stronger tone, more senior role</text>
-<text dominant-baseline="central" text-anchor="start" style="font: 500 13px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" y="6.5" transform="translate(722.3521 4)" fill="#B4B4BB">23 years in technology</text>
+<text dominant-baseline="central" text-anchor="start" style="font: 500 13px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" y="6.5" transform="translate(733.9175 4)" fill="#B4B4BB">23 years in technology</text>
 <path d="M128 298L328.4448 298" fill="transparent" stroke="#7C7C86" stroke-opacity="0.45" class="zr0-cls-0"></path>
 <text dominant-baseline="central" text-anchor="start" style="font: 400 11px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" y="5.5" transform="translate(228.2224 302)" fill="#7C7C86" fill-opacity="0.85">compressed scale</text>
 <text dominant-baseline="central" text-anchor="middle" style="font-size:11px;font-family:Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;" y="5.5" transform="translate(128 272)" fill="#7C7C86">2004</text>
@@ -35,95 +35,94 @@
 <path d="M670.2885 34L670.2885 256" fill="#000" stroke="rgb(255,255,255)" stroke-opacity="0.06" class="zr0-cls-6"></path>
 <path d="M732.4419 34L732.4419 256" fill="#000" stroke="rgb(255,255,255)" stroke-opacity="0.06" class="zr0-cls-6"></path>
 <path d="M794.5954 34L794.5954 256" fill="#000" stroke="rgb(255,255,255)" stroke-opacity="0.06" class="zr0-cls-6"></path>
-<path d="M377.5598 100L377.5598 144" fill="#000" fill-opacity="0.5" stroke="#7C7C86" stroke-opacity="0.5" class="zr0-cls-6"></path>
 <path d="M756.8392 100L756.8392 144" fill="#000" fill-opacity="0.5" stroke="#7C7C86" stroke-opacity="0.5" class="zr0-cls-6"></path>
 <path d="M134.5919 84L224.5531 84A4 4 0 0 1 228.5531 88L228.5531 96A4 4 0 0 1 224.5531 100L134.5919 100A4 4 0 0 1 130.5919 96L130.5919 88A4 4 0 0 1 134.5919 84" fill="rgb(54,69,94)" class="zr0-cls-7"></path>
-<path d="M130.5919 108l107.2085 0l0 14l-107.2085 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
+<path d="M130.5919 108l104.3354 0l0 14l-104.3354 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
 <text dominant-baseline="central" text-anchor="start" style="font: 600 11px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="134.59193726751732" y="115" fill="#F4F4F5">IT services</text>
-<text dominant-baseline="central" text-anchor="start" style="font: 12px sans-serif" xml:space="preserve" x="193.04555054876732" y="115" fill="#000">  </text>
-<text dominant-baseline="central" text-anchor="start" style="font: 500 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="199.71351929876732" y="115" fill="#7C7C86">10y 5m</text>
-<path d="M130.5919 125l148.2588 0l0 12l-148.2588 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
+<text dominant-baseline="central" text-anchor="start" style="font: 12px sans-serif" xml:space="preserve" x="191.46644898626732" y="115" fill="#000">  </text>
+<text dominant-baseline="central" text-anchor="start" style="font: 500 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="198.13441773626732" y="115" fill="#7C7C86">10y 5m</text>
+<path d="M130.5919 125l138.6299 0l0 12l-138.6299 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
 <text dominant-baseline="central" text-anchor="start" style="font: 400 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="134.59193726751732" y="131" fill="#7C7C86">Technician to business owner</text>
 <path d="M236.5531 84L327.6242 84A4 4 0 0 1 331.6242 88L331.6242 96A4 4 0 0 1 327.6242 100L236.5531 100A4 4 0 0 1 232.5531 96L232.5531 88A4 4 0 0 1 236.5531 84" fill="rgb(75,97,133)" class="zr0-cls-7"></path>
-<path d="M232.5531 46l96.7217 0l0 14l-96.7217 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
+<path d="M232.5531 46l93.2632 0l0 14l-93.2632 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
 <text dominant-baseline="central" text-anchor="start" style="font: 600 11px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" x="236.55313159746748" y="53" fill="#F4F4F5">Freelance</text>
-<text dominant-baseline="central" text-anchor="start" style="font: 12px sans-serif" xml:space="preserve" x="288.7386784724675" y="53" fill="#000">  </text>
-<text dominant-baseline="central" text-anchor="start" style="font: 500 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="295.4066472224675" y="53" fill="#7C7C86">3y 9m</text>
-<path d="M232.5531 63l162.6729 0l0 12l-162.6729 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
+<text dominant-baseline="central" text-anchor="start" style="font: 12px sans-serif" xml:space="preserve" x="287.9169011287175" y="53" fill="#000">  </text>
+<text dominant-baseline="central" text-anchor="start" style="font: 500 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="294.5848698787175" y="53" fill="#7C7C86">3y 9m</text>
+<path d="M232.5531 63l154.7529 0l0 12l-154.7529 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
 <text dominant-baseline="central" text-anchor="start" style="font: 400 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="236.55313159746748" y="69" fill="#7C7C86">BI Analyst and Python Developer</text>
 <path d="M245.8761 204L261.8452 204A4 4 0 0 1 265.8452 208L265.8452 216A4 4 0 0 1 261.8452 220L245.8761 220A4 4 0 0 1 241.8761 216L241.8761 208A4 4 0 0 1 245.8761 204" fill="url(#zr0-p0)" stroke="#8AB4F8" class="zr0-cls-9"></path>
-<path d="M241.8761 228l52.5361 0l0 14l-52.5361 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
+<path d="M241.8761 228l52.7241 0l0 14l-52.7241 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
 <text dominant-baseline="central" text-anchor="start" style="font: 600 11px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" x="245.87614356087153" y="235" fill="#F4F4F5">IFMG</text>
-<text dominant-baseline="central" text-anchor="start" style="font: 12px sans-serif" xml:space="preserve" x="273.7736044983715" y="235" fill="#000">  </text>
-<text dominant-baseline="central" text-anchor="start" style="font: 500 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" x="280.4415732483715" y="235" fill="#7C7C86">1y</text>
-<path d="M241.8761 245l132.1553 0l0 12l-132.1553 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
+<text dominant-baseline="central" text-anchor="start" style="font: 12px sans-serif" xml:space="preserve" x="273.3707724671215" y="235" fill="#000">  </text>
+<text dominant-baseline="central" text-anchor="start" style="font: 500 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" x="280.0387412171215" y="235" fill="#7C7C86">1y</text>
+<path d="M241.8761 245l125.2705 0l0 12l-125.2705 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
 <text dominant-baseline="central" text-anchor="start" style="font: 400 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="245.87614356087153" y="251" fill="#7C7C86">Professor, Data Structures</text>
 <path d="M339.6242 84L369.0598 84A4 4 0 0 1 373.0598 88L373.0598 96A4 4 0 0 1 369.0598 100L339.6242 100A4 4 0 0 1 335.6242 96L335.6242 88A4 4 0 0 1 339.6242 84" fill="rgb(96,125,171)" class="zr0-cls-7"></path>
-<path d="M335.6242 108l60.9209 0l0 14l-60.9209 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
+<path d="M335.6242 108l59.7388 0l0 14l-59.7388 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
 <text dominant-baseline="central" text-anchor="start" style="font: 600 11px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" x="339.6242083040084" y="115" fill="#F4F4F5">BySat</text>
-<text dominant-baseline="central" text-anchor="start" style="font: 12px sans-serif" xml:space="preserve" x="370.7013567415084" y="115" fill="#000">  </text>
-<text dominant-baseline="central" text-anchor="start" style="font: 500 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" x="377.3693254915084" y="115" fill="#7C7C86">8m</text>
-<path d="M335.6242 125l88.2539 0l0 12l-88.2539 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
+<text dominant-baseline="central" text-anchor="start" style="font: 12px sans-serif" xml:space="preserve" x="370.8034075227584" y="115" fill="#000">  </text>
+<text dominant-baseline="central" text-anchor="start" style="font: 500 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" x="377.4713762727584" y="115" fill="#7C7C86">8m</text>
+<path d="M335.6242 125l84.7041 0l0 12l-84.7041 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
 <text dominant-baseline="central" text-anchor="start" style="font: 400 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="339.6242083040084" y="131" fill="#7C7C86">Senior BI Analyst</text>
 <path d="M381.0598 84L467.4694 84A4 4 0 0 1 471.4694 88L471.4694 96A4 4 0 0 1 467.4694 100L381.0598 100A4 4 0 0 1 377.0598 96L377.0598 88A4 4 0 0 1 381.0598 84" fill="rgb(117,152,210)" class="zr0-cls-7"></path>
-<path d="M383.0598 142l80.4434 0l0 14l-80.4434 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
-<text dominant-baseline="central" text-anchor="start" style="font: 600 11px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" x="387.0598170302626" y="149" fill="#F4F4F5">Prodap</text>
-<text dominant-baseline="central" text-anchor="start" style="font: 12px sans-serif" xml:space="preserve" x="425.0227076552626" y="149" fill="#000">  </text>
-<text dominant-baseline="central" text-anchor="start" style="font: 500 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="431.6906764052626" y="149" fill="#7C7C86">1y 8m</text>
-<path d="M383.0598 159l118.2295 0l0 12l-118.2295 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
-<text dominant-baseline="central" text-anchor="start" style="font: 400 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="387.0598170302626" y="165" fill="#7C7C86">Principal Data Engineer</text>
+<path d="M377.0598 46l79.7925 0l0 14l-79.7925 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
+<text dominant-baseline="central" text-anchor="start" style="font: 600 11px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" x="381.0598170302626" y="53" fill="#F4F4F5">Prodap</text>
+<text dominant-baseline="central" text-anchor="start" style="font: 12px sans-serif" xml:space="preserve" x="418.9528834365126" y="53" fill="#000">  </text>
+<text dominant-baseline="central" text-anchor="start" style="font: 500 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="425.6208521865126" y="53" fill="#7C7C86">1y 8m</text>
+<path d="M377.0598 63l113.0586 0l0 12l-113.0586 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
+<text dominant-baseline="central" text-anchor="start" style="font: 400 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="381.0598170302626" y="69" fill="#7C7C86">Principal Data Engineer</text>
 <path d="M479.4694 84L519.2639 84A4 4 0 0 1 523.2639 88L523.2639 96A4 4 0 0 1 519.2639 100L479.4694 100A4 4 0 0 1 475.4694 96L475.4694 88A4 4 0 0 1 479.4694 84" fill="rgb(117,152,210)" class="zr0-cls-7"></path>
-<path d="M475.4694 108l95.7021 0l0 14l-95.7021 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
+<path d="M475.4694 108l96.9404 0l0 14l-96.9404 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
 <text dominant-baseline="central" text-anchor="start" style="font: 600 11px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" x="479.4693877551004" y="115" fill="#F4F4F5">Engineering</text>
-<text dominant-baseline="central" text-anchor="start" style="font: 12px sans-serif" xml:space="preserve" x="543.3209502551003" y="115" fill="#000">  </text>
-<text dominant-baseline="central" text-anchor="start" style="font: 500 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" x="549.9889190051003" y="115" fill="#7C7C86">11m</text>
-<path d="M475.4694 125l75.1143 0l0 12l-75.1143 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
+<text dominant-baseline="central" text-anchor="start" style="font: 12px sans-serif" xml:space="preserve" x="543.0309111926003" y="115" fill="#000">  </text>
+<text dominant-baseline="central" text-anchor="start" style="font: 500 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" x="549.6988799426003" y="115" fill="#7C7C86">11m</text>
+<path d="M475.4694 125l70.8027 0l0 12l-70.8027 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
 <text dominant-baseline="central" text-anchor="start" style="font: 400 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="479.4693877551004" y="131" fill="#7C7C86">Data Architect</text>
 <path d="M531.2639 84L612.494 84A4 4 0 0 1 616.494 88L616.494 96A4 4 0 0 1 612.494 100L531.2639 100A4 4 0 0 1 527.2639 96L527.2639 88A4 4 0 0 1 531.2639 84" fill="rgb(138,180,248)" class="zr0-cls-7"></path>
-<path d="M527.2639 46l112.3169 0l0 14l-112.3169 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
+<path d="M527.2639 46l111.7827 0l0 14l-111.7827 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
 <text dominant-baseline="central" text-anchor="start" style="font: 600 11px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="531.2638986629076" y="53" fill="#F4F4F5">Avenue Code</text>
-<text dominant-baseline="central" text-anchor="start" style="font: 12px sans-serif" xml:space="preserve" x="602.1891916316576" y="53" fill="#000">  </text>
-<text dominant-baseline="central" text-anchor="start" style="font: 500 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="608.8571603816576" y="53" fill="#7C7C86">1y 7m</text>
-<path d="M527.2639 63l142.1357 0l0 12l-142.1357 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
+<text dominant-baseline="central" text-anchor="start" style="font: 12px sans-serif" xml:space="preserve" x="601.1471994441576" y="53" fill="#000">  </text>
+<text dominant-baseline="central" text-anchor="start" style="font: 500 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="607.8151681941576" y="53" fill="#7C7C86">1y 7m</text>
+<path d="M527.2639 63l136.96 0l0 12l-136.96 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
 <text dominant-baseline="central" text-anchor="start" style="font: 400 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="531.2638986629076" y="69" fill="#7C7C86">Principal Engineer, Data &amp; AI</text>
 <path d="M624.494 84L700.5447 84A4 4 0 0 1 704.5447 88L704.5447 96A4 4 0 0 1 700.5447 100L624.494 100A4 4 0 0 1 620.494 96L620.494 88A4 4 0 0 1 624.494 84" fill="rgb(138,180,248)" class="zr0-cls-7"></path>
-<path d="M620.494 108l78.1558 0l0 14l-78.1558 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
+<path d="M620.494 108l76.7417 0l0 14l-76.7417 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
 <text dominant-baseline="central" text-anchor="start" style="font: 600 11px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" x="624.4940182969831" y="115" fill="#F4F4F5">Acerto</text>
-<text dominant-baseline="central" text-anchor="start" style="font: 12px sans-serif" xml:space="preserve" x="660.2816159532331" y="115" fill="#000">  </text>
-<text dominant-baseline="central" text-anchor="start" style="font: 500 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="666.9495847032331" y="115" fill="#7C7C86">1y 5m</text>
-<path d="M620.494 125l107.6289 0l0 12l-107.6289 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
+<text dominant-baseline="central" text-anchor="start" style="font: 12px sans-serif" xml:space="preserve" x="659.3363034532331" y="115" fill="#000">  </text>
+<text dominant-baseline="central" text-anchor="start" style="font: 500 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="666.0042722032331" y="115" fill="#7C7C86">1y 5m</text>
+<path d="M620.494 125l103.0537 0l0 12l-103.0537 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
 <text dominant-baseline="central" text-anchor="start" style="font: 400 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="624.4940182969831" y="131" fill="#7C7C86">Senior Data Manager</text>
 <path d="M712.5447 84L752.3392 84A4 4 0 0 1 756.3392 88L756.3392 96A4 4 0 0 1 752.3392 100L712.5447 100A4 4 0 0 1 708.5447 96L708.5447 88A4 4 0 0 1 712.5447 84" fill="rgb(138,180,248)" class="zr0-cls-7"></path>
-<path d="M660.6952 142l89.644 0l0 14l-89.644 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
+<path d="M659.9989 142l90.3403 0l0 14l-90.3403 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
 <text dominant-baseline="central" text-anchor="end" style="font: 500 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" x="746.339197748061" y="149" fill="#7C7C86">10m</text>
-<text dominant-baseline="central" text-anchor="end" style="font: 12px sans-serif" xml:space="preserve" x="726.851893060561" y="149" fill="#000">  </text>
-<text dominant-baseline="central" text-anchor="end" style="font: 600 11px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="720.183924310561" y="149" fill="#F4F4F5">RD Station</text>
-<path d="M560.9427 159l189.3965 0l0 12l-189.3965 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
+<text dominant-baseline="central" text-anchor="end" style="font: 12px sans-serif" xml:space="preserve" x="726.886072748061" y="149" fill="#000">  </text>
+<text dominant-baseline="central" text-anchor="end" style="font: 600 11px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="720.218103998061" y="149" fill="#F4F4F5">RD Station</text>
+<path d="M570.7669 159l179.5723 0l0 12l-179.5723 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
 <text dominant-baseline="central" text-anchor="end" style="font: 400 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="746.339197748061" y="165" fill="#7C7C86">Staff Software Engineer, Data Platform</text>
 <path d="M764.3392 84L845.5693 84A4 4 0 0 1 849.5693 88L849.5693 96A4 4 0 0 1 845.5693 100L764.3392 100A4 4 0 0 1 760.3392 96L760.3392 88A4 4 0 0 1 764.3392 84" fill="rgb(138,180,248)" class="zr0-cls-7"></path>
-<path d="M747.2607 46l102.3086 0l0 14l-102.3086 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
-<text dominant-baseline="central" text-anchor="end" style="font: 500 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="845.5693173821223" y="53" fill="#7C7C86">1y 6m</text>
-<text dominant-baseline="central" text-anchor="end" style="font: 12px sans-serif" xml:space="preserve" x="817.7519345696223" y="53" fill="#000">  </text>
-<text dominant-baseline="central" text-anchor="end" style="font: 600 11px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="811.0839658196223" y="53" fill="#F4F4F5">QI Network</text>
-<path d="M726.1006 63l123.4688 0l0 12l-123.4687 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
-<text dominant-baseline="central" text-anchor="end" style="font: 400 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="845.5693173821223" y="69" fill="#7C7C86">Staff Engineer, Data &amp; AI</text>
+<path d="M749.603 108l99.9663 0l0 14l-99.9663 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
+<text dominant-baseline="central" text-anchor="end" style="font: 500 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="845.5693173821223" y="115" fill="#7C7C86">1y 6m</text>
+<text dominant-baseline="central" text-anchor="end" style="font: 12px sans-serif" xml:space="preserve" x="818.3378720696223" y="115" fill="#000">  </text>
+<text dominant-baseline="central" text-anchor="end" style="font: 600 11px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="811.6699033196223" y="115" fill="#F4F4F5">QI Network</text>
+<path d="M730.5732 125l118.9961 0l0 12l-118.9961 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
+<text dominant-baseline="central" text-anchor="end" style="font: 400 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="845.5693173821223" y="131" fill="#7C7C86">Staff Engineer, Data &amp; AI</text>
 <path d="M489.8283 204L612.494 204A4 4 0 0 1 616.494 208L616.494 216A4 4 0 0 1 612.494 220L489.8283 220A4 4 0 0 1 485.8283 216L485.8283 208A4 4 0 0 1 489.8283 204" fill="url(#zr0-p0)" stroke="#8AB4F8" class="zr0-cls-9"></path>
-<path d="M485.8283 228l141.7183 0l0 14l-141.7183 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
+<path d="M485.8283 228l140.2871 0l0 14l-140.2871 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
 <text dominant-baseline="central" text-anchor="start" style="font: 600 11px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="489.8282899366675" y="235" fill="#F4F4F5">Google Cloud PSO</text>
-<text dominant-baseline="central" text-anchor="start" style="font: 12px sans-serif" xml:space="preserve" x="587.2545594679175" y="235" fill="#000">  </text>
-<text dominant-baseline="central" text-anchor="start" style="font: 500 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="593.9225282179175" y="235" fill="#7C7C86">2y 2m</text>
-<path d="M485.8283 245l125.5293 0l0 12l-125.5293 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
+<text dominant-baseline="central" text-anchor="start" style="font: 12px sans-serif" xml:space="preserve" x="588.2159852491675" y="235" fill="#000">  </text>
+<text dominant-baseline="central" text-anchor="start" style="font: 500 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="594.8839539991675" y="235" fill="#7C7C86">2y 2m</text>
+<path d="M485.8283 245l119.1768 0l0 12l-119.1768 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
 <text dominant-baseline="central" text-anchor="start" style="font: 400 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="489.8282899366675" y="251" fill="#7C7C86">Strategic Cloud Engineer</text>
 <path d="M821.3132 204L840.3899 204A4 4 0 0 1 844.3899 208L844.3899 216A4 4 0 0 1 840.3899 220L821.3132 220A4 4 0 0 1 817.3132 216L817.3132 208A4 4 0 0 1 821.3132 204" fill="url(#zr0-p0)" stroke="#8AB4F8" class="zr0-cls-9"></path>
-<path d="M779.6238 228l64.7661 0l0 14l-64.7661 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
+<path d="M780.9665 228l63.4233 0l0 14l-63.4233 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
 <text dominant-baseline="central" text-anchor="end" style="font: 500 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" x="840.3898662913458" y="235" fill="#7C7C86">6m</text>
-<text dominant-baseline="central" text-anchor="end" style="font: 12px sans-serif" xml:space="preserve" x="825.2092022288458" y="235" fill="#000">  </text>
-<text dominant-baseline="central" text-anchor="end" style="font: 600 11px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" x="818.5412334788458" y="235" fill="#F4F4F5">Escale</text>
-<path d="M720.9211 245l123.4688 0l0 12l-123.4687 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
+<text dominant-baseline="central" text-anchor="end" style="font: 12px sans-serif" xml:space="preserve" x="826.4982647288458" y="235" fill="#000">  </text>
+<text dominant-baseline="central" text-anchor="end" style="font: 600 11px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" x="819.8302959788458" y="235" fill="#F4F4F5">Escale</text>
+<path d="M725.3938 245l118.9961 0l0 12l-118.9961 0Z" fill="rgb(11, 12, 15)" class="zr0-cls-8"></path>
 <text dominant-baseline="central" text-anchor="end" style="font: 400 10px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" xml:space="preserve" x="840.3898662913458" y="251" fill="#7C7C86">Staff Engineer, Data &amp; AI</text>
 <defs >
 <pattern width="8" height="8" patternUnits="userSpaceOnUse" id="zr0-p0">
-<image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAuklEQVR4ATzOSw6CQAwG4LYzaOIzxiu41QP5OI5R8AruxLhxocFjadSIgjDTyhCwyb/p1z8pbaI0WB7jyeqcjuqsT99xEKW+f0m2lLA9kKc/UA1a0yZl54IyBFAP8kC9KoMSG7pAHIrg0+RZSDUymw45BBkg4N0asyPScXngUGm9kAo5M6FDVyZG6jWa3gxR+ih444xCUfrt0IUU8oyZBwB0ZYsF8h+LXZfqphjYF58nruXCuWlpT6Y/AAAA//+n1XmSAAAABklEQVQDAIPSYRHR1enxAAAAAElFTkSuQmCC" width="8" height="8"></image>
+<image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAALpJREFUKFNVzFtOAkEQheE61d0YEWMIW3ADuBu5bMaEiBB2wBsDG1AIi5KAUWSEnjqkJ0KgXr//FIbv+WBvMdMb/yv/hwK3KuyQbOBlsW0Gdd9nPMQ7VW2RaIi4DV6X+eMVwncorBP4KiROzoEVsRbo2wkhWB8Qp+r8TxkkdOK7IB8SGmPG4LfpM3rL/VPF+GxmdQArM50xWIll0J/no7QU1U9SpnTcnVBM7/H2sRuXS0F2ifYXq5UQukdqaGM4zjYO/QAAAABJRU5ErkJggg==" width="8" height="8"></image>
 </pattern>
 </defs>
 <style ><![CDATA[
