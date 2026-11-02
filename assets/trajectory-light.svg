@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 272" width="100%" height="100%">
+  <defs>
+    <style>
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif; }
+      .font-mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+    </style>
+  </defs>
+
+  <!-- Left Panel: Career Track Record -->
+  <rect x="1" y="1" width="536" height="270" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="24" y="28" class="font-mono" font-size="11" font-weight="700" fill="#2563eb" letter-spacing="0.8">
+    CAREER TRACK RECORD // LEADERSHIP, ARCHITECTURE &amp; FOUNDING
+  </text>
+  <line x1="24" y1="40" x2="514" y2="40" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Item 1 -->
+  <circle cx="30" cy="64" r="4" fill="#2563eb"/>
+  <text x="44" y="68" class="font-sans" font-size="13.5" font-weight="700" fill="#0f172a">
+    Engineering Management &amp; Tech Leadership
+  </text>
+  <text x="335" y="68" class="font-mono" font-size="11" font-weight="600" fill="#2563eb">
+    RD Station · Avenue Code · Acerto
+  </text>
+  <text x="44" y="88" class="font-sans" font-size="12" fill="#475569">
+    Building high-performance Data, AI, DevOps &amp; Software teams—combining delivery
+  </text>
+  <text x="44" y="104" class="font-sans" font-size="12" fill="#475569">
+    excellence with psychological safety and human-centric leadership.
+  </text>
+
+  <!-- Item 2 -->
+  <circle cx="30" cy="134" r="4" fill="#7c3aed"/>
+  <text x="44" y="138" class="font-sans" font-size="13.5" font-weight="700" fill="#0f172a">
+    Principal IC — Data Platforms &amp; AI
+  </text>
+  <text x="285" y="138" class="font-mono" font-size="11" font-weight="600" fill="#7c3aed">
+    Engineering · Prodap · Bysat · D-Analytics
+  </text>
+  <text x="44" y="158" class="font-sans" font-size="12" fill="#475569">
+    Greenfield Data Lakes, Master Data Management (MDM), GCP cloud architectures,
+  </text>
+  <text x="44" y="174" class="font-sans" font-size="12" fill="#475569">
+    Hadoop/Python/SQL ecosystems, and enterprise AI systems from the ground up.
+  </text>
+
+  <!-- Item 3 -->
+  <circle cx="30" cy="204" r="4" fill="#059669"/>
+  <text x="44" y="208" class="font-sans" font-size="13.5" font-weight="700" fill="#0f172a">
+    2x Startup Founder &amp; Product Builder
+  </text>
+  <text x="315" y="208" class="font-mono" font-size="11" font-weight="600" fill="#059669">
+    Conserta AI · Consertos Legais
+  </text>
+  <text x="44" y="228" class="font-sans" font-size="12" fill="#475569">
+    Founded an on-demand appliance service marketplace (Consertos Legais) and led its
+  </text>
+  <text x="44" y="244" class="font-sans" font-size="12" fill="#475569">
+    strategic pivot into Conserta AI—an intelligent diagnostic maintenance assistant.
+  </text>
+
+  <!-- Right Panel: Community, Speaking & Mentorship -->
+  <rect x="555" y="1" width="364" height="270" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="578" y="28" class="font-mono" font-size="11" font-weight="700" fill="#d97706" letter-spacing="0.8">
+    COMMUNITY, SPEAKING &amp; MENTORSHIP
+  </text>
+  <line x1="578" y1="40" x2="896" y2="40" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Community Row 1 -->
+  <rect x="578" y="54" width="318" height="42" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="592" y="72" class="font-sans" font-size="12.5" font-weight="700" fill="#0f172a">
+    The Developers Conference (TDC)
+  </text>
+  <text x="592" y="88" class="font-mono" font-size="10.5" fill="#2563eb">
+    Conference Speaker  ·  Cloud, Data &amp; AI Tracks
+  </text>
+
+  <!-- Community Row 2 -->
+  <rect x="578" y="104" width="318" height="42" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="592" y="122" class="font-sans" font-size="12.5" font-weight="700" fill="#0f172a">
+    DevFest BH (Google Developer Groups)
+  </text>
+  <text x="592" y="138" class="font-mono" font-size="10.5" fill="#059669">
+    Featured Speaker  ·  Google Cloud &amp; Applied AI
+  </text>
+
+  <!-- Community Row 3 -->
+  <rect x="578" y="154" width="318" height="42" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="592" y="172" class="font-sans" font-size="12.5" font-weight="700" fill="#0f172a">
+    Data Analytics Meetup &amp; DSA
+  </text>
+  <text x="592" y="188" class="font-mono" font-size="10.5" fill="#7c3aed">
+    Meetup Organizer &amp; Speaker · Mentor at Data Science Academy
+  </text>
+
+  <!-- Languages Box -->
+  <rect x="578" y="206" width="318" height="48" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="592" y="225" class="font-mono" font-size="10.5" font-weight="700" fill="#475569">
+    LANGUAGES &amp; GLOBAL COLLABORATION
+  </text>
+  <text x="592" y="243" class="font-sans" font-size="12" fill="#0f172a">
+    Portuguese (Native)  ·  English (Intermediate / B2)
+  </text>
+</svg>
