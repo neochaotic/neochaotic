@@ -1,75 +1,44 @@
-<div align="center">
-
 <p>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="./assets/hero-light.svg" />
-    <img alt="Alisson Rosa — Principal Engineer · Data & AI · Agentic Architect | Google Developer Expert (Cloud & AI)" src="./assets/hero-dark.svg" width="100%" />
+    <img alt="Alisson Rosa, Principal Engineer, Data Platforms. Google Developer Expert in Cloud. 88% lower data lake cost, 57% lower Databricks spend, 40+ TB moved to Google Cloud, AgTech data lake built from zero." src="./assets/hero-light.svg" width="100%" />
   </picture>
 </p>
 
-<p>
-  <a href="https://neochaotic.github.io/neochaotic/"><b>↗ Interactive Web CV</b></a> &nbsp;·&nbsp;
-  <a href="https://neochaotic.github.io/neochaotic/Alisson_Rosa_CV_EN.pdf"><b>⬇ ATS Resume PDF (EN)</b></a> &nbsp;·&nbsp;
-  <a href="https://neochaotic.github.io/neochaotic/Alisson_Rosa_CV_PT.pdf"><b>⬇ Currículo ATS PDF (PT-BR)</b></a> &nbsp;·&nbsp;
-  <a href="https://me.developers.google.com/communities/experts?q=alisson%20rosa"><b>✦ Verified GDE Directory</b></a> &nbsp;·&nbsp;
-  <a href="https://me.developers.google.com/u/neoChaotic"><b>Google Dev Profile</b></a> &nbsp;·&nbsp;
-  <a href="https://www.linkedin.com/in/alissonrosa/"><b>LinkedIn</b></a> &nbsp;·&nbsp;
-  <a href="https://www.instagram.com/neoChaotic/"><b>@neoChaotic</b></a>
-</p>
+I build data platforms and the systems around them, and I lead the teams that run them.
+I created [Dexaflow](https://github.com/dexadata/dexaflow), an Airflow-compatible workflow orchestrator written in Go, and I am a Google Developer Expert in Cloud.
 
-<p>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/impact-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./assets/impact-light.svg" />
-    <img alt="Enterprise Case Studies — -88% Cost, -57% FinOps, 40+ TB to GCP, European M&A Exit" src="./assets/impact-dark.svg" width="100%" />
-  </picture>
-</p>
+- Cut a fintech data lake's cost by 88% by moving it from Databricks to BigQuery.
+- Led a 4-project, 40+ TB migration from Hadoop, Oracle and Greenplum to Google Cloud, working with Google Professional Services.
+- Built an AgTech data lake from zero on AWS, moved it to Google Cloud, and supported the company through its acquisition by a European group.
+- Managed data, ML, DevOps and software teams at RD Station, Avenue Code and Acerto.
 
-<p>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/bento-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./assets/bento-light.svg" />
-    <img alt="Selected Engineering & Open-Source Systems" src="./assets/bento-dark.svg" width="100%" />
-  </picture>
-</p>
+## Selected work
 
-<p>
-  <sub>
-    <b>Direct Repository &amp; Upstream PR Links:</b> &nbsp;
-    <a href="https://github.com/google/adk-go/pull/2058"><code>google/adk-go</code> (PR #2058)</a> &nbsp;·&nbsp;
-    <a href="https://github.com/open-metadata/OpenMetadata/pull/32065"><code>open-metadata/OpenMetadata</code> (PR #32065 · #33505)</a> &nbsp;·&nbsp;
-    <a href="https://github.com/apache/airflow/pull/73289"><code>apache/airflow</code> (PR #73289 · #67883)</a> &nbsp;·&nbsp;
-    <a href="https://github.com/dexadata/dexaflow"><code>dexadata/dexaflow</code></a> &nbsp;·&nbsp;
-    <a href="https://github.com/neochaotic/powerlab"><code>neochaotic/powerlab</code></a> &nbsp;·&nbsp;
-    <a href="https://github.com/neochaotic/pong"><code>neochaotic/pong</code></a>
-  </sub>
-</p>
+**[Dexaflow](https://github.com/dexadata/dexaflow)** · Go, Kubernetes, Helm\
+Runs Airflow DAGs on a single Go control plane with the Airflow UI and REST API, one pod per task, and weekly releases. [Docs](https://dexaflow.dexadata.ai/) · [DexaData](https://dexadata.ai)
 
-<p>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/trajectory-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./assets/trajectory-light.svg" />
-    <img alt="Executive Career Track Record & Community Impact" src="./assets/trajectory-dark.svg" width="100%" />
-  </picture>
-</p>
+**[PowerLab](https://github.com/neochaotic/powerlab)** · Go, SvelteKit\
+Self-hosted control panel for home servers and edge boxes, with a one-line installer and a curated app catalog.
 
-<p>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/stack-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./assets/stack-light.svg" />
-    <img alt="Production Architecture Matrix" src="./assets/stack-dark.svg" width="100%" />
-  </picture>
-</p>
+## Open source
 
-<p>
-  <sub>
-    Belo Horizonte, MG — Brazil &nbsp;·&nbsp;
-    <a href="https://neochaotic.github.io/neochaotic/">Interactive CV</a> &nbsp;·&nbsp;
-    <a href="https://neochaotic.github.io/neochaotic/Alisson_Rosa_CV_EN.pdf">PDF (EN)</a> &nbsp;·&nbsp;
-    <a href="https://neochaotic.github.io/neochaotic/Alisson_Rosa_CV_PT.pdf">PDF (PT-BR)</a> &nbsp;·&nbsp;
-    <a href="mailto:alisson.david.rosa@gmail.com">alisson.david.rosa@gmail.com</a>
-  </sub>
-</p>
+**OpenMetadata**\
+Found that a successful login was silently dropped when the browser service worker failed ([#32063](https://github.com/open-metadata/OpenMetadata/issues/32063)), then fixed it ([#32065](https://github.com/open-metadata/OpenMetadata/pull/32065), merged).\
+Reported a Unity Catalog ingestion gap for BROWSE-only objects ([#33505](https://github.com/open-metadata/OpenMetadata/issues/33505)).
 
-</div>
+**Apache Airflow**\
+Reported two Airflow 3 UI bugs after Mark-as actions, both fixed upstream within a week ([#67883](https://github.com/apache/airflow/issues/67883), [#67884](https://github.com/apache/airflow/issues/67884)).\
+Shared a design note on secret masking for the Go SDK ([#67599](https://github.com/apache/airflow/issues/67599)).
+
+**Google ADK for Go**\
+Proposed a Firestore session service for serverless agent deployments ([#2058](https://github.com/google/adk-go/pull/2058), under review).
+
+## Community
+
+Speaker at The Developers Conference (TDC) and DevFest BH. Organizer of the Data Analytics Meetup and mentor at Data Science Academy.
+
+---
+
+[Resume (PDF)](https://neochaotic.github.io/neochaotic/Alisson_Rosa_CV_EN.pdf) · [Currículo (PDF)](https://neochaotic.github.io/neochaotic/Alisson_Rosa_CV_PT.pdf) · [Web CV](https://neochaotic.github.io/neochaotic/) · [LinkedIn](https://www.linkedin.com/in/alissonrosa/) · [Email](mailto:alisson.david.rosa@gmail.com)
