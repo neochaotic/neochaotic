@@ -37,7 +37,9 @@ for (const t of Object.keys(THEMES)) {
   const p = await browser.newPage({ viewport: { width: 1000, height: 900 } });
   p.on("pageerror", e => { console.error(e); process.exitCode = 1; });
   await p.goto("file://" + file);
-  await p.evaluate(() => document.fonts.ready);
+  // Load the faces explicitly: label widths are measured with them, and
+  // document.fonts.ready alone does not wait for fonts nothing uses yet.
+  await p.evaluate(() => Promise.all(["400", "500", "600"].map(w => document.fonts.load(`${w} 12px Inter`))));
   await p.evaluate(() => window.renderCareerTimeline(document.getElementById("tl"), "en"));
   await p.waitForTimeout(1500);
   const { svg, h } = await p.evaluate(() => {
