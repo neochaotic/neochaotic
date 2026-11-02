@@ -38,6 +38,20 @@
 
 ---
 
+### Enterprise Case Studies & Measurable Impact
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/impact-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./assets/impact-light.svg" />
+  <img alt="Enterprise Case Studies & Measurable FinOps, Scale & M&A Impact" src="./assets/impact-dark.svg" width="100%" />
+</picture>
+
+</div>
+
+---
+
 ### Executive Track Record, Speaking & Community Impact
 
 <div align="center">
