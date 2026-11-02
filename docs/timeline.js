@@ -9,28 +9,28 @@
   const FIRST = [2004, 8];
 
   const ROWS = [
-    { co: "IT services", lane: "direct", s: [2004, 8], e: [2014, 12], role: { en: "Technician to business owner", pt: "Técnico a dono de negócio" } },
-    { co: "Freelance", lane: "direct", s: [2014, 11], e: [2018, 7], role: { en: "BI Analyst and Python Developer", pt: "Analista de BI e Desenvolvedor Python" } },
-    { co: "IFMG", lane: "direct", concurrent: true, s: [2015, 5], e: [2016, 4], role: { en: "Professor, Data Structures", pt: "Professor, Estrutura de Dados" } },
-    { co: "BySat", lane: "direct", s: [2018, 8], e: [2019, 3], role: { en: "Senior BI Analyst", pt: "Analista de BI Sênior" } },
-    { co: "Prodap", lane: "direct", s: [2019, 3], e: [2020, 10], role: { en: "Principal Data Engineer", pt: "Principal Data Engineer" } },
-    { co: "Engineering", lane: "direct", s: [2020, 10], e: [2021, 8], role: { en: "Data Architect", pt: "Arquiteto de Dados" } },
-    { co: "Avenue Code", lane: "direct", s: [2021, 8], e: [2023, 2], role: { en: "Principal Engineer, Data & AI", pt: "Principal Engineer, Data & AI" } },
-    { co: "Acerto", lane: "direct", s: [2023, 3], e: [2024, 7], role: { en: "Senior Data Manager", pt: "Gerente Sênior de Dados" } },
-    { co: "RD Station", lane: "direct", s: [2024, 8], e: [2025, 5], role: { en: "Staff Software Engineer, Data Platform", pt: "Staff Software Engineer, Plataforma de Dados" } },
-    { co: "QI Network", lane: "direct", s: [2025, 6], e: null, role: { en: "Staff Engineer, Data & AI", pt: "Staff Engineer, Data & AI" } },
-    { co: "Google Cloud PSO", lane: "out", s: [2021, 1], e: [2023, 2], role: { en: "Strategic Cloud Engineer", pt: "Strategic Cloud Engineer" } },
-    { co: "Escale", lane: "out", s: [2026, 5], e: [2026, 10], role: { en: "Staff Engineer, Data & AI", pt: "Staff Engineer, Data & AI" } },
+    { co: "IT services", lvl: 1, lane: "direct", s: [2004, 8], e: [2014, 12], role: { en: "Technician to business owner", pt: "Técnico a dono de negócio" } },
+    { co: "Freelance", lvl: 2, lane: "direct", s: [2014, 11], e: [2018, 7], role: { en: "BI Analyst and Python Developer", pt: "Analista de BI e Desenvolvedor Python" } },
+    { co: "IFMG", lvl: 2, lane: "out", s: [2015, 5], e: [2016, 4], role: { en: "Professor, Data Structures", pt: "Professor, Estrutura de Dados" } },
+    { co: "BySat", lvl: 3, lane: "direct", s: [2018, 8], e: [2019, 3], role: { en: "Senior BI Analyst", pt: "Analista de BI Sênior" } },
+    { co: "Prodap", lvl: 4, lane: "direct", s: [2019, 3], e: [2020, 10], role: { en: "Principal Data Engineer", pt: "Principal Data Engineer" } },
+    { co: "Engineering", lvl: 4, lane: "direct", s: [2020, 10], e: [2021, 8], role: { en: "Data Architect", pt: "Arquiteto de Dados" } },
+    { co: "Avenue Code", lvl: 5, lane: "direct", s: [2021, 8], e: [2023, 2], role: { en: "Principal Engineer, Data & AI", pt: "Principal Engineer, Data & AI" } },
+    { co: "Acerto", lvl: 5, lane: "direct", s: [2023, 3], e: [2024, 7], role: { en: "Senior Data Manager", pt: "Gerente Sênior de Dados" } },
+    { co: "RD Station", lvl: 5, lane: "direct", s: [2024, 8], e: [2025, 5], role: { en: "Staff Software Engineer, Data Platform", pt: "Staff Software Engineer, Plataforma de Dados" } },
+    { co: "QI Network", lvl: 5, lane: "direct", s: [2025, 6], e: null, role: { en: "Staff Engineer, Data & AI", pt: "Staff Engineer, Data & AI" } },
+    { co: "Google Cloud PSO", lvl: 4, lane: "out", s: [2021, 1], e: [2023, 2], role: { en: "Strategic Cloud Engineer", pt: "Strategic Cloud Engineer" } },
+    { co: "Escale", lvl: 5, lane: "out", s: [2026, 5], e: [2026, 10], role: { en: "Staff Engineer, Data & AI", pt: "Staff Engineer, Data & AI" } },
   ];
 
   const TEXT = {
     en: {
-      direct: ["Direct", "Brazilian CLT or contractor"], out: ["Outsourced", "allocated to a client"],
+      direct: ["Direct", "Brazilian CLT or contractor"], shade: "Stronger tone, more senior role", out: ["Outsourced", "allocated to a client"],
       y: "y", m: "m", to: "to", present: "Present", total: n => `${n} years in technology`,
       months: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
     },
     pt: {
-      direct: ["Direto", "CLT ou PJ"], out: ["Alocado", "em cliente"],
+      direct: ["Direto", "CLT ou PJ"], shade: "Tom mais forte, cargo mais sênior", out: ["Alocado", "em cliente"],
       y: "a", m: "m", to: "a", present: "Atual", total: n => `${n} anos em tecnologia`,
       months: ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"],
     },
@@ -113,7 +113,19 @@
     // sits above or below its bar, starting at the bar's left edge; near the
     // right edge it is right aligned to the bar's end. Blocks go to the
     // closest free tier, so labels never collide and always read the same way.
-    const BAR_H = 16, LBL_H = 34, PAD = 6, SEP = 14;
+    // Seniority drives the tone of each bar: one hue, five steps.
+    const rgb = str => {
+      const m = str.match(/^#([0-9a-f]{6})$/i);
+      if (m) return [0, 2, 4].map(i => parseInt(m[1].slice(i, i + 2), 16));
+      return (str.match(/[\d.]+/g) || [0, 0, 0]).slice(0, 3).map(Number);
+    };
+    const A = rgb(c.accent), B = rgb(c.bg);
+    // Solid blends of the accent over the background, so bars stay opaque.
+    const shade = lvl => {
+      const a = 0.34 + 0.66 * ((lvl || 5) - 1) / 4;
+      return `rgb(${A.map((v, i) => Math.round(B[i] + (v - B[i]) * a)).join(",")})`;
+    };
+    const BAR_H = 16, LBL_H = 34, PAD = 6, SEP = 20;
     const items = ROWS.map((r, i) => {
       const e = r.e || NOW, n = months(r.s, e);
       const role = r.role[lang] || r.role.en, dur = fmtDur(n, t);
@@ -147,6 +159,11 @@
         row.below = tiers.below.filter(l => l.length).length;
       }
     }
+    // Within a row a bar starts where the previous one ends.
+    for (const lane of Object.values(lanes)) for (const row of lane) {
+      row.sort((a, b) => a.ms - b.ms);
+      row.forEach((it, k) => { it.vs = k ? Math.max(it.ms, row[k - 1].me) : it.ms; });
+    }
     const TOP = 44, LANE_GAP = 26, AXIS = 40, ROW_GAP = 4;
     let y = TOP;
     const laneTop = {};
@@ -177,7 +194,7 @@
     const font = "Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif";
 
     const data = items.map(it => ({
-      value: [warp(dec(it.r.s)), warp(dec(it.e, true)), rowY(it)],
+      value: [warp(it.vs), warp(dec(it.e, true)), rowY(it)],
       it,
     }));
 
@@ -217,6 +234,8 @@
         ...laneLabel("direct", laneTop.direct + 4),
         { type: "line", shape: { x1: 0, y1: outTop - LANE_GAP / 2, x2: width - right, y2: outTop - LANE_GAP / 2 }, style: { stroke: c.grid, lineWidth: 1 } },
         ...laneLabel("out", outTop + 4),
+        ...[1, 2, 3, 4, 5].map(l => ({ type: "rect", left: left + (l - 1) * 15, top: 9, shape: { width: 12, height: 8, r: 2 }, style: { fill: shade(l) } })),
+        { type: "text", left: left + 5 * 15 + 6, top: 6, style: { text: t.shade, fill: c.muted, font: `400 12px ${fontFam}` } },
         { type: "text", right, top: 4, style: { text: t.total(total), fill: c.secondary, font: `500 13px ${font}`, align: "right" } },
         { type: "text", left: left + EARLY_UNITS * pxPerUnit - 2, top: height - AXIS + 12, style: { text: "//", fill: c.muted, font: `400 12px ${font}` } },
       ],
@@ -252,8 +271,8 @@
             const x = p1[0] + 2, y = p1[1], w = Math.max(p2[0] - p1[0] - 4, 6), h = BAR_H;
             const kids = [{
               type: "rect", shape: { x, y, width: w, height: h, r: 4 },
-              style: out ? { fill: pattern, stroke: c.accent, lineWidth: 1 } : { fill: c.accent },
-              emphasis: { style: out ? { lineWidth: 2 } : { shadowBlur: 12, shadowColor: c.accent } },
+              style: out ? { fill: pattern, stroke: c.accent, lineWidth: 1 } : { fill: shade(it.r.lvl) },
+              emphasis: { style: out ? { lineWidth: 2 } : { fill: c.accent, shadowBlur: 12, shadowColor: c.accent } },
             }];
             // A role held at the same time as another one is drawn inside
             // that bar as an outlined segment, on the same row.
