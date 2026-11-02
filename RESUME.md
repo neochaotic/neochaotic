@@ -1,12 +1,12 @@
 # Alisson Rosa
 
-**Principal Engineer, Data & AI** · Google Developer Expert (Cloud)  
+**Principal Engineer, Data & AI** · Google Developer Expert (Cloud & AI)  
 Belo Horizonte, MG, Brazil · Open to remote  
 [alisson.david.rosa@gmail.com](mailto:alisson.david.rosa@gmail.com) · [LinkedIn](https://www.linkedin.com/in/alissonrosa/) · [GitHub](https://github.com/neochaotic) · [Interactive CV](https://neochaotic.github.io/neochaotic/) · [PDF](https://neochaotic.github.io/neochaotic/Alisson_Rosa_CV_EN.pdf)
 
 ## Summary
 
-Principal Engineer with 23 years in technology and 10 years in data platforms, leading data engineering, machine learning, DevOps and software teams. Google Developer Expert in Cloud. Cut data lake cost by 88% moving from Azure and Databricks to Google Cloud and BigQuery, cut Databricks cost by 68% with FinOps cost segmentation, and worked on Latin America's largest big data migration to Google Cloud (40 PB) with Google Cloud Professional Services. Creator of Dexaflow, an open source workflow orchestrator in Go compatible with Apache Airflow.
+Principal Engineer with 23 years in technology and 10 years in data platforms, leading data engineering, machine learning, DevOps and software teams. Google Developer Expert in Cloud & AI. Cut data lake cost by 88% moving from Azure and Databricks to Google Cloud and BigQuery, cut Databricks cost by 68% with FinOps cost segmentation, and worked on Latin America's largest big data migration to Google Cloud (40 PB) with Google Cloud Professional Services. Creator of Dexaflow, an open source workflow orchestrator in Go compatible with Apache Airflow.
 
 ## Skills
 
@@ -106,7 +106,7 @@ Owner, Neotec (IT services, Jan 2009 to Dec 2014); Store Manager and Technical S
 
 ## Recognition and Community
 
-- Google Developer Expert, Cloud, since 2026.
+- Google Developer Expert, Cloud & AI, since 2026.
 - Speaker at The Developers Conference (TDC) and DevFest Belo Horizonte.
 - Organizer and speaker, Data Analytics Meetup.
 - Mentor, Data Science Academy.

@@ -1,5 +1,5 @@
 <p>
-  <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/hero-light.svg" /><img alt="Alisson Rosa, Principal Engineer, Data and AI. Google Developer Expert in Cloud. 88% lower data lake cost, 68% lower Databricks spend, 40 PB moved to Google Cloud, AgTech data lake built from zero." src="./assets/hero-light.svg" width="100%" /></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg" /><source media="(prefers-color-scheme: light)" srcset="./assets/hero-light.svg" /><img alt="Alisson Rosa, Principal Engineer, Data and AI. Google Developer Expert in Cloud and AI. 88% lower data lake cost, 68% lower Databricks spend, 40 PB moved to Google Cloud, AgTech data lake built from zero." src="./assets/hero-light.svg" width="100%" /></picture>
 </p>
 
 <p align="center">
